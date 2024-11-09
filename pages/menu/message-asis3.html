@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TechMedic - Mensajeria</title>
+    <script src="https://kit.fontawesome.com/c2b1422a44.js" crossorigin="anonymous"></script>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link href="../../design/css/pg-admin-1.css" rel="stylesheet">
+    <link href="../../design/css/pg-admin-2.css" rel="stylesheet">
+    <link href="../../design/css/menu/message3.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .navbar-nav .nav-item .dropdown-menu {
+            min-width: 300px;
+        }
+        .img-profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../profileUser.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <img src="../../design/img/logo.png" alt="TechMedic Logo" class="img-fluid">
+                </div>
+                <div class="sidebar-brand-text mx-3">TechMedic</div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item">
+              <a class="nav-link" href="../profileUser.html">
+                <i class="fa-solid fa-user-nurse"></i>
+                  <span>Sobre Mi</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="../menu/listpacient-asis.html">
+                    <i class="fa-solid fa-bed"></i>
+                    <span>Pacientes</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../menu/listaCitas-asis.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Citas</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="listaConsultas-asis.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Consultas</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../menu/calendarAsis.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Calendario</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="message-asis.html">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Mensajería</span>
+                </a>
+            </li>
+
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="form-container">
+                        <form action="../registerPC-asis.html">
+                            <div class="input-group">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span class="button-text d-none d-lg-inline">Registrar Paciente</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input id="searchInput" class="form-control bg-light border-0 small" placeholder="Búsqueda Paciente..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" id="searchButton">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            document.getElementById('searchButton').addEventListener('click', function (event) {
+                                event.preventDefault(); 
+                    
+                                const searchQuery = document.getElementById('searchInput').value.trim();
+                                if (searchQuery) {
+                                    localStorage.setItem('searchQuery', searchQuery); 
+                                    window.location.href = `./menu/listpacient-asis.html`;
+                                }
+                            });
+                    
+                            document.getElementById('searchInput').addEventListener('keypress', function (e) {
+                                if (e.key === 'Enter') {
+                                    e.preventDefault(); 
+                                    const searchQuery = document.getElementById('searchInput').value.trim();
+                                    if (searchQuery) {
+                                        localStorage.setItem('searchQuery', searchQuery);
+                                        window.location.href = `./menu/listpacient-asis.html`; 
+                                    }
+                                }
+                            });
+                        });
+                    </script>
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="user-name mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <img class="img-profile rounded-circle"
+                                    src="../../design/img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="../profileUser.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <a class="dropdown-item" href="../editarUser.html">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Configuración
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Salir
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+            <div class="email-app mb-4">
+              <nav>
+                  <a href="message-asis2.html" class="btn btn-danger btn-block">Nuevo Email</a>
+                  <ul class="nav">
+                      <li class="nav-item">
+                          <a class="nav-link" href="message-asis.html"><i class="fa fa-inbox"></i> Principal<span class="badge badge-danger"></span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="message-asis3.html"><i class="fa fa-rocket"></i> Enviados</a>
+                      </li>
+                  </ul>
+              </nav>
+              <main class="inbox">
+                  <div class="toolbar">
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-light">
+                              <span class="fa fa-envelope"></span>
+                          </button>
+                          <button type="button" class="btn btn-light">
+                              <span class="fa fa-star"></span>
+                          </button>
+                          <button type="button" class="btn btn-light">
+                              <span class="fa fa-star-o"></span>
+                          </button>
+                          <button type="button" class="btn btn-light">
+                              <span class="fa fa-bookmark-o"></span>
+                          </button>
+                      </div>
+                  </div>
+          
+                  <ul class="messages" id="messagesList">
+                  </ul>
+              </main>
+          </div>
+
+        </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        let currentPage = 1;
+        const recordsPerPage = 5;
+        let mensajes = [];
+        let allMensajes = [];
+
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        if (!user || !user.id_usuario) {
+            window.location.href = '../login.html';
+            return;
+        }
+
+        const idUsuario = user.id_usuario;
+
+        cargarMensajes(idUsuario);
+
+        async function cargarMensajes(idUsuario) {
+            try {
+                const response = await fetch(`/api/notificacion/enviados?id_usuario=${idUsuario}`);
+
+                if (!response.ok) {
+                    if (response.status === 404) {
+                        console.error('No se encontraron mensajes recibidos:', await response.json());
+                    } else {
+                        throw new Error(`Error en la respuesta: ${response.status}`);
+                    }
+                    return;
+                }
+
+                allMensajes = await response.json();
+                console.log('Mensajes enviados:', allMensajes);
+
+                if (Array.isArray(allMensajes) && allMensajes.length > 0) {
+                    mensajes = allMensajes;
+                    renderPage(currentPage);
+                } else {
+                    console.error('No se encontraron mensajes:', allMensajes);
+                }
+            } catch (error) {
+                console.error('Error al obtener los mensajes enviados:', error);
+            }
+        }
+
+        function renderPage(page) {
+            const start = (page - 1) * recordsPerPage;
+            const end = page * recordsPerPage;
+            const paginaMensajes = mensajes.slice(start, end);
+
+            const messagesList = document.getElementById('messagesList');
+            messagesList.innerHTML = '';
+
+            paginaMensajes.forEach((mensaje) => {
+                const messageItem = document.createElement('li');
+                messageItem.classList.add('message');
+                if (!mensaje.estado) {
+                    messageItem.classList.add('unread');
+                }
+
+                const destinatario= `${mensaje.nombre_destinatario}`;
+
+                messageItem.innerHTML = `
+                    <a href="#">
+                        <div class="header">
+                            <span class="from">${destinatario}</span>
+                            <span class="date">${new Date(mensaje.fecha_envio).toLocaleString()}</span>
+                        </div>
+                        <div class="title">
+                            ${truncateText(mensaje.contenido, 50)}
+                        </div>
+                        <div class="description">
+                            ${mensaje.contenido}
+                        </div>
+                    </a>
+                `;
+                messagesList.appendChild(messageItem);
+            });
+
+            document.getElementById('prevButton').disabled = currentPage === 1;
+            document.getElementById('nextButton').disabled = currentPage * recordsPerPage >= mensajes.length;
+        }
+
+        function truncateText(text, maxLength) {
+            return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+        }
+
+        document.getElementById('prevButton').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPage(currentPage);
+            }
+        });
+
+        document.getElementById('nextButton').addEventListener('click', () => {
+            if (currentPage * recordsPerPage < mensajes.length) {
+                currentPage++;
+                renderPage(currentPage);
+            }
+        });
+    });
+  </script>
+
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Selecciona "Cerrar sesión" si estás listo para finalizar tu sesión actual.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-primary" id="logoutButton">Cerrar sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
+        
+   <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            fetch('/api/logout', {
+                    method: 'POST',
+                    credentials: 'include' 
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al cerrar sesión');
+                    }
+                    window.location.href = '../login.html'; 
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al cerrar sesión.');
+                });
+                
+        });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        if (user) {
+            console.log(user); 
+
+            document.querySelectorAll('.user-name').forEach(element => {
+                element.textContent = `${user.nombre} ${user.apellido}`;
+            });
+
+            document.getElementById('user-email').textContent = user.correo;
+            
+
+        } else {
+            window.location.href = '../login.html';
+        }            
+    });
+  </script>  
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

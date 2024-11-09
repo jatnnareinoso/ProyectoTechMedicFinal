@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../design/css/register.css">
+    <title>Registro de Diagnóstico</title>
+</head>
+<body>
+    <div class="container">
+        <header>Diagnóstico</header>
+
+        <hr>
+
+        <form action="" method="POST" id="diagnosticoForm" enctype="multipart/form-data">
+            <div class="form first">
+                <div class="details">
+                    <div class="fields">
+        
+                        <div class="input-field">
+                            <label>Descripción del diagnóstico obtenido</label>
+                            <textarea name="descripcion" placeholder="Ingrese descripción del diagnóstico..." rows="6" required></textarea>
+                        </div>
+
+                        <div class="input-field" id="pruebasField">
+                            <label>Pruebas Realizadas</label>
+                            <button type="button" onclick="agregarPrueba()">Agregar Prueba</button>
+                            <div id="listaPruebas" style="margin-top: 10px;"></div>
+                        </div>
+                
+                        <div class="input-field">
+                            <label>Observación</label>
+                            <textarea name="observacion" placeholder="Ingrese observaciones adicionales..." rows="4"></textarea>
+                        </div>
+        
+                        <div class="input-field">
+                            <label>Subir Archivos</label>
+                            <input type="file" name="archivos" multiple accept=".jpg, .jpeg, .png, .pdf, .doc, .docx" />
+                            <small>Puedes subir imágenes, documentos en PDF o Word.</small>
+                        </div>
+                        <input type="hidden" name="estado" value="true">
+                        <input type="hidden" name="id_consulta" value="">
+                    </div>
+                </div>
+        
+                <div class="button-container">
+                    <button type="submit">GUARDAR DIAGNÓSTICO</button>
+                </div>  
+            </div>   
+        </form>
+        
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const idCita = urlParams.get('id_consulta');
+        
+            document.querySelector('input[name="id_consulta"]').value = idCita;
+        
+            let contadorPruebas = 0;
+        
+            function agregarPrueba() {
+                contadorPruebas++;
+                const listaPruebas = document.getElementById('listaPruebas');
+                const nuevaPrueba = document.createElement('div');
+                nuevaPrueba.innerHTML = `
+                    <div>
+                        <label>Prueba ${contadorPruebas}</label>
+                        <input type="text" name="prueba${contadorPruebas}" placeholder="Prueba" required>
+                        <br><label>Resultado</label>
+                        <input type="text" name="resultado${contadorPruebas}" placeholder="Resultado" required>
+                        <hr>
+                    </div>
+                `;
+                listaPruebas.appendChild(nuevaPrueba);
+            }
+        
+            document.getElementById('diagnosticoForm').addEventListener('submit', async function(event) {
+                event.preventDefault();
+        
+                const formData = new FormData(this);
+                const pruebasResultados = [];
+                const listaPruebasDivs = document.querySelectorAll('#listaPruebas > div');
+
+                listaPruebasDivs.forEach((div, i) => {
+                    const prueba = div.querySelector(`input[name="prueba${i + 1}"]`).value;
+                    const resultado = div.querySelector(`input[name="resultado${i + 1}"]`).value;
+                    pruebasResultados.push(`Prueba: ${prueba}, Resultado: ${resultado}`);
+                });
+
+                const resultado_pruebas = pruebasResultados.join('; ');
+                formData.append('resultado_pruebas', resultado_pruebas); // Agregar el resultado de las pruebas a FormData
+        
+                try {
+                    const response = await fetch('/api/diagnostico/registerDiagnostico', {
+                        method: 'POST',
+                        body: formData, 
+                    });
+        
+                    const result = await response.json();
+                    if (response.ok) {
+                        alert('Diagnóstico registrado exitosamente');
+                        window.location.href = './menu/listaConsultas.html';
+                    } else {
+                        alert(result.message);
+                    }
+                } catch (error) {
+                    console.error('Error al registrar el diagnóstico:', error);
+                }
+            });
+        </script>
+          
+
+</body>
+</html>

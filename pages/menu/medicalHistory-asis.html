@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TechMedic/Historial Clinico</title>
+    <script src="https://kit.fontawesome.com/c2b1422a44.js" crossorigin="anonymous"></script>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" 
+        rel="stylesheet">
+
+    <link href="../../design/css/pg-admin-1.css" rel="stylesheet">
+    <link href="../../design/css/pg-admin-2.css" rel="stylesheet">
+    <link href="../../design/css/doctor/medicalhistory.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .navbar-nav .nav-item .dropdown-menu {
+            min-width: 300px;
+        }
+        .img-profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../profileUser.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <img src="../../design/img/logo.png" alt="TechMedic Logo" class="img-fluid">
+                </div>
+                <div class="sidebar-brand-text mx-3">TechMedic</div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item">
+              <a class="nav-link" href="../profileUser.html">
+                <i class="fa-solid fa-user-nurse"></i>
+                  <span>Sobre Mi</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="../menu/listpacient-asis.html">
+                    <i class="fa-solid fa-bed"></i>
+                    <span>Pacientes</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../menu/listaCitas-asis.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Citas</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../menu/listaConsultas-asis.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Consultas</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../menu/calendarAsis.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Calendario</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="message-asis.html">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Mensajería</span>
+                </a>
+            </li>
+
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="form-container">
+                        <form action="../registerPC-asis.html">
+                            <div class="input-group">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span class="button-text d-none d-lg-inline">Registrar Paciente</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input id="searchInput" class="form-control bg-light border-0 small" placeholder="Búsqueda Paciente..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" id="searchButton">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            document.getElementById('searchButton').addEventListener('click', function (event) {
+                                event.preventDefault(); 
+                    
+                                const searchQuery = document.getElementById('searchInput').value.trim();
+                                if (searchQuery) {
+                                    localStorage.setItem('searchQuery', searchQuery); 
+                                    window.location.href = `listpacient-asis.html`;
+                                }
+                            });
+                    
+                            document.getElementById('searchInput').addEventListener('keypress', function (e) {
+                                if (e.key === 'Enter') {
+                                    e.preventDefault(); 
+                                    const searchQuery = document.getElementById('searchInput').value.trim();
+                                    if (searchQuery) {
+                                        localStorage.setItem('searchQuery', searchQuery); 
+                                        window.location.href = `listpacient-asis.html`; 
+                                    }
+                                }
+                            });
+                        });
+                    </script>
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <span class="badge badge-danger badge-counter"></span>
+                            </a>
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Notificaciones
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Ver todas las notificaciones</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <span class="badge badge-danger badge-counter"></span>
+                            </a>
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Centro de Mensajes
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="../../design/img/undraw_profile_1.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="../../design/img/undraw_profile_2.svg"
+                                            alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Leer otros mensajes</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="user-name mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <img class="img-profile rounded-circle"
+                                    src="../../design/img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="../profileUser.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <a class="dropdown-item" href="../editarUser.html">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Configuración
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Salir
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container">
+                    <div class="filters mb-4">
+                        <form id="filterForm" class="form-inline">
+                            <div class="form-group mr-3">
+                                <label for="startDate" class="mr-2">Desde:</label>
+                                <input type="date" id="startDate" class="form-control" placeholder="DD/MM/AAAA">
+                            </div>
+                            <div class="form-group mr-3">
+                                <label for="endDate" class="mr-2">Hasta:</label>
+                                <input type="date" id="endDate" class="form-control" placeholder="DD/MM/AAAA">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Filtrar</button>
+                        </form>
+                    </div>
+
+                    <section id="resume" class="resume">
+                        <div class="container" data-aos="fade-up">
+                        </div>
+                    </section>
+                </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const user = JSON.parse(localStorage.getItem('user'));
+                    
+                        if (user) {
+                            document.querySelectorAll('.user-name').forEach(element => {
+                                element.textContent = `${user.nombre} ${user.apellido}`;
+                            });
+                            
+                            cargarConsultas();
+                    
+                        } else {
+                            window.location.href = '../login.html';
+                        }
+                    });
+
+                    async function cargarConsultas() {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const idPaciente = urlParams.get('id_paciente');
+                        const idEspecialidad = urlParams.get('id_especialidad');
+                        const user = JSON.parse(localStorage.getItem('user'));
+                        const idUsuario = user.id_usuario;
+                
+                        try {
+                            const response = await fetch(`/api/historial/asistente/pacientes/${idPaciente}/especialidad/${idEspecialidad}/usuario/${idUsuario}`);
+                            const consultas = await response.json();
+                
+                            renderizarConsultas(consultas);
+            
+                            document.getElementById('filterForm').addEventListener('submit', (event) => {
+                                event.preventDefault();
+                                aplicarFiltros(consultas);
+                            });
+
+                        } catch (error) {
+                            console.error('Error al cargar las consultas:', error);
+                        }
+                    }
+
+                    function renderizarConsultas(consultas) {
+
+                        const contenedorConsultas = document.getElementById('resume');
+                        contenedorConsultas.innerHTML = ''; 
+            
+                        consultas.forEach(consulta => {
+                            const consultaDiv = document.createElement('div');
+                            consultaDiv.className = 'resume-item pb-0 col-12 col-md-6 mt-3';
+            
+                            let archivosHtml = '';
+                            if (consulta.diagnostico.rutas && consulta.diagnostico.rutas.length > 0) {
+
+                                archivosHtml = consulta.diagnostico.rutas.map(ruta => `
+                                    <a href="${ruta}" download>Descargar archivo</a>
+                                `).join('<br>');
+                            } else {
+                                archivosHtml = 'No hay archivos adjuntos';
+                            }
+            
+                            consultaDiv.innerHTML = `
+                                <h4>Dr. ${consulta.doctor}</h4>
+                                <h5>${new Date(consulta.fecha_consulta).toLocaleDateString()}</h5>
+                                <h4>Motivo de Consulta</h4>
+                                <p><em>${consulta.motivo}</em></p>
+                                <h4>Descripción</h4>
+                                <p>${consulta.descripcion}</p>
+                                <h4>Pruebas a realizar</h4>
+                                <p>${consulta.pruebas ? consulta.pruebas : 'No hay pruebas a realizar'}</p>
+                                <h4>Notas Externas</h4>
+                                <p>${consulta.notas_externas}</p>
+                                <h4>Diagnóstico</h4>
+                                <p><strong>Descripción:</strong> ${consulta.diagnostico.descripcion || 'No hay diagnóstico'}</p>
+                                <p><strong>Observación:</strong> ${consulta.diagnostico.observacion || 'No hay observación'}</p>
+                                <p><strong>Resultado de Pruebas:</strong> ${consulta.diagnostico.resultado_pruebas || 'Sin resultados'}</p>
+                                <p><strong>Estado:</strong> ${consulta.diagnostico.estado ? 'Activo' : 'Inactivo'}</p>
+                                <h4>Archivos del Diagnóstico</h4>
+                                <p>${archivosHtml}</p>
+                            `;
+            
+                            contenedorConsultas.appendChild(consultaDiv);
+                        });
+                    }
+                    
+                    function aplicarFiltros(consultas) {
+                        const startDate = document.getElementById('startDate').value;
+                        const endDate = document.getElementById('endDate').value;
+                    
+                        const start = startDate ? new Date(startDate) : null;
+                        let end = endDate ? new Date(endDate) : null;
+                    
+                        if (end) {
+                            end.setDate(end.getDate() + 1);
+                        }
+                    
+                        const consultasFiltradas = consultas.filter(consulta => {
+                            const fechaConsulta = new Date(consulta.fecha_consulta);
+                            return (!start || fechaConsulta >= start) && (!end || fechaConsulta < end);
+                        });
+                    
+                        renderizarConsultas(consultasFiltradas);
+                    }
+                
+                    document.addEventListener('DOMContentLoaded', cargarConsultas);
+                </script>
+                
+            </div>
+        </div>
+
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Selecciona "Cerrar sesión" si estás listo para finalizar tu sesión actual.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-primary" id="logoutButton">Cerrar sesión</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const user = JSON.parse(localStorage.getItem('user'));
+      
+              if (user) {
+                  console.log(user); 
+      
+                  document.querySelectorAll('.user-name').forEach(element => {
+                      element.textContent = `${user.nombre} ${user.apellido}`;
+                  });
+      
+                  document.getElementById('user-email').textContent = user.correo;
+                  document.getElementById('user-fecha-nacimiento').textContent = user.fecha_nacimiento;
+                  document.getElementById('user-celular').textContent = user.celular;
+                  document.getElementById('user-cedula').textContent = user.cedula;
+              } else {
+                 
+                  window.location.href = '../login.html';
+              }
+          });
+          </script>
+
+        <script>
+            document.getElementById('logoutButton').addEventListener('click', function() {
+                fetch('/api/logout', {
+                        method: 'POST',
+                        credentials: 'include' 
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error al cerrar sesión');
+                        }
+                        window.location.href = '../login.html'; 
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error al cerrar sesión.');
+                    });
+                    
+            });
+        </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../design/css/menu/recetaMedica.css">
+    <title>Registro Receta Médica</title>
+</head>
+<body>
+    <div class="container">
+        <header>Receta Médica</header>
+
+        <form id="registrationForm">
+            <div class="form first">
+                <div class="details">
+                    <div class="fields">
+                        <div class="input-field" id="nombreField">
+                            <label>Paciente</label>
+                            <input type="text" name="nombre" id="nombrePaciente" placeholder="Nombre del paciente" readonly>
+                        </div>
+
+                        <div class="input-field" id="doctorField">
+                            <label>Doctor</label>
+                            <select id="select-doctor" class="form-control">
+                                <option value="">Selecciona Doctor</option>
+                            </select>
+                        </div>
+
+                        <div class="details" id="medicamento-list">
+                            <div class="fields medicamento-item">
+                                <div class="form-group">
+                                    <label for="medicamento">Medicamento <span>*</span></label>
+                                    <input type="text" name="medicamento" placeholder="Ingrese..." required>
+                                </div>
+
+                                <div class="form-group grid">
+                                    <div>
+                                        <label for="uso">Uso</label>
+                                        <input type="text" name="uso" placeholder="Ingrese el uso del medicamento" required>
+                                    </div>
+                                    <div>
+                                        <label for="cantidad">Cantidad</label>
+                                        <input type="text" name="cantidad" placeholder="Ingrese la cantidad" required>
+                                    </div>
+                                    <div>
+                                        <label for="frecuencia">Frecuencia</label>
+                                        <input type="text" name="frecuencia" placeholder="Ingrese la frecuencia" required>
+                                    </div>
+                                    <div>
+                                        <label for="tiempo">Tiempo</label>
+                                        <input type="text" name="tiempo" placeholder="Ingrese el tiempo" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label for="observaciones" class="form-label">Observaciones</label>
+                        <textarea id="observaciones" name="observaciones" class="textarea" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <button type="button" id="submitBtn">HACER RECETA</button>
+                </div>  
+            </div>   
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', loadRecetaInfo);
+
+        const user = JSON.parse(localStorage.getItem('user'));
+        const urlParams = new URLSearchParams(window.location.search);
+        const idPaciente = urlParams.get('id_paciente');
+        let idDoctor = null;
+        const idUsuario = user.id_usuario;
+
+        async function loadRecetaInfo() {
+            if (!idPaciente) {
+                alert('ID de paciente no encontrado en la URL');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/recetas/paciente/${idPaciente}`);
+                const pacienteInfo = await response.json();
+
+                if (response.ok) {
+                    document.getElementById('nombrePaciente').value = pacienteInfo.nombre_paciente;
+                } else {
+                    alert(pacienteInfo.message);
+                }
+            } catch (error) {
+                console.error('Error al cargar información del paciente:', error);
+            }
+
+            obtenerDoctor(idUsuario);
+        }
+
+        function obtenerDoctor(idUsuario) {
+            const selectDoctor = document.getElementById('select-doctor');
+
+            fetch(`/api/cita/doctoresAsistentes?id_usuario=${idUsuario}`)
+                .then(response => response.json())
+                .then(doctores => {
+                    doctores.forEach(doctor => {
+                        const option = document.createElement('option');
+                        option.value = doctor.id_doctor;
+                        option.textContent = `${doctor.nombre} ${doctor.apellido}`;
+                        selectDoctor.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Error al obtener doctores:', error));
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', async () => {
+            const idDoctor = document.getElementById('select-doctor').value;
+            const recetaData = {
+                id_doctor: idDoctor,
+                id_paciente: idPaciente,
+                observacion: document.getElementById('observaciones').value,
+                medicamentos: []
+            };
+
+            document.querySelectorAll('.medicamento-item').forEach(item => {
+                const medicamento = {
+                    nombre: item.querySelector('[name="medicamento"]').value,
+                    uso: item.querySelector('[name="uso"]').value,
+                    cantidad: item.querySelector('[name="cantidad"]').value,
+                    frecuencia: item.querySelector('[name="frecuencia"]').value,
+                    tiempo: item.querySelector('[name="tiempo"]').value
+                };
+                recetaData.medicamentos.push(medicamento);
+            });
+
+            try {
+                const response = await fetch('/api/recetas/registrarReceta', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(recetaData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('Receta registrada exitosamente');
+                    window.location.href = 'recetaConfirmacion.html'; 
+                } else {
+                    alert('Error al registrar la receta: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Error al registrar receta:', error);
+                alert('Ocurrió un error al registrar la receta.');
+            }
+        });
+
+        function updateButtonVisibility() {
+            document.querySelectorAll('.medicamento-item .button-group').forEach(buttonGroup => buttonGroup.remove());
+
+            const lastItem = document.querySelector('#medicamento-list').lastElementChild;
+            const buttonGroup = document.createElement('div');
+            buttonGroup.classList.add('button-group');
+            buttonGroup.innerHTML = `
+                <button type="button" class="add-button">+</button>
+                <button type="button" class="cancel-button">-</button>
+            `;
+            lastItem.appendChild(buttonGroup);
+
+            buttonGroup.querySelector('.add-button').addEventListener('click', addMedicamento);
+            buttonGroup.querySelector('.cancel-button').addEventListener('click', removeMedicamento);
+        }
+
+        function addMedicamento() {
+            const medicamentoList = document.getElementById('medicamento-list');
+            
+            if (medicamentoList.children.length >= 5) {
+                alert("No se pueden agregar más de 5 medicamentos.");
+                return;
+            }
+
+            const medicamentoItem = document.querySelector('.medicamento-item');
+            const newMedicamentoItem = medicamentoItem.cloneNode(true);
+            newMedicamentoItem.querySelectorAll('input').forEach(input => input.value = '');
+
+            medicamentoList.appendChild(newMedicamentoItem);
+            updateButtonVisibility();
+        }
+
+        function removeMedicamento() {
+            const medicamentoList = document.getElementById('medicamento-list');
+            if (medicamentoList.children.length > 1) {
+                medicamentoList.removeChild(medicamentoList.lastElementChild);
+                updateButtonVisibility();
+            }
+        }
+
+        updateButtonVisibility();
+    </script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TechMedic - Accesos</title>
+    <script src="https://kit.fontawesome.com/c2b1422a44.js" crossorigin="anonymous"></script>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" 
+        rel="stylesheet">
+
+    <link href="../design/css/pg-admin-1.css" rel="stylesheet">
+    <link href="../design/css/pg-admin-2.css" rel="stylesheet">
+    <link href="../design/css/menu/accessUser.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" 
+    integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .navbar-nav .nav-item .dropdown-menu {
+            min-width: 300px;
+        }
+        .img-profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="profileAdmin.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <img src="../../design/img/logo_only.png" alt="TechMedic Logo" class="img-fluid">
+                </div>
+                <div class="sidebar-brand-text mx-3">TechMedic</div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="profileAdmin.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span>Sobre Mi</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="./menu/listPaDcAd.html">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    <span>Usuarios</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./accessUser.html">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Accesos</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./menu/especialidades.html">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Especialidades</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./menu/message-user.html">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Mensajería</span>
+                </a>
+            </li>
+
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="form-container">
+                        <form action="register.html">
+                            <div class="input-group">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span class="button-text d-none d-lg-inline">Registrar Usuario</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input id="searchInput" class="form-control bg-light border-0 small" placeholder="Búsqueda Usuario..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" id="searchButton">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            document.getElementById('searchButton').addEventListener('click', function (event) {
+                                event.preventDefault(); 
+                                const searchQuery = document.getElementById('searchInput').value.trim();
+                                if (searchQuery) {
+                                    localStorage.setItem('searchQuery', searchQuery); 
+                                    window.location.href = `./menu/listPaDcAd.html`;
+                                }
+                            });
+                    
+                            document.getElementById('searchInput').addEventListener('keypress', function (e) {
+                                if (e.key === 'Enter') {
+                                    e.preventDefault(); 
+                                    const searchQuery = document.getElementById('searchInput').value.trim();
+                                    if (searchQuery) {
+                                        localStorage.setItem('searchQuery', searchQuery); 
+                                        window.location.href = `./menu/listPaDcAd.html`; 
+                                    }
+                                }
+                            });
+                        });
+                    </script>
+                    
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <span class="badge badge-danger badge-counter"></span>
+                            </a>
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Notificaciones
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Ver todas las notificaciones</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <span class="badge badge-danger badge-counter"></span>
+                            </a>
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Centro de Mensajes
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="../../design/img/undraw_profile_1.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="../../design/img/undraw_profile_2.svg"
+                                            alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Leer otros mensajes</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="user-name mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <img class="img-profile rounded-circle"
+                                    src="../../design/img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="profileAdmin.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <a class="dropdown-item" href="editarAdmin.html">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Configuración
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Salir
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+                <div class="main-body">
+                    <div id="access_list_container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm">
+                    </div>
+
+                    <div id="notificationModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:1px solid #ccc; padding:20px; z-index:1000;">
+                        <h4 id="label-nombre-paciente"></h4>
+
+                        <h6 id="label-modulo"></h6>
+                        <p id="label-motivo" class="my-5"></p>
+
+                        <div class="d-flex justify-content-end">
+                            <button onclick="closeModalMotivo()">Cerrar</button>
+                        </div>
+                    </div>
+            
+                    <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            fetch(`/api/accesos/solicitudes`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al obtener los detalles del paciente');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    
+                    renderAccessListItems(data)
+                })
+        });
+
+        function renderAccessListItems(accessListItems) {
+            const accessListContainer = document.querySelector('#access_list_container');
+
+            accessListItems.forEach((accessItem) => {
+                const taskListBox = document.createElement('div');
+                taskListBox.setAttribute('data-id-acc-usuario', accessItem.id_acc_usuario)
+
+                taskListBox.innerHTML= `
+                    <div class="col mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">${accessItem.nombre_doctor.trim()} ${accessItem.apellido_doctor.trim()}</h5>
+                                <p class="text-secondary mb-1">${accessItem.modulo}</p>
+                            </div>
+                            <div class="card-footer">
+                                <button id="btn-motivo" class="btn btn-light btn-sm bg-white has-icon btn-block" type="button" >
+                                    <i class="material-icons">inf.</i> MOTIVO
+                                </button>
+
+                                <button class="btn btn-light btn-sm bg-white has-icon ml-2" type="button" data-toggle="modal" data-target="#approve-modal-${accessItem.id_acc_usuario}">
+                                    <i class="mdi mdi-check align-middle font-size-18 text-success"></i>
+                                </button> 
+
+                                <button class="btn btn-light btn-sm bg-white has-icon ml-2" type="button" data-toggle="modal" data-target="#reject-modal-${accessItem.id_acc_usuario}">
+                                    <i class="mdi mdi-trash-can-outline align-middle font-size-18 text-danger"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="approve-modal-${accessItem.id_acc_usuario}" tabindex="-1" role="dialog" aria-labelledby="approveModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="approveModalLabel">¿Estás seguro de querer aprobar la solicitud?</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p class="mb-1"><strong> Usuario:</strong> ${accessItem.nombre_doctor.trim()} ${accessItem.apellido_doctor.trim()}</p>
+                                    <p class="mb-1"><strong> Especialidad:</strong> ${accessItem.modulo}</p>
+                                    <p class="text-secondary mt-3"> Selecciona "Aceptar" para confirmar. </p>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                    <button id="btn-approve" class="btn btn-primary" type="button" >Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="reject-modal-${accessItem.id_acc_usuario}" tabindex="-1" role="dialog" aria-labelledby="rejectModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="rejectModalLabel">¿Estás seguro de querer denegar la solicitud?</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="mb-1"><strong> Usuario:</strong> ${accessItem.nombre_doctor.trim()} ${accessItem.apellido_doctor.trim()}</p>
+                                    <p class="mb-1"><strong> Especialidad:</strong> ${accessItem.modulo}</p>
+                                    <p class="text-secondary mt-3"> Selecciona "Aceptar" para confirmar. </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                    <button id="btn-reject" class="btn btn-primary" type="button" >Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                // Selecciona el botón y agrega el evento click con accessItem como parámetro
+                const buttonMotivo = taskListBox.querySelector('button#btn-motivo');
+                buttonMotivo.onclick = () => openModalMotivo(accessItem);
+
+                const buttonApprove = taskListBox.querySelector('button#btn-approve');
+                buttonApprove.onclick = () => modifyAccessRequest(accessItem, true);
+
+                const buttonReject = taskListBox.querySelector('button#btn-reject');
+                buttonReject.onclick = () => modifyAccessRequest(accessItem, false);
+
+                accessListContainer.appendChild(taskListBox);
+            })
+
+        }
+
+        async function modifyAccessRequest(accessItem, status){
+            try {
+                    const response = await fetch(`/api/accesos/solicitudes/${accessItem.id_acc_usuario}`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ estado: status })
+                    });
+                    
+                    const data = await response.json();
+
+                    
+                    if (response.ok) {
+                        closeConfirmModal(accessItem, status);
+                        removeModifiedAccess(accessItem.id_acc_usuario)
+                        
+                        alert(`Solicitud de acceso ${status ? 'aceptada' : 'denegada' } correctamente`)
+                        
+                    } 
+                    
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+            
+        function closeConfirmModal(accessItem, status) {
+            const modalId = `#${status ? 'approve':'reject'}-modal-${accessItem.id_acc_usuario}`;
+            $(modalId).modal('hide');
+            $('.modal-backdrop').remove();
+        }
+
+        function removeModifiedAccess(id_acc_usuario){
+            const requestedAccess = document.querySelector(`div[data-id-acc-usuario="${id_acc_usuario}"]`);
+
+            if (requestedAccess) requestedAccess.remove();
+        }
+
+
+        function openModalMotivo(accessItem) {
+            document.getElementById('notificationModal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+
+            const labelPatientName = document.querySelector('#label-nombre-paciente')
+            const labelModulo = document.querySelector('#label-modulo')
+            const labelMotivo = document.querySelector('#label-motivo')
+
+            if (labelPatientName) labelPatientName.textContent = `${accessItem.nombre_paciente.trim()} ${accessItem.apellido_paciente.trim()}`
+            if (labelModulo) labelModulo.textContent = `${accessItem.modulo}`
+            if (labelMotivo) labelMotivo.textContent = `${accessItem.motivo}`
+
+        }
+        
+        function closeModalMotivo() {
+            document.getElementById('notificationModal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+        </script>
+
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Selecciona "Cerrar sesión" si estás listo para finalizar tu sesión actual.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-primary" id="logoutButton">Cerrar sesión</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById('logoutButton').addEventListener('click', function() {
+                fetch('/api/logout', {
+                        method: 'POST',
+                        credentials: 'include'
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error al cerrar sesión');
+                        }
+                       
+                        window.location.href = 'login.html'; 
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error al cerrar sesión.');
+                    });
+                    
+            });
+        </script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const user = JSON.parse(localStorage.getItem('user'));
+    
+                if (user) {
+                    console.log(user); 
+    
+                    document.querySelectorAll('.user-name').forEach(element => {
+                        element.textContent = `${user.nombre} ${user.apellido}`;
+                    });
+    
+                } else {
+                   
+                    window.location.href = 'login.html';
+                }
+            });
+    
+            document.addEventListener('DOMContentLoaded', loadUserData);
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../design/css/register.css">
+    <title>Registro Consulta Clinica</title>
+</head>
+<body>
+    <div class="container">
+        <header>Consulta de Emergencia</header>
+
+        <form action="" method="POST" id="registrationForm">
+            <div class="form first">
+                <div class="details">
+                    <div class="fields">
+                        <div class="input-field" id="nombreField">
+                            <label>Nombre</label>
+                            <input type="text" name="nombre" id="nombrePaciente" placeholder="Nombre del paciente" readonly>
+                        </div>
+                
+                        <div class="input-field" id="cedulaField">
+                            <label>Número de Identidad/Pasaporte</label>
+                            <input type="text" name="cedula" id="cedulaPaciente" placeholder="Número de identidad/pasaporte" readonly>
+                        </div>
+
+                        <div class="input-field" id="especialidadField">
+                            <label>Especialidad</label>
+                            <select name="especialidad" id="especialidad" required>
+                                <option value="">Seleccione una especialidad</option>
+                            </select>
+                        </div>
+                
+                        <div class="input-field" id="motivoField">
+                            <label>Motivo de Consulta</label>
+                            <textarea name="motivo" placeholder="Ingrese motivo de consulta..." rows="6" required></textarea>
+                        </div>
+
+                        <div class="input-field" id="condicionField">
+                            <label>¿Tiene alguna condición médica preexistente?</label>
+                            <select name="condicion" id="condicion" onchange="toggleDetail('detalleCondicion')">
+                                <option value="">Seleccione</option>
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            <div id="detalleCondicion" style="display:none;">
+                                <label>Detalles:</label>
+                                <textarea name="detalleCondicion" placeholder="Ingrese la condicion medica..." rows="4" style="width: 400px; height: 60px;"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="input-field" id="notasExternasField">
+                            <label>Notas Externas</label>
+                            <textarea name="notasexternas" placeholder="Ingrese notas externas..." rows="6" required class="fixed-height"></textarea>
+                        </div>
+
+                        <div class="input-field" id="medicamentosField">
+                            <label>¿Está tomando algún medicamento actualmente?</label>
+                            <select name="medicamentos" id="medicamentos" onchange="toggleDetail('detalleMedicamentos')">
+                                <option value="">Seleccione</option>
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            <div id="detalleMedicamentos" style="display:none;">
+                                <label>Detalles:</label>
+                                <textarea name="detalleMedicamentos" placeholder="Ingrese los medicamentos..." rows="4" style="width: 400px; height: 60px;"></textarea>
+                            </div>
+                        </div>
+                
+                        <div class="input-field" id="notasInternasField">
+                            <label>Notas Internas</label>
+                            <textarea name="notasinternas" placeholder="Ingrese notas internas..." rows="6" class="fixed-height"></textarea>
+                        </div>
+
+                        <div class="input-field" id="sintomasField">
+                            <label>¿Cuándo comenzaron los síntomas?</label>
+                            <input type="text" name="sintomas" placeholder="Ingrese el tiempo" required>
+                        </div>
+
+                        <div class="input-field" id="pruebasField">
+                            <label>Pruebas a Realizar</label>
+                            <div style="margin-top: 10px;">
+                                <input type="text" id="nuevaPrueba" placeholder="Prueba" />
+                                <button type="button" onclick="agregarPruebaARealizar()">Agregar Prueba</button>
+                            </div>
+                            <textarea id="listaPruebas" name="pruebas" placeholder="Pruebas a realizar..." rows="6" readonly style="margin-top: 10px; width: 100%;"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="button-container" type="submit">
+                    <button type="btntext">GUARDAR CONSULTA</button>
+                </div>  
+            </div>   
+        </form>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', loadCitaInfo);
+
+        async function loadCitaInfo() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const idCita = urlParams.get('id_cita');
+
+            if (!idCita) {
+                alert('ID de cita no encontrado en la URL');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/consulta/informacion-cita/${idCita}`);
+                const citaInfo = await response.json();
+
+                if (response.ok) {
+                    document.getElementById('nombrePaciente').value = citaInfo.nombre_paciente;
+                    document.getElementById('cedulaPaciente').value = citaInfo.cedula;
+                    const especialidadSelect = document.getElementById('especialidad');
+                    citaInfo.especialidades.forEach(especialidad => {
+                        const option = document.createElement('option');
+                        option.value = especialidad.id_especialidad;
+                        option.textContent = especialidad.nombre_especialidad;
+                        especialidadSelect.appendChild(option);
+                    });
+                } else {
+                    alert(citaInfo.message);
+                }
+            } catch (error) {
+                console.error('Error al cargar información de la cita:', error);
+            }
+        }
+
+        function toggleDetail(detailId) {
+            const select = document.getElementById(detailId === 'detalleCondicion' ? 'condicion' : 'medicamentos');
+            const detailDiv = document.getElementById(detailId);
+                
+            detailDiv.style.display = select.value === 'si' ? 'block' : 'none';
+        }
+
+        let contadorPruebasARealizar = 0;
+
+        function agregarPruebaARealizar() {
+            const nuevaPruebaInput = document.getElementById('nuevaPrueba');
+            const listaPruebas = document.getElementById('listaPruebas');
+            
+            const nuevaPrueba = nuevaPruebaInput.value.trim();
+            if (nuevaPrueba) {
+                contadorPruebasARealizar++;
+                listaPruebas.value += `Prueba a realizar ${contadorPruebasARealizar}: ${nuevaPrueba}\n`;
+                nuevaPruebaInput.value = '';
+            } else {
+                alert('Por favor, ingrese el nombre de la prueba a realizar.');
+            }
+        }
+
+        /*function agregarPruebaRealizada() {
+            contadorPruebasRealizadas++;
+            const listaPruebasRealizadas = document.getElementById('listaPruebasRealizadas');
+            const nuevaPruebaRealizada = document.createElement('div');
+            nuevaPruebaRealizada.innerHTML = `
+                <div class="prueba-div">
+                    <label>Prueba Realizada ${contadorPruebasRealizadas}</label>
+                    <input type="text" name="prueba${contadorPruebasRealizadas}" placeholder="Prueba" required>
+                    <br><label>Resultado</label>
+                    <input type="text" name="resultado${contadorPruebasRealizadas}" placeholder="Resultado" required>
+                    <hr>
+                </div>
+            `;
+            listaPruebasRealizadas.appendChild(nuevaPruebaRealizada);
+        }*/
+
+        document.getElementById('registrationForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+        
+            const motivo = this.motivo.value;
+            const detallesCondicion = this.condicion.value === 'si' ? this.detalleCondicion.value : '';
+            const detallesMedicamentos = this.medicamentos.value === 'si' ? this.detalleMedicamentos.value : '';
+            const sintomas = this.sintomas.value;
+            const notasExternas = this.notasexternas.value;
+            const notasInternas = this.notasinternas.value;
+            const pruebas = document.getElementById('listaPruebas').value;
+        
+            const descripcion = `
+                ${detallesCondicion ? 'Condición médica preexistente: ' + detallesCondicion + '. ' : ''}
+                ${detallesMedicamentos ? 'Medicamentos que toma: ' + detallesMedicamentos + '. ' : ''}
+                Hace que tiempo empezaron los síntomas: ${sintomas}.
+            `.trim();
+        
+            const fecha_hora = new Date().toISOString();
+            const estado = 'activo';
+            const id_cita = new URLSearchParams(window.location.search).get('id_cita');
+            const id_especialidad = document.getElementById('especialidad').value;
+        
+            /*const pruebasResultados = [];
+            const listaPruebasDivs = document.querySelectorAll('#listaPruebasRealizadas > div');
+            
+        
+            listaPruebasDivs.forEach((div, index) => {
+                const prueba = div.querySelector(`input[name="prueba${index + 1}"]`).value;
+                const resultado = div.querySelector(`input[name="resultado${index + 1}"]`).value;
+                pruebasResultados.push(`Prueba: ${prueba}, Resultado: ${resultado}`);
+            });
+        
+            const resultados_pruebas = pruebasResultados.join('; ');*/
+        
+            const requestBody = {
+                motivo,
+                descripcion,
+                fecha_hora,
+                estado: true,
+                id_cita,
+                notas_internas: notasInternas,
+                notas_externas: notasExternas,
+                pruebas,
+                /*resultados_pruebas, */
+                id_especialidad
+            };
+        
+            try {
+                const response = await fetch('/api/consulta/registerConsulta', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(requestBody)
+                });
+        
+                const result = await response.json();
+                if (response.ok) {
+                    alert('Consulta guardada exitosamente');
+                    window.location.href = './menu/listaConsultas.html';
+                } else {
+                    alert(result.message);
+                }
+            } catch (error) {
+                console.error('Error al guardar la consulta:', error);
+            }
+        });
+
+    </script>
+
+</body>
+</html>

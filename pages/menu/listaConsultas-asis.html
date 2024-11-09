@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TechMedic - Consultas</title>
+    
+    <script src="https://kit.fontawesome.com/c2b1422a44.js" crossorigin="anonymous"></script>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" 
+        rel="stylesheet">
+
+    <link href="/design/css/pg-admin-1.css" rel="stylesheet">
+    <link href="/design/css/pg-admin-2.css" rel="stylesheet">
+    <link href="/design/css/doctor/consulta.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<style>
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1050; 
+        padding: 20px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4); 
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 90%;
+        max-width: 600px; 
+        height: auto; 
+        max-height: 600px; 
+        overflow-y: auto; 
+        border-radius: 8px; 
+    }
+
+    .close {
+        color: #aaa; 
+        float: right;
+        font-size: 28px;
+        font-weight: bold; 
+        cursor: pointer; 
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black; 
+        text-decoration: none; 
+        cursor: pointer; 
+    }
+
+    h2 {
+        color: #333; 
+        font-size: 24px;
+        margin-bottom: 20px; 
+    }
+
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        color: #555;
+    }
+
+    select,
+    input[type="datetime-local"] {
+        width: 100%;
+        padding: 10px; 
+        margin-bottom: 15px;
+        border: 1px solid #ccc; 
+        border-radius: 4px;
+        font-size: 16px; 
+        transition: border 0.3s; 
+    }
+
+    select:focus,
+    input[type="datetime-local"]:focus {
+        border-color: #66afe9; 
+        outline: none;
+    }
+
+    .edit-consulta-btn {
+        background-color: whitesmoke;  
+        border: none;    
+        transition: background-color 0.3s;
+    }
+
+
+
+
+</style>
+
+
+<body id="page-top">
+    <div id="wrapper">
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../profileUser.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <img src="../../design/img/logo.png" alt="TechMedic Logo" class="img-fluid">
+                </div>
+                <div class="sidebar-brand-text mx-3">TechMedic</div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item">
+              <a class="nav-link" href="../profileUser.html">
+                <i class="fa-solid fa-user-nurse"></i>
+                  <span>Sobre Mi</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="../menu/listpacient-asis.html">
+                    <i class="fa-solid fa-bed"></i>
+                    <span>Pacientes</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../menu/listaCitas-asis.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Citas</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="listaConsultas-asis.html">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Consultas</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../menu/calendarAsis.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Calendario</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="message-asis.html">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Mensajería</span>
+                </a>
+            </li>
+
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="form-container">
+                        <form action="../registerPC-asis.html">
+                            <div class="input-group">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span class="button-text d-none d-lg-inline">Registrar Paciente</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input id="searchInput" class="form-control bg-light border-0 small" placeholder="Búsqueda Paciente..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" id="searchButton">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            document.getElementById('searchButton').addEventListener('click', function (event) {
+                                event.preventDefault(); 
+                    
+                                const searchQuery = document.getElementById('searchInput').value.trim();
+                                if (searchQuery) {
+                                    localStorage.setItem('searchQuery', searchQuery); 
+                                    window.location.href = `./menu/listpacient-asis.html`;
+                                }
+                            });
+                    
+                            document.getElementById('searchInput').addEventListener('keypress', function (e) {
+                                if (e.key === 'Enter') {
+                                    e.preventDefault(); 
+                                    const searchQuery = document.getElementById('searchInput').value.trim();
+                                    if (searchQuery) {
+                                        localStorage.setItem('searchQuery', searchQuery);
+                                        window.location.href = `./menu/listpacient-asis.html`; 
+                                    }
+                                }
+                            });
+                        });
+                    </script>
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="user-name mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <img class="img-profile rounded-circle"
+                                    src="../../design/img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="../profileUser.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <a class="dropdown-item" href="../editarUser.html">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Configuración
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Salir
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main-box clearfix">
+                            <div class="filters mb-4">
+                                <form id="filterForm" class="form-inline">
+                                    <div class="form-group mr-3">
+                                        <label for="startDate" class="mr-2">Desde:</label>
+                                        <input type="date" id="startDate" class="form-control">
+                                    </div>
+                                    <div class="form-group mr-3">
+                                        <label for="endDate" class="mr-2">Hasta:</label>
+                                        <input type="date" id="endDate" class="form-control">
+                                    </div>
+                                    <div class="form-group mr-3">
+                                        <label for="filterStatus" class="mr-2">Estado:</label>
+                                        <select id="filterStatus" class="form-control">
+                                            <option value="">Todos</option>
+                                            <option value="active">Activo</option>
+                                            <option value="inactive">Inactivo</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" id="btn-filtrar" class="btn btn-primary">Filtrar</button>
+                                </form>
+                            </div>
+                
+                            <div class="table-responsive">
+                                <table class="table user-list">
+                                    <thead>
+                                        <tr>
+                                            <th> <span>Paciente</span></th>
+                                            <th> <span>Especialidad</span></th>
+                                            <th> <span>Motivo Consulta</span></th>
+                                            <th><span>Fecha y Hora</span></th>
+                                            <th class="text-center"><span>Estado</span></th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabla-consultas"></tbody>
+                                </table>
+                                <center>
+                                    <div class="btn-next">
+                                        <button id="prevButton" class="btn btn-primary" disabled>Anterior</button>
+                                        <button id="nextButton" class="btn btn-primary">Siguiente</button>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="editConsultaModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeModal">&times;</span>
+                        <h2>Editar Consulta</h2>
+                        
+                        <label for="editPaciente">Paciente:</label>
+                        <select id="editPaciente" disabled></select>
+
+                        <label for="editDoctor">Doctor:</label>
+                        <input id="editDoctor" disabled>
+                        
+                        <label for="editEspecialidad">Especialidad:</label>
+                        <select id="editEspecialidad" disabled></select>
+                
+                        <label for="editMotivo">Motivo:</label>
+                        <input id="editMotivo" required>
+                
+                        <label for="editDescripcion">Descripcion:</label>
+                        <input id="editDescripcion" required>
+                
+                        <label for="editFechaHora">Fecha y Hora:</label>
+                        <input type="datetime-local" id="editFechaHora" required>
+
+                        <label for="editNotasInternas">Notas Internas:</label>
+                        <input id="editNotasInternas" required>
+
+                        <label for="editNotasExternas">Notas Externas:</label>
+                        <input id="editNotasExternas" required>
+
+                        <label for="editPruebas">Pruebas:</label>
+                        <input id="editPruebas" required>
+                
+                        <label for="editEstado">Estado:</label>
+                        <select id="editEstado" required>
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                        </select>
+                
+                        <button type="submit" id="btn-actualizar" class="btn btn-primary">Guardar Cambios</button>
+                    </div>
+                </div>
+                
+                <script>
+                    function cerrarModal() {
+                        document.getElementById('editConsultaModal').style.display = 'none';
+                    }
+                
+                    document.addEventListener('DOMContentLoaded', async () => {
+                        let currentPage = 1;
+                        const recordsPerPage = 5;
+                        let consultas = [];
+                        let allConsultas = [];
+                
+                        const user = JSON.parse(localStorage.getItem('user'));
+                
+                        if (!user || !user.id_usuario) {
+                            window.location.href = '../login.html';
+                            return;
+                        }
+                
+                        const idUsuario = user.id_usuario;
+
+                        cargarConsultas(idUsuario)
+                
+                        async function cargarConsultas(idUsuario) {
+                            try {
+                                const response = await fetch(`/api/consulta/consultasAsistente?id_usuario=${idUsuario}`);
+                                allConsultas = await response.json();
+                                console.log(allConsultas);
+                                
+                                if (Array.isArray(allConsultas) && allConsultas.length > 0) {
+                                    consultas = allConsultas;
+                                    renderPage(currentPage);
+                                } else {
+                                    console.error('No se encontraron consultas:', allConsultas);
+                                }
+                            } catch (error) {
+                                console.error('Error al obtener las consultas:', error);
+                            }
+                        }
+
+                        
+                        console.log(consultas);
+                
+                        function renderPage(page) {
+                            const start = (page - 1) * recordsPerPage;
+                            const end = page * recordsPerPage;
+                            const paginaConsultas = consultas.slice(start, end);
+                    
+                            const tablaConsultas = document.getElementById('tabla-consultas');
+                            tablaConsultas.innerHTML = '';
+                    
+                            paginaConsultas.forEach((consulta) => {
+
+                                const editUrl = `../registerDiagnostico-asis.html?id_consulta=${consulta.id_consulta}`;
+
+                                const row = document.createElement('tr');
+                                row.innerHTML = `
+                                    <td>${consulta.nombre_paciente}</td>
+                                    <td>${consulta.especialidad}</td>
+                                    <td>${consulta.motivo}</td>
+                                    <td>${new Date(consulta.fecha_consulta).toLocaleString()}</td>
+                                    <td>${consulta.estado ? 'Activo' : 'Inactivo'}</td>
+                                    <td style="width: 10%; text-align: center;">
+                                        <button class="edit-consulta-btn table-link" data-id-consulta="${consulta.id_consulta}">
+                                            <span class="fa-stack fa-sm">
+                                                <i class="fa fa-square fa-stack-2x"></i>
+                                                <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </button>
+                                        <a href="${editUrl}" class="table-link" style="margin-right: 8px;">
+                                            <span class="fa-stack fa-sm">
+                                                <i class="fa fa-square fa-stack-2x"></i>
+                                                <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </a>
+                                    </td>
+                                `;
+                                tablaConsultas.appendChild(row);
+                    
+                                row.querySelector('.edit-consulta-btn').addEventListener('click', function (event) {
+                                    const id_consulta = event.currentTarget.getAttribute('data-id-consulta');
+                                    abrirModal(id_consulta);
+                                });
+                            });
+                    
+                            document.getElementById('prevButton').disabled = currentPage === 1;
+                            document.getElementById('nextButton').disabled = currentPage * recordsPerPage >= consultas.length;
+                        }
+                
+                        document.getElementById('prevButton').addEventListener('click', () => {
+                            if (currentPage > 1) {
+                                currentPage--;
+                                renderPage(currentPage);
+                            }
+                        });
+                
+                        document.getElementById('nextButton').addEventListener('click', () => {
+                            if (currentPage * recordsPerPage < consultas.length) {
+                                currentPage++;
+                                renderPage(currentPage);
+                            }
+                        });
+
+                        document.getElementById('filterForm').addEventListener('submit', (event) => {
+                            event.preventDefault();
+                            aplicarFiltros();
+                        });
+
+                        function aplicarFiltros() {
+                            const startDate = document.getElementById('startDate').value;
+                            const endDate = document.getElementById('endDate').value;
+                            const estado = document.getElementById('filterStatus').value;
+                        
+                            consultas = allConsultas.filter(consulta => {
+                                const consultaFecha = new Date(consulta.fecha_consulta);
+                                
+                                const adjustedEndDate = endDate ? new Date(new Date(endDate).setDate(new Date(endDate).getDate() + 1)) : null;
+                        
+                                const cumpleFecha = (!startDate || consultaFecha >= new Date(startDate)) &&
+                                                    (!adjustedEndDate || consultaFecha < adjustedEndDate); 
+                                const cumpleEstado = !estado || (estado === 'active' ? consulta.estado : !consulta.estado);
+                        
+                                return cumpleFecha && cumpleEstado;
+                            });
+                        
+                            currentPage = 1;
+                            renderPage(currentPage);
+                        }
+                
+                        let currentEditId = null;
+                
+                        async function abrirModal(id_consulta) {
+                            try {
+                                const response = await fetch(`/api/consulta/consultaId/${id_consulta}`);
+                                const consulta = await response.json();
+                    
+                                if (consulta) {
+                                    currentEditId = consulta.id_consulta;
+
+                                    const fechaHora = new Date(consulta.fecha_consulta);
+                                    const localFechaHora = new Date(fechaHora.getTime() - (fechaHora.getTimezoneOffset() * 60000));
+                                    document.getElementById('editFechaHora').value = localFechaHora.toISOString().slice(0, 16);
+                                    document.getElementById('editDoctor').value = consulta.doctor;
+                                    document.getElementById('editMotivo').value = consulta.motivo;
+                                    document.getElementById('editDescripcion').value = consulta.descripcion;
+                                    document.getElementById('editNotasInternas').value = consulta.notas_internas;
+                                    document.getElementById('editNotasExternas').value = consulta.notas_externas;
+                                    document.getElementById('editPruebas').value = consulta.pruebas;
+                                    document.getElementById('editEstado').value = consulta.estado ? 'true' : 'false';
+                    
+                                    await cargarPacientes(consulta.id_paciente);
+                                    await cargarEspecialidades(consulta.id_especialidad);
+                    
+                                    document.getElementById('editConsultaModal').style.display = 'block';
+                                } else {
+                                    console.error('Consulta no encontrada:', consulta);
+                                }
+                            } catch (error) {
+                                console.error('Error al obtener datos de la consulta:', error);
+                            }
+                        }
+                    
+                
+                        async function cargarPacientes(selectedId) {
+                            try {
+                                const response = await fetch(`/api/pacientes`);
+                                const pacientes = await response.json();
+                                const pacienteSelect = document.getElementById('editPaciente');
+                    
+                                pacienteSelect.innerHTML = '';
+                                pacientes.forEach(paciente => {
+                                    const option = document.createElement('option');
+                                    option.value = paciente.id_paciente;
+                                    option.textContent = `${paciente.nombre} ${paciente.apellido}`;
+                                    option.selected = paciente.id_paciente == selectedId;
+                                    pacienteSelect.appendChild(option);
+                                });
+                            } catch (error) {
+                                console.error('Error al cargar pacientes:', error);
+                            }
+                        }
+                    
+                        async function cargarEspecialidades(selectedId) {
+                            try {
+                                const response = await fetch('/api/especialidades');
+                                const especialidades = await response.json();
+                                const especialidadSelect = document.getElementById('editEspecialidad');
+                    
+                                especialidadSelect.innerHTML = '';
+                                especialidades.forEach(especialidad => {
+                                    const option = document.createElement('option');
+                                    option.value = especialidad.id_especialidad;
+                                    option.textContent = especialidad.especialidad;
+                                    option.selected = especialidad.id_especialidad == selectedId;
+                                    especialidadSelect.appendChild(option);
+                                });
+                            } catch (error) {
+                                console.error('Error al cargar especialidades:', error);
+                            }
+                        }
+                    
+                        document.getElementById('closeModal').addEventListener('click', () => {
+                            document.getElementById('editConsultaModal').style.display = 'none';
+                        });
+                    
+                        document.getElementById('btn-actualizar').addEventListener('click', async () => {
+                            const data = {
+                                id_consulta: currentEditId,
+                                id_especialidad: document.getElementById('editEspecialidad').value,
+                                motivo: document.getElementById('editMotivo').value,
+                                descripcion: document.getElementById('editDescripcion').value,
+                                fecha_hora: document.getElementById('editFechaHora').value,
+                                notas_internas: document.getElementById('editNotasInternas').value,
+                                notas_externas: document.getElementById('editNotasExternas').value,
+                                pruebas: document.getElementById('editPruebas').value,
+                                estado: document.getElementById('editEstado').value === 'true',
+                            };
+                    
+                            try {
+                                const response = await fetch(`/api/consulta/actualizarConsulta`, {
+                                    method: 'PUT',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify(data),
+                                });
+                    
+                                const resultado = await response.json();
+                                if (resultado.success) {
+                                    alert('Consulta actualizada con éxito.');
+                                    await cargarConsultas(idUsuario);
+                                    cerrarModal();
+                                } else {
+                                    alert('Error al actualizar la consulta.');
+                                }
+                            } catch (error) {
+                                console.error('Error al actualizar la consulta:', error);
+                            }
+                        });
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        if (user) {
+            console.log(user); 
+
+            document.querySelectorAll('.user-name').forEach(element => {
+                element.textContent = `${user.nombre} ${user.apellido}`;
+            });
+
+        } else {
+           
+            window.location.href = '../login.html';
+        }
+    });
+    </script>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Selecciona "Cerrar sesión" si estás listo para finalizar tu sesión actual.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" id="logoutButton">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            fetch('/api/logout', {
+                    method: 'POST',
+                    credentials: 'include' 
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al cerrar sesión');
+                    }
+                    window.location.href = '../login.html'; 
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al cerrar sesión.');
+                });
+                
+        });
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"> </script>
+    <script src="/vendor/jquery/jquery.min.js"> </script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/design/js/sb-admin-2.min.js"> </script>
+
+    <!-- Page level plugins -->
+    <script src="/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/design/js/demo/chart-area-demo.js"></script>
+    <script src="/design/js/demo/chart-pie-demo.js"></script>
+
+</body>
+</html>
