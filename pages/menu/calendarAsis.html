@@ -300,7 +300,7 @@
                                                             <div id="external-events">
                                                                 <div class="checkbox">
                                                                     <label for="drop-remove">
-                                                                        TechMedic
+                                                                        <div id="mensajeDiv"></div>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -525,11 +525,13 @@
                 body: JSON.stringify(idCitaData)
             })
             .then(response => {
-                if (!response.ok) throw new Error('Error al agregar la cita');
+                if (!response.ok) {
+                    return response.json().then(error => { throw error; });
+                }
                 return response.json();
             })
             .then(data => {
-                console.log('Cita agregada:', data);
+                mostrarMensaje('Cita registrada con éxito.', 'success');
                 document.getElementById('new-event').value = '';
                 document.getElementById('new-event-cedula').value = '';
                 document.getElementById('id_tipo_consulta').value = '';
@@ -537,8 +539,20 @@
                 document.getElementById('new-event-date').value = '';
                 document.getElementById('new-event-time').value = '';
             })
-            .catch(error => console.error('Error:', error));
-        }        
+            .catch(error => {
+                mostrarMensaje(error.error || 'Error al registrar la cita.', 'error');
+                console.error('Error:', error);
+            });
+        }
+        
+        function mostrarMensaje(mensaje, tipo) {
+            const mensajeDiv = document.getElementById('mensajeDiv');
+            mensajeDiv.textContent = mensaje;
+            mensajeDiv.className = tipo === 'success' ? 'alert alert-success' : 'alert alert-danger';
+            mensajeDiv.style.display = 'block';
+            setTimeout(() => mensajeDiv.style.display = 'none', 5000);
+        }
+               
     </script>
 
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
