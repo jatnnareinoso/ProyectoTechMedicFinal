@@ -114,12 +114,11 @@ $(function () {
     function cargarCitasPorDoctor(idDoctor) {
         const apiUrl = `/api/cita/citasDoctor?id_doctor=${idDoctor}`;
         
-        // Mapeo de clases CSS a colores hexadecimales
         const colorMap = {
-            'text-danger': '#dc3545', // Rojo
-            'text-warning': '#ffc107', // Amarillo
-            'text-success': '#28a745', // Verde
-            'text-info': '#17a2b8',    // Cian
+            'text-danger': '#dc3545', 
+            'text-warning': '#ffc107', 
+            'text-success': '#28a745', 
+            'text-info': '#17a2b8',    
         };
     
         fetch(apiUrl)

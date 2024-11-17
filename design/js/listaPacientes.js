@@ -96,8 +96,8 @@ const buscarPacientesCitas = async (searchQuery) => {
     const query = `
       SELECT id_paciente, nombre, apellido, cedula
       FROM paciente
-      WHERE nombre ILIKE $1
-      OR CAST(cedula AS TEXT) ILIKE $1
+      WHERE (nombre ILIKE $1 OR CAST(cedula AS TEXT) ILIKE $1)
+      AND estado = true
     `;
     const values = [`%${searchQuery}%`]; 
     const result = await client.query(query, values);
@@ -108,5 +108,6 @@ const buscarPacientesCitas = async (searchQuery) => {
     return [];
   }
 };
+
 
 module.exports = { obtenerPerfilesPacientes, actualizarPaciente, buscarPacientes, buscarPacientesCitas };

@@ -119,8 +119,8 @@
                     const especialidadSelect = document.getElementById('especialidad');
                     citaInfo.especialidades.forEach(especialidad => {
                         const option = document.createElement('option');
-                        option.value = especialidad.id_especialidad; // Cambia a id_especialidad
-                        option.textContent = especialidad.nombre_especialidad; // Cambia a nombre de especialidad
+                        option.value = especialidad.id_especialidad;
+                        option.textContent = especialidad.nombre_especialidad;
                         especialidadSelect.appendChild(option);
                     });
                 } else {
@@ -196,7 +196,6 @@
 
                 const result = await response.json();
                 if (response.ok) {
-                    alert('Consulta guardada exitosamente');
                     window.location.href = './menu/listaConsultas.html';
                 } else {
                     alert(result.message);

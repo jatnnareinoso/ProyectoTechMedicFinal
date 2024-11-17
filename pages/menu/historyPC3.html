@@ -269,6 +269,35 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xl-12">              
+                                            <div class="task-list-box" id="design-task">
+                                                <div id="task-item-2">
+                                                    <div class="card task-box rounded-3">
+                                                        <div class="card-body">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-xl-6 col-sm-5">
+                                                                    <h5 class="form-check-label ms-1 task-title">Receta Medica</h5>
+                                                                </div>
+                                                                <div class="col-xl-6 col-sm-7">
+                                                                    <div class="row align-items-center">
+                                                                        <div class="col-xl-12 col-md-5 col-sm-12">
+                                                                            <div class="d-flex flex-wrap gap-3 mt-3 mt-xl-0 justify-content-md-end">
+                                                                                <div>
+                                                                                    <button type="button" class="btn btn-primary btn-sm w-5" onclick="redirectToRecetaMedica()">VISUALIZAR</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                 
                                         </div>
                                     </div>
@@ -392,6 +421,11 @@
     
         function redirectToConsultaMedica() {
             const url = `../registerRecetaMedica.html?id_paciente=${id_paciente}&id_doctor=${idDoctor}&id_usuario=${idUsuario}`;
+            window.location.href = url;
+        }
+
+        function redirectToRecetaMedica() {
+            const url = `detalleRecetaMedica.html?id_paciente=${id_paciente}`;
             window.location.href = url;
         }
     

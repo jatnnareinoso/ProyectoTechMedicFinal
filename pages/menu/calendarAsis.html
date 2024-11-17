@@ -379,7 +379,6 @@
         
             document.getElementById('new-event').addEventListener('input', buscarPacientesPorNombre);
             document.getElementById('new-event-cedula').addEventListener('input', buscarPacientesPorCedula);
-        
             document.getElementById('add-new-event').addEventListener('click', agregarCita);
 
             cargarTiposConsulta();
@@ -488,7 +487,7 @@
             colorSeleccionado = color; 
             console.log('Color seleccionado:', colorSeleccionado); 
         }
-        
+
         function agregarCita() {
             const idPaciente = document.getElementById('id-paciente').value; 
             const idDoctor = document.getElementById('select-doctor').value;

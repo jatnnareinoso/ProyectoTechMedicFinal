@@ -89,7 +89,7 @@
                 });
 
                 const resultado_pruebas = pruebasResultados.join('; ');
-                formData.append('resultado_pruebas', resultado_pruebas); // Agregar el resultado de las pruebas a FormData
+                formData.append('resultado_pruebas', resultado_pruebas); 
         
                 try {
                     const response = await fetch('/api/diagnostico/registerDiagnostico', {
@@ -99,7 +99,6 @@
         
                     const result = await response.json();
                     if (response.ok) {
-                        alert('Diagnóstico registrado exitosamente');
                         window.location.href = './menu/listaConsultas.html';
                     } else {
                         alert(result.message);

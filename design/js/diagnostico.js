@@ -23,10 +23,9 @@ router.post('/registerDiagnostico', upload, async (req, res) => {
     try {
         let rutas = [];
         if (archivos) {
-            rutas = archivos.map(file => `uploads/${file.filename}`); // Almacena la ruta de cada archivo
+            rutas = archivos.map(file => `uploads/${file.filename}`); 
         }
 
-        // El estado se puede tomar directamente desde el cuerpo, pero siempre será true
         const estado = true; 
 
         const result = await client.query(
@@ -37,7 +36,7 @@ router.post('/registerDiagnostico', upload, async (req, res) => {
                 observacion,
                 JSON.stringify(rutas), 
                 resultado_pruebas,
-                estado // El estado se manda como true
+                estado
             ]
         );
 

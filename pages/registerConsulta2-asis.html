@@ -138,22 +138,6 @@
             }
         }
 
-        /*function agregarPrueba() {
-            contadorPruebas++;
-            const listaPruebas = document.getElementById('listaPruebas');
-            const nuevaPrueba = document.createElement('div');
-            nuevaPrueba.innerHTML = `
-                <div>
-                    <label>Prueba ${contadorPruebas}</label>
-                    <input type="text" name="prueba${contadorPruebas}" placeholder="Prueba" required>
-                    <br><label>Resultado</label>
-                    <input type="text" name="resultado${contadorPruebas}" placeholder="Resultado" required>
-                    <hr>
-                </div>
-            `;
-            listaPruebas.appendChild(nuevaPrueba);
-        }*/
-
         document.getElementById('registrationForm').addEventListener('submit', async function(event) {
             event.preventDefault(); 
 
@@ -161,17 +145,6 @@
             const notasExternas = this.notasexternas.value;
             const notasInternas = this.notasinternas.value;
             const sintomas = document.getElementById('sintomas').value;
-
-            /*const pruebasResultados = [];
-            const listaPruebasDivs = document.querySelectorAll('#listaPruebas > div');
-
-            listaPruebasDivs.forEach((div, index) => {
-                const prueba = div.querySelector(`input[name="prueba${index + 1}"]`).value;
-                const resultado = div.querySelector(`input[name="resultado${index + 1}"]`).value;
-                pruebasResultados.push(`Prueba: ${prueba}, Resultado: ${resultado}`);
-            });
-
-            const resultados_pruebas = pruebasResultados.join('; '); */
 
             const descripcion = `Nuevos síntomas o cambios presentados: ${sintomas}`.trim();
             const pruebas = document.getElementById('listaPruebas').value;
@@ -189,7 +162,6 @@
                 notas_internas: notasInternas,
                 notas_externas: notasExternas,
                 pruebas, 
-                /*resultados_pruebas, */
                 id_especialidad
             };
 
@@ -202,7 +174,6 @@
 
                 const result = await response.json();
                 if (response.ok) {
-                    alert('Consulta guardada exitosamente');
                     window.location.href = './menu/listaConsultas-asis.html';
                 } else {
                     alert(result.message);

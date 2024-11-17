@@ -18,6 +18,27 @@ router.get('/doctores', async (req, res) => {
     }
 });
 
+router.get('/doctorId/:idDoctor/usuario', async (req, res) => {
+    const idDoctor = req.params.idDoctor;
+
+    try {
+        const result = await client.query(
+            'SELECT id_usuario FROM doctor WHERE id_doctor = $1',
+            [idDoctor]
+        );
+
+        if (result.rows.length > 0) {
+            const idUsuario = result.rows[0].id_usuario;
+            res.json({ id_usuario: idUsuario });
+        } else {
+            res.status(404).json({ message: 'Doctor no encontrado' });
+        }
+    } catch (error) {
+        console.error('Error al obtener id_usuario del doctor:', error);
+        res.status(500).json({ message: 'Error en el servidor al obtener id_usuario' });
+    }
+});
+
 router.get('/:id_usuario', async (req, res) => {
     const { id_usuario } = req.params;
 

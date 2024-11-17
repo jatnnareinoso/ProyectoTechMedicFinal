@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TechMedic/Historial Clinico</title>
+    <title>TechMedic - Recetas</title>
     <script src="https://kit.fontawesome.com/c2b1422a44.js" crossorigin="anonymous"></script>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" 
         rel="stylesheet">
 
-    <link href="../../design/css/pg-admin-1.css" rel="stylesheet">
-    <link href="../../design/css/pg-admin-2.css" rel="stylesheet">
-    <link href="../../design/css/doctor/medicalhistory.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" 
-        integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" 
-            crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="/design/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/design/css/sb-admin-3.min.css" rel="stylesheet">
+    <link href="/design/css/table.css" rel="stylesheet">
     <style>
-        .navbar-nav .nav-item .dropdown-menu {
+        .navbar-nav .nav-item .dropdown-menu {          
             min-width: 300px;
         }
         .img-profile {
@@ -38,6 +31,7 @@
             align-items: center;
         }
     </style>
+
 </head>
 
 <body id="page-top">
@@ -54,7 +48,7 @@
 
             <hr class="sidebar-divider my-0">
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="../profileDC.html">
                     <i class="fa-solid fa-user-doctor"></i>
                     <span>Sobre Mi</span></a>
@@ -62,7 +56,7 @@
 
             <hr class="sidebar-divider">
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="../menu/listpacient.html">
                     <i class="fa-solid fa-hospital-user"></i>
                     <span>Pacientes</span>
@@ -100,6 +94,7 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
@@ -199,183 +194,180 @@
                             </div>
                         </li>                 
                     </ul>
-                </nav>
-
-                <div class="container">
-                    <div class="filters mb-4">
-                        <div class="filters mb-4">
-                            <form id="filterForm" class="form-inline">
-                                <div class="form-group mr-3">
-                                    <label for="startDate" class="mr-2">Desde:</label>
-                                    <input type="date" id="startDate" class="form-control">
+                </nav> 
+                
+                <div class="container-fluid">
+                    <h1 class="h3 mb-4 text-gray-800">Recetas</h1>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" id="paciente"></h6>
                                 </div>
-                                <div class="form-group mr-3">
-                                    <label for="endDate" class="mr-2">Hasta:</label>
-                                    <input type="date" id="endDate" class="form-control">
-                                </div>
-                                <button type="submit" id="btn-filtrar" class="btn btn-primary">Filtrar</button>
-                            </form>
+                                <div class="card-body">
+                                    <main class="h-full pb-16 overflow-y-auto">
+                                        <div class="container grid px-6 mx-auto">
+                                            <div class="w-full overflow-hidden rounded-lg shadow-xs">
+                                                <div class="w-full overflow-x-auto">
+                                                    <table class="w-full whitespace-no-wrap">
+                                                        <thead>
+                                                            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                                                <th class="px-4 py-2">Doctor</th>
+                                                                <th class="px-4 py-2">Medicamentos</th>
+                                                                <th class="px-4 py-3">Uso</th>
+                                                                <th class="px-4 py-2">Cantidad</th>
+                                                                <th class="px-4 py-2">Frecuencia</th>
+                                                                <th class="px-4 py-3">Tiempo</th>
+                                                                <th class="px-4 py-3">Observación</th>
+                                                                <th class="px-4 py-3">Fecha</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tabla-receta" class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"></tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="flex justify-center mt-4">
+                                                <button id="prevButton" class="px-4 py-2 mr-2 bg-gray-300 text-gray-700 rounded" disabled>Anterior</button>
+                                                <button id="nextButton" class="px-4 py-2 bg-gray-300 text-gray-700 rounded">Siguiente</button>
+                                            </div>
+                                        </div>
+                                    </main>
+                                </div>                                
+                            </div>
                         </div>
                     </div>
-
-                    <section id="resume" class="resume row">
-                        <div  class="container" data-aos="fade-up">
-                        </div>
-                    </section>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const user = JSON.parse(localStorage.getItem('user'));
-            
-                if (user) {
-                    console.log(user); 
-                    document.querySelectorAll('.user-name').forEach(element => {
-                        element.textContent = `${user.nombre} ${user.apellido}`;
-                    });
-                    
-                    cargarConsultas();
-            
-                } else {
-                    window.location.href = '../login.html';
-                }
-            });
-            
-            async function cargarConsultas() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const idPaciente = urlParams.get('id_paciente');
-                const idEspecialidad = urlParams.get('id_especialidad');
-                const user = JSON.parse(localStorage.getItem('user'));
-            
-                try {
-                    const response = await fetch(`/api/historial/consultas/pacientes/${idPaciente}/especialidad/${idEspecialidad}/usuario/${user.id_usuario}`);
-                    const consultas = await response.json();
-            
-                    renderizarConsultas(consultas);
-            
-                    document.getElementById('filterForm').addEventListener('submit', (event) => {
-                        event.preventDefault();
-                        aplicarFiltros(consultas);
-                    });
-                } catch (error) {
-                    console.error('Error al cargar las consultas:', error);
-                }
-            }
-            
-            function renderizarConsultas(consultas) {
-                const contenedorConsultas = document.getElementById('resume');
-                contenedorConsultas.innerHTML = '';
-                const user = JSON.parse(localStorage.getItem('user'));
-            
-                consultas.forEach(consulta => {
-                    const consultaDiv = document.createElement('div');
-                    consultaDiv.className = 'resume-item pb-0 col-12 col-md-6 mt-3';
-            
-                    let archivosHtml = '';
-                    if (consulta.diagnostico.rutas && consulta.diagnostico.rutas.length > 0) {
-                        archivosHtml = consulta.diagnostico.rutas.map(ruta => `
-                            <a href="${ruta}" target="_blank">Ver archivo</a>
-                        `).join('<br>');
-                    } else {
-                        archivosHtml = 'No hay archivos adjuntos';
-                    }
-            
-                    consultaDiv.innerHTML = `
-                        <h4 class="text-black">Dr. ${consulta.doctor}</h4>
-                        <h5>${new Date(consulta.fecha_consulta).toLocaleDateString()}</h5>
-                        <h4>Motivo de Consulta</h4>
-                        <p><em>${consulta.motivo}</em></p>
-                        <h4>Descripción</h4>
-                        <p>${consulta.descripcion}</p>
-                        <h4>Pruebas a realizar</h4>
-                        <p>${consulta.pruebas ? consulta.pruebas : 'No hay pruebas a realizar'}</p>
-
-                        ${
-                            consulta.id_usuario == user.id_usuario ? `
-                            <h4>Notas Internas</h4> 
-                            <p>${consulta.notas_internas}</p>
-                            ` : ''
-                        }
-                        <h4>Notas Externas</h4>
-                        <p>${consulta.notas_externas}</p>
-                        <h4>Diagnóstico</h4>
-                        <p><strong>Descripción:</strong> ${consulta.diagnostico.descripcion || 'No hay diagnóstico'}</p>
-                        <p><strong>Observación:</strong> ${consulta.diagnostico.observacion || 'No hay observación'}</p>
-                        <p><strong>Resultado de Pruebas:</strong> ${consulta.diagnostico.resultado_pruebas || 'Sin resultados'}</p>
-                        <h4>Archivos del Diagnóstico</h4>
-                        <p>${archivosHtml}</p>
-                    `;
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Selecciona "Cerrar sesión" si estás listo para finalizar tu sesión actual.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" id="logoutButton">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
-                    contenedorConsultas.appendChild(consultaDiv);
+    <script>
+        let id_paciente = null; 
+    
+        document.addEventListener('DOMContentLoaded', async function() {
+            const user = JSON.parse(localStorage.getItem('user'));
+            let currentPage = 1;
+            const recordsPerPage = 10;
+            let recetas = [];
+            let allRecetas = [];
+            
+            if (user) {
+                console.log(user); 
+    
+                document.querySelectorAll('.user-name').forEach(element => {
+                    element.textContent = `${user.nombre} ${user.apellido}`;
                 });
-            }
+    
+                const idUsuario = user.id_usuario;
+                const urlParams = new URLSearchParams(window.location.search);
+                id_paciente = urlParams.get('id_paciente'); 
+    
+            } else {
+                window.location.href = '../login.html';
+            }   
             
-            function aplicarFiltros(consultas) {
-                const startDate = document.getElementById('startDate').value;
-                const endDate = document.getElementById('endDate').value;
-            
-                const start = startDate ? new Date(startDate) : null;
-                let end = endDate ? new Date(endDate) : null;
-            
-                if (end) {
-                    end.setDate(end.getDate() + 1);
-                }
-            
-                const consultasFiltradas = consultas.filter(consulta => {
-                    const fechaConsulta = new Date(consulta.fecha_consulta);
-                    return (!start || fechaConsulta >= start) && (!end || fechaConsulta < end);
+            try {
+                const response = await fetch(`/api/recetas/recetasPaciente?id_paciente=${id_paciente}`);
+                if (!response.ok) throw new Error("Error al obtener las recetas");
+                
+                recetas = await response.json();
+                allRecetas = [...recetas];
+                renderPage(currentPage);
+
+                document.getElementById('prevButton').addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderPage(currentPage);
+                    }
                 });
-            
-                renderizarConsultas(consultasFiltradas);
+
+                document.getElementById('nextButton').addEventListener('click', () => {
+                    if (currentPage * recordsPerPage < recetas.length) {
+                        currentPage++;
+                        renderPage(currentPage);
+                    }
+                });
+                
+            } catch (error) {
+                console.error(error);
+                alert("Hubo un problema al cargar las recetas.");
             }
-            
-        </script>
-            
+        
+            function renderPage(page) {
+                const start = (page - 1) * recordsPerPage;
+                const end = page * recordsPerPage;
+                const paginaRecetas = recetas.slice(start, end);
 
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Selecciona "Cerrar sesión" si estás listo para finalizar tu sesión actual.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                        <button class="btn btn-primary" id="logoutButton">Cerrar sesión</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                const recetaTableBody = document.getElementById("tabla-receta");
+                recetaTableBody.innerHTML = '';
+                paginaRecetas.forEach((receta) => {
+                    const row = document.createElement("tr");
 
-        <script>
-            document.getElementById('logoutButton').addEventListener('click', function() {
-                fetch('/api/logout', {
-                        method: 'POST',
-                        credentials: 'include' 
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Error al cerrar sesión');
-                        }
-                        window.location.href = '../login.html'; 
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('Error al cerrar sesión.');
-                    });
-                    
-            });
-        </script>
+                    const fechaReceta = new Date(receta.fecha_receta).toISOString().split('T')[0];
+                    document.getElementById('paciente').textContent = receta.paciente;
+
+                    row.innerHTML = `
+                        <td class="px-4 py-3 text-sm">${receta.doctor}</td>
+                        <td class="px-4 py-3 text-sm">${receta.medicamento}</td>
+                        <td class="px-4 py-3 text-sm">${receta.uso}</td>
+                        <td class="px-4 py-3 text-sm">${receta.cantidad}</td>
+                        <td class="px-4 py-3 text-sm">${receta.frecuencia}</td>
+                        <td class="px-4 py-3 text-sm">${receta.tiempo}</td>
+                        <td class="px-4 py-3 text-sm">${receta.observacion}</td>
+                        <td class="px-4 py-3 text-sm">${fechaReceta}</td>
+                    `;
+        
+                    recetaTableBody.appendChild(row);
+                });
+
+                document.getElementById('prevButton').disabled = currentPage === 1;
+                document.getElementById('nextButton').disabled = currentPage * recordsPerPage >= recetas.length;
+            }
+        });
+    
+    </script>
+
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            fetch('/api/logout', {
+                    method: 'POST',
+                    credentials: 'include' 
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al cerrar sesión');
+                    }
+                    window.location.href = '../login.html'; 
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al cerrar sesión.');
+                });
+                
+        });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
 
 </body>
 </html>
