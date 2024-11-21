@@ -1,55 +1,3 @@
-const express = require('express');
-const client = require('./db');
-const pdf = require('html-pdf');
-const router = express.Router();
-
-router.get('/doctor/:id_usuario', async (req, res) => {
-    const { id_usuario } = req.params;
-
-    try {
-        const doctorQuery = `
-            SELECT d.id_doctor, 
-            CONCAT(u.nombre, ' ', u.apellido) AS nombre_doctor
-            FROM doctor d
-            JOIN usuario u ON d.id_usuario = u.id_usuario
-            WHERE d.id_usuario = $1
-        `;
-        const doctorResult = await client.query(doctorQuery, [id_usuario]);
-
-        if (doctorResult.rows.length > 0) {
-            res.status(200).json(doctorResult.rows[0]);
-        } else {
-            res.status(404).json({ message: 'Doctor no encontrado' });
-        }
-    } catch (error) {
-        console.error('Error al obtener los datos del doctor', error);
-        res.status(500).json({ message: 'Error al obtener los datos del doctor' });
-    }
-});
-
-router.get('/paciente/:id_paciente', async (req, res) => {
-    const { id_paciente } = req.params;
-
-    try {
-        const pacienteQuery = `
-            SELECT CONCAT(nombre, ' ', apellido) AS nombre_paciente, fecha_nacimiento, DATE_PART('year', AGE(fecha_nacimiento)) AS edad
-            FROM paciente
-            WHERE id_paciente = $1
-        `;
-
-        const pacienteResult = await client.query(pacienteQuery, [id_paciente]);
-
-        if (pacienteResult.rows.length > 0) {
-            res.status(200).json(pacienteResult.rows[0]);
-        } else {
-            res.status(404).json({ message: 'Paciente no encontrado' });
-        }
-    } catch (error) {
-        console.error('Error al obtener los datos del paciente', error);
-        res.status(500).json({ message: 'Error al obtener los datos del paciente' });
-    }
-});
-
 router.post('/registrarReceta', async (req, res) => {
     const { id_doctor, id_paciente, observacion, medicamentos, edad_paciente, id_usuario } = req.body;
 
@@ -94,7 +42,7 @@ router.post('/registrarReceta', async (req, res) => {
             observacion
         };
 
-      const htmlContent = `
+        const htmlContent = `
             <!DOCTYPE html>
             <html lang="es">
             <head>
@@ -166,30 +114,3 @@ router.post('/registrarReceta', async (req, res) => {
         res.status(500).json({ message: 'Error al registrar la receta o generar el PDF' });
     }
 });
-
-router.get('/recetasPaciente', async (req, res) => {
-    const { id_paciente } = req.query;
-    if (!id_paciente) return res.status(400).json({ error: "Id del paciente requerido" });
-
-    try {
-        const result = await client.query(`
-            SELECT r.id_doctor, CONCAT(u.nombre, ' ', u.apellido) AS doctor, 
-                   CONCAT(p.nombre, ' ', p.apellido) AS paciente,
-                   r.fecha_receta, r.medicamento, r.uso, r.cantidad, r.frecuencia, 
-                   r.tiempo, r.observacion 
-            FROM receta r
-            JOIN doctor d ON r.id_doctor = d.id_doctor
-            JOIN usuario u ON d.id_usuario = u.id_usuario
-            JOIN paciente p ON r.id_paciente = p.id_paciente
-            WHERE r.id_paciente = $1
-        `, [id_paciente]);
-
-        res.json(result.rows);
-    } catch (error) {
-        console.error("Error al obtener recetas:", error);
-        res.status(500).json({ error: "Error al obtener recetas" });
-    }
-});
-
-
-module.exports = router;

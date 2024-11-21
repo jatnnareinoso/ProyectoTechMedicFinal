@@ -114,12 +114,11 @@ $(function () {
     function cargarCitasPorDoctor(idDoctor) {
         const apiUrl = `/api/cita/citasDoctor?id_doctor=${idDoctor}`;
         
-        // Mapeo de clases CSS a colores hexadecimales
         const colorMap = {
-            'text-danger': '#dc3545', // Rojo
-            'text-warning': '#ffc107', // Amarillo
-            'text-success': '#28a745', // Verde
-            'text-info': '#17a2b8',    // Cian
+            'text-danger': '#dc3545', 
+            'text-warning': '#ffc107', 
+            'text-success': '#28a745', 
+            'text-info': '#17a2b8',    
         };
     
         fetch(apiUrl)
@@ -152,10 +151,10 @@ $(function () {
         const apiUrl = `/api/cita/citasUsuario?id_usuario=${idUsuario}`;
     
         const colorMap = {
-            'text-danger': '#dc3545', // Rojo
-            'text-warning': '#ffc107', // Amarillo
-            'text-success': '#28a745', // Verde
-            'text-info': '#17a2b8',    // Cian
+            'text-danger': '#dc3545', 
+            'text-warning': '#ffc107',
+            'text-success': '#28a745', 
+            'text-info': '#17a2b8',    
         };
     
         fetch(apiUrl)
@@ -199,7 +198,7 @@ $(function () {
         var title = $('#new-event').val();
         var time = $('#new-event-time').val();
         var date = $('#new-event-date').val();
-        
+    
         var paciente = $('#id-paciente').val(); 
         var doctor = $('#select-doctor').val(); 
         var asistente = $('#select-asistente').val(); 
@@ -209,16 +208,7 @@ $(function () {
         var selectedDate = new Date(date + 'T' + time);
         var startDate = new Date(selectedDate);
     
-        calendar.addEvent({
-            title: title,
-            start: startDate,
-            allDay: false,
-            backgroundColor: currColor,  
-            borderColor: currColor,      
-            textColor: '#fff'            
-        });
-    
-        fetch('/cita/agregarCita', {
+        fetch('/api/cita/agregarCita', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -237,23 +227,44 @@ $(function () {
         })
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
-                console.log(data.success);
-            } else {
-                console.log(data.error);
+            if (data.message) { 
+                mostrarMensaje(data.message, data.success ? 'success' : 'error');
             }
-        });
     
-        // Limpiar campos
-        $('#new-event').val('');
-        $('#new-event-time').val('');
-        $('#new-event-date').val('');
-        $('#id-paciente').val('');
-        $('#select-doctor').val('');
-        $('#select-asistente').val('');
+            if (data.success) {
+                calendar.addEvent({
+                    title: title,
+                    start: startDate,
+                    allDay: false,
+                    backgroundColor: currColor,
+                    borderColor: currColor,
+                    textColor: '#fff'
+                });
+
+                $('#new-event').val('');
+                $('#new-event-time').val('');
+                $('#new-event-date').val('');
+                $('#id-paciente').val('');
+                $('#select-doctor').val('');
+                $('#select-asistente').val('');
+            }
+        })
+        .catch(error => {
+            console.error('Error al agregar la cita:', error);
+            mostrarMensaje('Error al agregar la cita. Por favor, intenta nuevamente.', 'error');
+        });
     });
     
+    function mostrarMensaje(mensaje, tipo) {
+        const mensajeDiv = document.createElement('div');
+        mensajeDiv.textContent = mensaje;
+        mensajeDiv.className = `alert alert-${tipo === 'success' ? 'success' : 'danger'}`; 
+        document.body.appendChild(mensajeDiv);
     
+        setTimeout(() => {
+            mensajeDiv.remove();
+        }, 5000);
+    }   
 
     var currColor = '#3c8dbc';
     $('#color-chooser > li > a').click(function (e) {

@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TechMedic - Inicio</title>
+    <title>TechMedic - Recetas</title>
     <script src="https://kit.fontawesome.com/c2b1422a44.js" crossorigin="anonymous"></script>
-    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" 
         rel="stylesheet">
+
     <link href="/design/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="/design/css/sb-admin-3.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../design/css/profile.css">
-
+    <link href="/design/css/table.css" rel="stylesheet">
     <style>
-        #doctor-asociado {
-            width: 100%;
-            height: 100px; 
-            overflow-y: auto; 
-            
+        .navbar-nav .nav-item .dropdown-menu {          
+            min-width: 300px;
+        }
+        .img-profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
+
 </head>
 
 <body id="page-top">
@@ -32,7 +39,7 @@
 
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="profileUser.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../profileUser.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <img src="../../design/img/logo_only.png" alt="TechMedic Logo" class="img-fluid">
                 </div>
@@ -42,7 +49,7 @@
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item active">
-                <a class="nav-link" href="profileUser.html">
+                <a class="nav-link" href="../profileUser.html">
                     <i class="fa-solid fa-user-nurse"></i>
                     <span>Sobre Mi</span></a>
             </li>
@@ -50,32 +57,32 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="./menu/listpacient-asis.html">
+                <a class="nav-link" href="../menu/listpacient-asis.html">
                     <i class="fa-solid fa-bed"></i>
                     <span>Pacientes</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="./menu/listaCitas-asis.html">
+                <a class="nav-link" href="../menu/listaCitas-asis.html">
                     <i class="fa-solid fa-calendar-days"></i>
                     <span>Citas</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="./menu/listaConsultas.html">
+                <a class="nav-link" href="listaConsultas-asis.html">
                     <i class="fa-solid fa-stethoscope"></i>
                     <span>Consultas</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="./menu/calendarAsis.html">
+                <a class="nav-link" href="../menu/calendarAsis.html">
                     <i class="fa-solid fa-calendar-days"></i>
                     <span>Calendario</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="./menu/message-asis.html">
+                <a class="nav-link" href="message-asis.html">
                     <i class="fa-regular fa-envelope"></i>
                     <span>Mensajería</span>
                 </a>
@@ -93,7 +100,7 @@
                     </button>
 
                     <div class="form-container">
-                        <form action="registerPC-asis.html">
+                        <form action="../registerPC-asis.html">
                             <div class="input-group">
                                 <button class="btn btn-primary">
                                     <i class="fas fa-user-plus"></i>
@@ -117,21 +124,21 @@
                     <script>
                         document.addEventListener('DOMContentLoaded', function () {
                             document.getElementById('searchButton').addEventListener('click', function (event) {
-                                event.preventDefault(); 
+                                event.preventDefault();
                                 const searchQuery = document.getElementById('searchInput').value.trim();
                                 if (searchQuery) {
-                                    localStorage.setItem('searchQuery', searchQuery); 
-                                    window.location.href = `./menu/listpacient-asis.html`;
+                                    localStorage.setItem('searchQuery', searchQuery);
+                                    window.location.href = `listpacient-asis.html`;
                                 }
                             });
                     
                             document.getElementById('searchInput').addEventListener('keypress', function (e) {
                                 if (e.key === 'Enter') {
-                                    e.preventDefault(); 
+                                    e.preventDefault();
                                     const searchQuery = document.getElementById('searchInput').value.trim();
                                     if (searchQuery) {
-                                        localStorage.setItem('searchQuery', searchQuery);
-                                        window.location.href = `./menu/listpacient-asis.html`; 
+                                        localStorage.setItem('searchQuery', searchQuery); 
+                                        window.location.href = `listpacient-asis.html`; 
                                     }
                                 }
                             });
@@ -239,11 +246,11 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="profileUser.html">
+                                <a class="dropdown-item" href="../profileUser.html">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
-                                <a class="dropdown-item" href="editarUser.html">
+                                <a class="dropdown-item" href="../editarUser.html">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Configuración
                                 </a>
@@ -254,80 +261,46 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
-                </nav>
-   
+                </nav>  
+                
                 <div class="container-fluid">
+                    <h1 class="h3 mb-4 text-gray-800">Recetas</h1>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Editar Información Personal</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary" id="paciente"></h6>
                                 </div>
                                 <div class="card-body">
-                                    <form id="asistente-info-form">
-                                        <input type="hidden" id="id_usuario">
-                                        <h6 class="f-w-600">Datos Personales</h6>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label for="user-nombre" class="f-w-500">Nombres</label>
-                                                <input type="text" id="user-nombre" class="form-control"  value="">
+                                    <main class="h-full pb-16 overflow-y-auto">
+                                        <div class="container grid px-6 mx-auto">
+                                            <div class="w-full overflow-hidden rounded-lg shadow-xs">
+                                                <div class="w-full overflow-x-auto">
+                                                    <table class="w-full whitespace-no-wrap">
+                                                        <thead>
+                                                            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                                                <th class="px-4 py-2">Doctor</th>
+                                                                <th class="px-4 py-2">Medicamentos</th>
+                                                                <th class="px-4 py-3">Uso</th>
+                                                                <th class="px-4 py-2">Cantidad</th>
+                                                                <th class="px-4 py-2">Frecuencia</th>
+                                                                <th class="px-4 py-3">Tiempo</th>
+                                                                <th class="px-4 py-3">Observación</th>
+                                                                <th class="px-4 py-3">Fecha</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tabla-receta" class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"></tbody>
+                                                    </table>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-6">
-                                                <label for="user-apellido" class="f-w-500">Apellidos</label>
-                                                <input type="text" id="user-apellido" class="form-control"  value="">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="user-fecha-nacimiento" class="f-w-500">Fecha de Nacimiento</label>
-                                                <input type="date" id="user-fecha-nacimiento" class="form-control" value="">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="user-email" class="f-w-500">Email</label>
-                                                <input type="email" id="user-email" class="form-control" value="">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="user-celular" class="f-w-500">Celular</label>
-                                                <input type="text" id="user-celular" class="form-control" value="">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="user-telefono" class="f-w-500">Teléfono</label>
-                                                <input type="text" id="user-telefono" class="form-control" value="">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="user-cedula" class="f-w-500">Cédula</label>
-                                                <input type="text" id="user-cedula" class="form-control" value="">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label for="user-sexo" class="f-w-500">Sexo</label>
-                                                <select id="user-sexo" class="form-control">
-                                                    <option value="Masculino">Masculino</option>
-                                                    <option value="Femenino">Femenino</option>
-                                                    <option value="Femenino">Otro</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label hidden for="password" class="f-w-500">Contraseña</label>
-                                                <input hidden type="text" class="form-control" id="user-password" name="password" required>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <label hidden for="user-usuario" class="f-w-500">Usuario</label>
-                                                <input hidden type="text" id="user-usuario" class="form-control" value="">
+                                            <div class="flex justify-center mt-4">
+                                                <button id="prevButton" class="px-4 py-2 mr-2 bg-gray-300 text-gray-700 rounded" disabled>Anterior</button>
+                                                <button id="nextButton" class="px-4 py-2 bg-gray-300 text-gray-700 rounded">Siguiente</button>
                                             </div>
                                         </div>
-
-                                        <h6 class="f-w-600 mt-4">Datos Profesionales</h6>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label for="doctor-asociado" class="f-w-500">Doctores Asociados</label>
-                                                <select id="doctor-asociado" class="form-control" multiple style="width: 100%; height: 100px;">
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary mt-4">Guardar Cambios</button>
-                                    </form>
-                                </div>
+                                    </main>
+                                </div>                                
                             </div>
                         </div>
                     </div>
@@ -353,6 +326,92 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        let id_paciente = null; 
+    
+        document.addEventListener('DOMContentLoaded', async function() {
+            const user = JSON.parse(localStorage.getItem('user'));
+            let currentPage = 1;
+            const recordsPerPage = 10;
+            let recetas = [];
+            let allRecetas = [];
+            
+            if (user) {
+                console.log(user); 
+    
+                document.querySelectorAll('.user-name').forEach(element => {
+                    element.textContent = `${user.nombre} ${user.apellido}`;
+                });
+    
+                const idUsuario = user.id_usuario;
+                const urlParams = new URLSearchParams(window.location.search);
+                id_paciente = urlParams.get('id_paciente'); 
+    
+            } else {
+                window.location.href = '../login.html';
+            }   
+            
+            try {
+                const response = await fetch(`/api/recetas/recetasPaciente?id_paciente=${id_paciente}`);
+                if (!response.ok) throw new Error("Error al obtener las recetas");
+                
+                recetas = await response.json();
+                allRecetas = [...recetas];
+                renderPage(currentPage);
+
+                document.getElementById('prevButton').addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderPage(currentPage);
+                    }
+                });
+
+                document.getElementById('nextButton').addEventListener('click', () => {
+                    if (currentPage * recordsPerPage < recetas.length) {
+                        currentPage++;
+                        renderPage(currentPage);
+                    }
+                });
+                
+            } catch (error) {
+                console.error(error);
+                alert("Hubo un problema al cargar las recetas.");
+            }
+        
+            function renderPage(page) {
+                const start = (page - 1) * recordsPerPage;
+                const end = page * recordsPerPage;
+                const paginaRecetas = recetas.slice(start, end);
+
+                const recetaTableBody = document.getElementById("tabla-receta");
+                recetaTableBody.innerHTML = '';
+                paginaRecetas.forEach((receta) => {
+                    const row = document.createElement("tr");
+
+                    const fechaReceta = new Date(receta.fecha_receta).toISOString().split('T')[0];
+                    document.getElementById('paciente').textContent = receta.paciente;
+
+                    row.innerHTML = `
+                        <td class="px-4 py-3 text-sm">${receta.doctor}</td>
+                        <td class="px-4 py-3 text-sm">${receta.medicamento}</td>
+                        <td class="px-4 py-3 text-sm">${receta.uso}</td>
+                        <td class="px-4 py-3 text-sm">${receta.cantidad}</td>
+                        <td class="px-4 py-3 text-sm">${receta.frecuencia}</td>
+                        <td class="px-4 py-3 text-sm">${receta.tiempo}</td>
+                        <td class="px-4 py-3 text-sm">${receta.observacion}</td>
+                        <td class="px-4 py-3 text-sm">${fechaReceta}</td>
+                    `;
+        
+                    recetaTableBody.appendChild(row);
+                });
+
+                document.getElementById('prevButton').disabled = currentPage === 1;
+                document.getElementById('nextButton').disabled = currentPage * recordsPerPage >= recetas.length;
+            }
+        });
+    
+    </script>
 
     <script>
         document.getElementById('logoutButton').addEventListener('click', function() {
@@ -364,7 +423,7 @@
                     if (!response.ok) {
                         throw new Error('Error al cerrar sesión');
                     }
-                    window.location.href = 'login.html'; 
+                    window.location.href = '../login.html'; 
                 })
                 .catch(error => {
                     console.error('Error:', error);
@@ -374,151 +433,9 @@
         });
     </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', async function() {
-            const user = JSON.parse(localStorage.getItem('user'));
-            console.log(user);
-    
-            if (user) {
-                document.querySelectorAll('.user-name').forEach(element => {
-                    element.textContent = `${user.nombre} ${user.apellido}`;
-                });
-    
-                const fechaNacimiento = new Date(user.fecha_nacimiento).toISOString().split('T')[0];
-                document.getElementById('user-nombre').value = user.nombre;
-                document.getElementById('user-apellido').value = user.apellido;
-                document.getElementById('user-usuario').value = user.usuario;
-                document.getElementById('user-fecha-nacimiento').value = fechaNacimiento;
-                document.getElementById('user-email').value = user.correo;
-                document.getElementById('user-celular').value = user.celular;
-                document.getElementById('user-telefono').value = user.telefono;
-                document.getElementById('user-cedula').value = user.cedula;
-                document.getElementById('user-sexo').value = user.sexo;
-                document.getElementById('user-password').value = user.password;
-    
-                if (user.id_tipo_usuario === 3) { 
-                    try {
-                        const doctoresAsociadosResponse = await fetch(`/api/doctoresAsociados/${user.id_usuario}`);
-                        const doctoresAsociados = await doctoresAsociadosResponse.json();
-                        const doctoresAsociadosIds = doctoresAsociados.map(doctor => doctor.id_doctor); 
-                
-                        console.log("Doctores asociados:", doctoresAsociados);
-                
-                        const todosDoctoresResponse = await fetch('/api/doctor/doctores');
-                        if (todosDoctoresResponse.ok) {
-                            const doctores = await todosDoctoresResponse.json();
-                            console.log("Todos los doctores: ", doctores);
-                
-                            const doctorSelect = document.getElementById('doctor-asociado');
-                            doctorSelect.innerHTML = '';
-                
-                            doctores.forEach(doctor => {
-                                const option = document.createElement('option');
-                                option.value = doctor.id_doctor;
-                                option.textContent = `${doctor.nombre} ${doctor.apellido}`;
-                
-                                if (doctoresAsociadosIds.includes(doctor.id_doctor)) { 
-                                    option.selected = true; 
-                                }
-                
-                                doctorSelect.appendChild(option);
-                            });
-                        } else {
-                            console.error('Error al obtener los doctores:', todosDoctoresResponse.status, todosDoctoresResponse.statusText);
-                        }
-                
-                    } catch (error) {
-                        console.error('Error al obtener los doctores asociados:', error);
-                    }
-                } else {
-                    document.getElementById('doctores-asociados').style.display = 'none';
-                }                
-                
-            } else {
-                window.location.href = 'login.html'; 
-            }
-        });
-    
-        function llenarSelectDoctores(doctores, doctoresAsociadosIds) {
-            const selectDoctores = document.getElementById('doctores-asociados');
-            selectDoctores.innerHTML = ''; 
-    
-            doctores.forEach(doctor => {
-                const option = document.createElement('option');
-                option.value = doctor.id_doctor;
-                option.textContent = `${doctor.nombre} ${doctor.apellido}`;
-                
-                if (doctoresAsociadosIds.includes(doctor.id_doctor)) {
-                    option.selected = true;
-                }
-    
-                selectDoctores.appendChild(option);
-            });
-        }
-    
-        document.getElementById('asistente-info-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-    
-            const user = JSON.parse(localStorage.getItem('user'));
-            console.log(user);
-    
-            const asistenteData = {
-                nombre: document.getElementById('user-nombre').value,
-                apellido: document.getElementById('user-apellido').value,
-                fecha_nacimiento: document.getElementById('user-fecha-nacimiento').value,
-                sexo: document.getElementById('user-sexo').value,
-                celular: document.getElementById('user-celular').value,
-                telefono: document.getElementById('user-telefono').value,
-                cedula: document.getElementById('user-cedula').value,
-                correo: document.getElementById('user-email').value,
-                usuario: document.getElementById('user-usuario').value,
-                password: document.getElementById('user-password').value,
-                id_doctor: Array.from(document.getElementById('doctor-asociado').selectedOptions).map(option => option.value),
-                estado: true 
-            };
-    
-            try {
-                const response = await fetch(`/api/usuario/${user.id_usuario}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(asistenteData)
-                });
-    
-                if (response.ok) {
-                    localStorage.setItem('user', JSON.stringify({ ...user, ...asistenteData }));
-                    window.location.href = 'profileUser.html'; 
-                } else {
-                    const errorMessage = await response.text(); 
-                    console.error('Error al actualizar la información:', errorMessage);
-                    alert(`Error al actualizar la información: ${errorMessage}`);
-                }
-            } catch (error) {
-                console.error('Error al enviar la solicitud:', error);
-                alert('Error al enviar la solicitud de actualización.');
-            }
-        });
-    
-    </script>
-    
-    <!-- Bootstrap core JavaScript-->
-    <script src="../vendor/jquery/jquery.min.js"> </script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="../design/js/sb-admin-2.min.js"> </script>
-
-    <!-- Page level plugins -->
-    <script src="../vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="../design/js/demo/chart-area-demo.js"></script>
-    <script src="../design/js/demo/chart-pie-demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
-
 </html>

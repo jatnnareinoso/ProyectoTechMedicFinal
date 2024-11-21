@@ -41,7 +41,7 @@ const registrarPaciente = async (req, res) => {
 
 const buscarPacientePorCedula = async (cedula) => {
     try {
-        const result = await pool.query('SELECT nombre, apellido FROM paciente WHERE cedula = $1', [cedula]);
+        const result = await pool.query('SELECT nombre, apellido FROM paciente WHERE cedula = $1 and estado = true' , [cedula]);
 
         if (result.rows.length > 0) {
             return { existe: true, nombre: result.rows[0].nombre, apellido: result.rows[0].apellido };

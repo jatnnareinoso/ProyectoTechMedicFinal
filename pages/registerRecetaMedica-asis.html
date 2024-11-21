@@ -21,6 +21,11 @@
                             <input type="text" name="nombre" id="nombrePaciente" placeholder="Nombre del paciente" readonly>
                         </div>
 
+                        <div class="input-field" id="edadField">
+                            <label>Edad</label>
+                            <input type="text" name="edad" id="edadPaciente" placeholder="Edad del paciente" readonly>
+                        </div>
+
                         <div class="input-field" id="doctorField">
                             <label>Doctor</label>
                             <select id="select-doctor" class="form-control">
@@ -74,8 +79,9 @@
         const user = JSON.parse(localStorage.getItem('user'));
         const urlParams = new URLSearchParams(window.location.search);
         const idPaciente = urlParams.get('id_paciente');
-        let idDoctor = null;
-        const idUsuario = user.id_usuario;
+        let idUsuarioDoctor = null; 
+        const idUsuarioAsistente = user.id_usuario;
+        let paciente = null;
 
         async function loadRecetaInfo() {
             if (!idPaciente) {
@@ -88,7 +94,9 @@
                 const pacienteInfo = await response.json();
 
                 if (response.ok) {
+                    paciente = pacienteInfo.nombre_paciente;
                     document.getElementById('nombrePaciente').value = pacienteInfo.nombre_paciente;
+                    document.getElementById('edadPaciente').value = pacienteInfo.edad;
                 } else {
                     alert(pacienteInfo.message);
                 }
@@ -96,18 +104,18 @@
                 console.error('Error al cargar información del paciente:', error);
             }
 
-            obtenerDoctor(idUsuario);
+            obtenerDoctores(idUsuarioAsistente);
         }
 
-        function obtenerDoctor(idUsuario) {
+        function obtenerDoctores(idUsuarioAsistente) {
             const selectDoctor = document.getElementById('select-doctor');
 
-            fetch(`/api/cita/doctoresAsistentes?id_usuario=${idUsuario}`)
+            fetch(`/api/cita/doctoresAsistentes?id_usuario=${idUsuarioAsistente}`)
                 .then(response => response.json())
                 .then(doctores => {
                     doctores.forEach(doctor => {
                         const option = document.createElement('option');
-                        option.value = doctor.id_doctor;
+                        option.value = doctor.id_doctor; 
                         option.textContent = `${doctor.nombre} ${doctor.apellido}`;
                         selectDoctor.appendChild(option);
                     });
@@ -115,13 +123,36 @@
                 .catch(error => console.error('Error al obtener doctores:', error));
         }
 
+        document.getElementById('select-doctor').addEventListener('change', async (event) => {
+            const idDoctorSeleccionado = event.target.value;
+
+            if (idDoctorSeleccionado) {
+                try {
+                    const response = await fetch(`/api/doctor/doctorId/${idDoctorSeleccionado}/usuario`);
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        idUsuarioDoctor = data.id_usuario;
+                    } else {
+                        alert('Error al obtener el id_usuario del doctor: ' + data.message);
+                    }
+                } catch (error) {
+                    console.error('Error al obtener id_usuario del doctor:', error);
+                    alert('Ocurrió un error al obtener el id_usuario del doctor.');
+                }
+            }
+        });
+
         document.getElementById('submitBtn').addEventListener('click', async () => {
             const idDoctor = document.getElementById('select-doctor').value;
+
             const recetaData = {
                 id_doctor: idDoctor,
                 id_paciente: idPaciente,
+                edad_paciente: document.getElementById('edadPaciente').value,
                 observacion: document.getElementById('observaciones').value,
-                medicamentos: []
+                medicamentos: [],
+                id_usuario: idUsuarioDoctor
             };
 
             document.querySelectorAll('.medicamento-item').forEach(item => {
@@ -138,25 +169,27 @@
             try {
                 const response = await fetch('/api/recetas/registrarReceta', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(recetaData)
                 });
-
-                const result = await response.json();
-
+        
                 if (response.ok) {
-                    alert('Receta registrada exitosamente');
-                    window.location.href = 'recetaConfirmacion.html'; 
+                    const blob = await response.blob(); 
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `receta_medica_${paciente}.pdf`;
+                    a.click();
+                    window.location.href = `./menu/historyPC-asis.html?id_paciente=${idPaciente}`;
                 } else {
-                    alert('Error al registrar la receta: ' + result.message);
+                    alert('Error al generar la receta.');
                 }
             } catch (error) {
-                console.error('Error al registrar receta:', error);
-                alert('Ocurrió un error al registrar la receta.');
+                console.error('Error al generar la receta:', error);
+                alert('Error al generar la receta.');
             }
         });
+
 
         function updateButtonVisibility() {
             document.querySelectorAll('.medicamento-item .button-group').forEach(buttonGroup => buttonGroup.remove());

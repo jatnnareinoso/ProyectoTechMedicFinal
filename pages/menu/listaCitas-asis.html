@@ -127,7 +127,35 @@
         transition: background-color 0.3s;
     }
 
+    .error-modal {
+        display: none; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+    }
 
+    .error-modal button {
+        padding: 5px 9px;
+        background-color: #721c24;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .error-modal button:hover {
+        background-color: #a71d2a;
+    }
 
 </style>
 
@@ -348,6 +376,12 @@
                     
                 </div>
 
+                <div id="errorModal" class="error-modal">
+                    <span id="errorText"></span>
+                    <hr>
+                    <button onclick="cerrarError()">Cerrar</button>
+                </div>
+
                 <div id="editCitaModal" class="modal">
                     <div class="modal-content">
                         <span class="close" id="closeModal">&times;</span>
@@ -379,6 +413,18 @@
 
                     function cerrarModal() {
                         document.getElementById('editCitaModal').style.display = 'none';
+                    }
+
+                    function mostrarError(mensaje) {
+                        const errorModal = document.getElementById('errorModal');
+                        const errorText = document.getElementById('errorText');
+                        errorText.textContent = mensaje;
+                        errorModal.style.display = 'block';
+                    }
+                    
+                    function cerrarError() {
+                        const errorModal = document.getElementById('errorModal');
+                        errorModal.style.display = 'none';
                     }
                 
                     document.addEventListener('DOMContentLoaded', async () => {
@@ -512,6 +558,15 @@
                 
                         async function abrirModal(id_cita) {
                             try {
+
+                                const consultaResponse = await fetch(`/api/cita/consultaPorCita/${id_cita}`);
+                                const consultaData = await consultaResponse.json();
+
+                                if (consultaData.tieneConsulta) {
+                                    mostrarError('No se puede editar esta cita porque ya tiene una consulta registrada.');
+                                    return;
+                                }
+
                                 const response = await fetch(`/api/cita/citaId/${id_cita}`);
                                 const cita = await response.json();
                 
@@ -619,7 +674,6 @@
                                 });
                 
                                 if (response.ok) {
-                                    alert('Cita actualizada correctamente');
                                     await cargarCitas(idUsuario);
                                     cerrarModal();
                                 } else {

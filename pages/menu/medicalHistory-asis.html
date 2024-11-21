@@ -338,7 +338,7 @@
                             if (consulta.diagnostico.rutas && consulta.diagnostico.rutas.length > 0) {
 
                                 archivosHtml = consulta.diagnostico.rutas.map(ruta => `
-                                    <a href="${ruta}" download>Descargar archivo</a>
+                                    <a href="${ruta}" target="_blank">Ver archivo</a>
                                 `).join('<br>');
                             } else {
                                 archivosHtml = 'No hay archivos adjuntos';
@@ -359,7 +359,6 @@
                                 <p><strong>Descripción:</strong> ${consulta.diagnostico.descripcion || 'No hay diagnóstico'}</p>
                                 <p><strong>Observación:</strong> ${consulta.diagnostico.observacion || 'No hay observación'}</p>
                                 <p><strong>Resultado de Pruebas:</strong> ${consulta.diagnostico.resultado_pruebas || 'Sin resultados'}</p>
-                                <p><strong>Estado:</strong> ${consulta.diagnostico.estado ? 'Activo' : 'Inactivo'}</p>
                                 <h4>Archivos del Diagnóstico</h4>
                                 <p>${archivosHtml}</p>
                             `;

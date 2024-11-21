@@ -22,7 +22,7 @@
                         </div>
 
                         <div class="input-field" id="edadField">
-                            <label>Paciente</label>
+                            <label>Edad</label>
                             <input type="text" name="edad" id="edadPaciente" placeholder="Edad del paciente" readonly>
                         </div>
 
@@ -77,8 +77,11 @@
         const urlParams = new URLSearchParams(window.location.search);
         const idPaciente = urlParams.get('id_paciente');
         const idDoctor = urlParams.get('id_doctor');
+        const idUsuario = urlParams.get('id_usuario');
+        let paciente = null;
 
         async function loadRecetaInfo() {
+            console.log("ID del paciente:", idPaciente);
             if (!idPaciente) {
                 alert('ID de paciente no encontrado en la URL');
                 return;
@@ -86,9 +89,12 @@
             
             try {
                 const response = await fetch(`/api/recetas/paciente/${idPaciente}`);
+                console.log("Respuesta de carga de paciente:", response);
+                
                 const pacienteInfo = await response.json();
 
                 if (response.ok) {
+                    paciente = pacienteInfo.nombre_paciente;
                     document.getElementById('nombrePaciente').value = pacienteInfo.nombre_paciente;
                     document.getElementById('edadPaciente').value = pacienteInfo.edad;
                 } else {
@@ -101,25 +107,9 @@
 
         if (user) {
             document.getElementById('user-name').value = `${user.nombre} ${user.apellido}`;
-            obtenerIdDoctor(user.id_usuario);
         } else {
             window.location.href = 'login.html';
         }   
-
-        async function obtenerIdDoctor(idUsuario) {
-            try {
-                const response = await fetch(`/api/cita/getIdDoctor?id_usuario=${idUsuario}`);
-                const data = await response.json();
-
-                if (data.id_doctor) {
-                    idDoctor = data.id_doctor;
-                } else {
-                    console.error('No se encontró el ID del doctor:', data);
-                }
-            } catch (error) {
-                console.error('Error al obtener id_doctor:', error);
-            }
-        }
 
         document.getElementById('submitBtn').addEventListener('click', async () => {
             const recetaData = {
@@ -128,9 +118,9 @@
                 edad_paciente: document.getElementById('edadPaciente').value,
                 observacion: document.getElementById('observaciones').value,
                 medicamentos: [],
-                
+                id_usuario: idUsuario
             };
-
+        
             document.querySelectorAll('.medicamento-item').forEach(item => {
                 const medicamento = {
                     nombre: item.querySelector('[name="medicamento"]').value,
@@ -141,30 +131,31 @@
                 };
                 recetaData.medicamentos.push(medicamento);
             });
-
+        
             try {
                 const response = await fetch('/api/recetas/registrarReceta', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(recetaData)
                 });
-
-                const result = await response.json();
-
+        
                 if (response.ok) {
-                    alert('Receta registrada exitosamente');
-                    window.location.href = 'recetaConfirmacion.html'; 
+                    const blob = await response.blob(); 
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `receta_medica_${paciente}.pdf`;
+                    a.click();
+                    window.location.href = `./menu/historyPC.html?id_paciente=${idPaciente}`;
                 } else {
-                    alert('Error al registrar la receta: ' + result.message);
+                    alert('Error al generar la receta.');
                 }
             } catch (error) {
-                console.error('Error al registrar receta:', error);
-                alert('Ocurrió un error al registrar la receta.');
+                console.error('Error al generar la receta:', error);
+                alert('Error al generar la receta.');
             }
         });
-
+        
         function updateButtonVisibility() {
             document.querySelectorAll('.medicamento-item .button-group').forEach(buttonGroup => buttonGroup.remove());
 

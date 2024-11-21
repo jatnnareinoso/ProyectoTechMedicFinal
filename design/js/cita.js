@@ -93,10 +93,27 @@ router.post('/agregarCita', async (req, res) => {
     const { id_paciente, id_doctor, id_centro_medico, id_usuario, fecha_hora, estado, color, id_tipo_consulta } = req.body;
 
     if (!id_paciente || !id_doctor || !id_centro_medico || !fecha_hora) {
-        return res.status(400).json({ message: 'Todos los campos obligatorios deben ser completados' });
+        return res.status(400).json({ error: 'Todos los campos obligatorios deben ser completados' });
     }
 
     try {
+        const fechaActual = new Date();
+        const fechaCita = new Date(fecha_hora);
+
+        if (fechaCita < fechaActual) {
+            return res.status(400).json({ error: 'No se permiten citas en fechas pasadas.' });
+        }
+
+        const citaExistenteQuery = `
+            SELECT * FROM cita 
+            WHERE id_doctor = $1 AND fecha_hora = $2
+        `;
+        const citaExistenteResult = await client.query(citaExistenteQuery, [id_doctor, fecha_hora]);
+
+        if (citaExistenteResult.rows.length > 0) {
+            return res.status(400).json({ error: 'Ya existe una cita registrada para este doctor en la fecha y hora seleccionadas.' });
+        }
+
         const query = `
             INSERT INTO cita (id_paciente, id_doctor, id_centro_medico, id_usuario, fecha_hora, estado, color, id_tipo_consulta)
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *
@@ -114,16 +131,15 @@ router.post('/agregarCita', async (req, res) => {
             const correoPaciente = pacienteQuery.rows[0].correo;
             const nombreCompletoDoctor = `${doctorQuery.rows[0].nombre_doctor} ${doctorQuery.rows[0].apellido_doctor}`;
 
-            const fechaCita = new Date(fecha_hora).toLocaleDateString();
-            const horaCita = new Date(fecha_hora).toLocaleTimeString();
+            const fechaCitaFormateada = fechaCita.toLocaleDateString();
+            const horaCita = fechaCita.toLocaleTimeString();
 
             if (correoPaciente) {
-
                 await enviarCorreo({
                     correoPaciente,
                     nombreCompletoPaciente,
                     nombreCompletoDoctor,
-                    fechaCita,
+                    fechaCita: fechaCitaFormateada,
                     horaCita
                 });
                 res.status(201).json({ message: 'Cita agregada y correo enviado correctamente' });
@@ -138,6 +154,7 @@ router.post('/agregarCita', async (req, res) => {
         res.status(500).json({ message: 'Error al agregar la cita' });
     }
 });
+
 
 async function enviarCorreo({ correoPaciente, nombreCompletoPaciente, nombreCompletoDoctor, fechaCita, horaCita }) {
     const mensaje = {
@@ -306,6 +323,15 @@ router.get('/tipo_consulta', async (req, res) => {
 router.get('/citaId/:id_cita', async (req, res) => {
     const { id_cita } = req.params;
     try {
+        const consultaResult = await client.query(
+            'SELECT * FROM consulta WHERE id_cita = $1',
+            [id_cita]
+        );
+
+        if (consultaResult.rows.length > 0) {
+            return res.status(400).json({ success: false, message: 'No se puede editar esta cita ya que tiene una consulta registrada.' });
+        }
+
         const result = await client.query(
             `SELECT * FROM cita WHERE id_cita = $1`,
             [id_cita]
@@ -320,5 +346,22 @@ router.get('/citaId/:id_cita', async (req, res) => {
     }
 });
 
+router.get('/consultaPorCita/:id_cita', async (req, res) => {
+    const { id_cita } = req.params;
+    try {
+        const result = await client.query(
+            `SELECT 1 FROM consulta WHERE id_cita = $1 LIMIT 1`,
+            [id_cita]
+        );
+        if (result.rows.length > 0) {
+            return res.json({ tieneConsulta: true });
+        } else {
+            return res.json({ tieneConsulta: false });
+        }
+    } catch (error) {
+        console.error('Error al verificar consulta por cita:', error);
+        res.status(500).json({ message: 'Error al verificar consulta por cita' });
+    }
+});
 
 module.exports = router;

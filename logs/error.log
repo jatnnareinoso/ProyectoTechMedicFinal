@@ -53,3 +53,212 @@ Error: Extension "handlebars" is not compatible with "core" extension. Missing "
     at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedic\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
     at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedic\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
     at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedic\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T16:35:28.602Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:14:9
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:14:9
+2024-11-09T16:39:59.542Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T16:43:56.139Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T16:47:29.056Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.0.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:01:10.230Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:03:33.480Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:03:55.784Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:05:05.065Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:18:06.348Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T02:47:46.696Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:27:38.147Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:30:27.992Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:35:18.546Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:42:39.797Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:56:32.082Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:58:00.588Z - error: Error occurred during reporter init: Error: Error when loading extension html-to-pdfmake@1.0.5
+Error: Extension "html-to-pdfmake" is not compatible with "core" extension. Missing ".requires" information in "html-to-pdfmake" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+2024-11-10T23:25:55.749Z - error: Error occurred during reporter init: Error: Error when loading extension html-to-pdfmake@1.0.5
+Error: Extension "html-to-pdfmake" is not compatible with "core" extension. Missing ".requires" information in "html-to-pdfmake" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+2024-11-10T23:37:18.999Z - error: Error occurred during reporter init: Error: Error when loading extension html-to-pdfmake@1.0.5
+Error: Extension "html-to-pdfmake" is not compatible with "core" extension. Missing ".requires" information in "html-to-pdfmake" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+2024-11-10T23:39:22.882Z - error: Error occurred during reporter init: Error: Error when loading extension html-to-pdfmake@1.0.5
+Error: Extension "html-to-pdfmake" is not compatible with "core" extension. Missing ".requires" information in "html-to-pdfmake" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9

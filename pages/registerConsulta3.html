@@ -156,22 +156,6 @@
             }
         }
 
-        /*function agregarPruebaRealizada() {
-            contadorPruebasRealizadas++;
-            const listaPruebasRealizadas = document.getElementById('listaPruebasRealizadas');
-            const nuevaPruebaRealizada = document.createElement('div');
-            nuevaPruebaRealizada.innerHTML = `
-                <div class="prueba-div">
-                    <label>Prueba Realizada ${contadorPruebasRealizadas}</label>
-                    <input type="text" name="prueba${contadorPruebasRealizadas}" placeholder="Prueba" required>
-                    <br><label>Resultado</label>
-                    <input type="text" name="resultado${contadorPruebasRealizadas}" placeholder="Resultado" required>
-                    <hr>
-                </div>
-            `;
-            listaPruebasRealizadas.appendChild(nuevaPruebaRealizada);
-        }*/
-
         document.getElementById('registrationForm').addEventListener('submit', async function(event) {
             event.preventDefault();
         
@@ -193,19 +177,7 @@
             const estado = 'activo';
             const id_cita = new URLSearchParams(window.location.search).get('id_cita');
             const id_especialidad = document.getElementById('especialidad').value;
-        
-            /*const pruebasResultados = [];
-            const listaPruebasDivs = document.querySelectorAll('#listaPruebasRealizadas > div');
-            
-        
-            listaPruebasDivs.forEach((div, index) => {
-                const prueba = div.querySelector(`input[name="prueba${index + 1}"]`).value;
-                const resultado = div.querySelector(`input[name="resultado${index + 1}"]`).value;
-                pruebasResultados.push(`Prueba: ${prueba}, Resultado: ${resultado}`);
-            });
-        
-            const resultados_pruebas = pruebasResultados.join('; ');*/
-        
+
             const requestBody = {
                 motivo,
                 descripcion,
@@ -215,7 +187,6 @@
                 notas_internas: notasInternas,
                 notas_externas: notasExternas,
                 pruebas,
-                /*resultados_pruebas, */
                 id_especialidad
             };
         
@@ -228,7 +199,6 @@
         
                 const result = await response.json();
                 if (response.ok) {
-                    alert('Consulta guardada exitosamente');
                     window.location.href = './menu/listaConsultas.html';
                 } else {
                     alert(result.message);

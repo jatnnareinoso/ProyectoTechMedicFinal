@@ -647,3 +647,1163 @@ Error: Extension "handlebars" is not compatible with "core" extension. Missing "
     at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedic\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
     at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedic\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
     at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedic\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T16:35:13.384Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-09T16:35:13.392Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T16:35:13.419Z - info: Extensions location cache doesn't contain entry yet, crawling
+2024-11-09T16:35:28.263Z - info: Found 36 extension(s)
+2024-11-09T16:35:28.399Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-09T16:35:28.404Z - debug: Discovered 36 extensions
+2024-11-09T16:35:28.407Z - warn: Filtering out duplicated extension "handlebars" from C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport-handlebars, using C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport-handlebars
+2024-11-09T16:35:28.415Z - warn: Filtering out duplicated extension "html-to-pdfmake" from C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport-html-to-pdfmake, using C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport-html-to-pdfmake
+2024-11-09T16:35:28.602Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:14:9
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:14:9
+2024-11-09T16:39:51.122Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-09T16:39:51.129Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T16:39:51.155Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-09T16:39:59.321Z - info: Found 36 extension(s)
+2024-11-09T16:39:59.423Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-09T16:39:59.428Z - debug: Discovered 36 extensions
+2024-11-09T16:39:59.542Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T16:43:46.494Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-09T16:43:46.500Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T16:43:46.518Z - info: Extensions location cache not found, crawling directories
+2024-11-09T16:43:55.912Z - info: Found 36 extension(s)
+2024-11-09T16:43:56.025Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-09T16:43:56.033Z - debug: Discovered 36 extensions
+2024-11-09T16:43:56.139Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T16:47:19.254Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-09T16:47:19.266Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T16:47:19.300Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-09T16:47:28.778Z - info: Found 36 extension(s)
+2024-11-09T16:47:28.895Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-09T16:47:28.901Z - debug: Discovered 36 extensions
+2024-11-09T16:47:29.056Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.0.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:01:00.878Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-09T17:01:00.884Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T17:01:00.904Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-09T17:01:10.012Z - info: Found 36 extension(s)
+2024-11-09T17:01:10.115Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-09T17:01:10.119Z - debug: Discovered 36 extensions
+2024-11-09T17:01:10.230Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:03:24.675Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-09T17:03:24.682Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T17:03:24.703Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-09T17:03:33.265Z - info: Found 36 extension(s)
+2024-11-09T17:03:33.368Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-09T17:03:33.372Z - debug: Discovered 36 extensions
+2024-11-09T17:03:33.480Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:03:54.694Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-09T17:03:54.700Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T17:03:54.734Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T17:03:55.574Z - info: Found 36 extension(s)
+2024-11-09T17:03:55.672Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-09T17:03:55.676Z - debug: Discovered 36 extensions
+2024-11-09T17:03:55.784Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:04:56.247Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-09T17:04:56.257Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T17:04:56.279Z - info: Extensions location cache not found, crawling directories
+2024-11-09T17:05:04.802Z - info: Found 36 extension(s)
+2024-11-09T17:05:04.935Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-09T17:05:04.941Z - debug: Discovered 36 extensions
+2024-11-09T17:05:05.065Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-09T17:17:56.820Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-09T17:17:56.826Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-09T17:17:56.848Z - info: Extensions location cache doesn't contain entry yet, crawling
+2024-11-09T17:18:06.125Z - info: Found 36 extension(s)
+2024-11-09T17:18:06.234Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-09T17:18:06.238Z - debug: Discovered 36 extensions
+2024-11-09T17:18:06.348Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\jsreport\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T02:47:37.093Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T02:47:37.099Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T02:47:37.116Z - info: Extensions location cache not found, crawling directories
+2024-11-10T02:47:46.448Z - info: Found 36 extension(s)
+2024-11-10T02:47:46.565Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T02:47:46.569Z - debug: Discovered 36 extensions
+2024-11-10T02:47:46.696Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:27:29.403Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T21:27:29.411Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T21:27:29.447Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-10T21:27:37.922Z - info: Found 36 extension(s)
+2024-11-10T21:27:38.028Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T21:27:38.032Z - debug: Discovered 36 extensions
+2024-11-10T21:27:38.147Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:30:26.796Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T21:30:26.803Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T21:30:26.831Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T21:30:27.733Z - info: Found 36 extension(s)
+2024-11-10T21:30:27.870Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T21:30:27.874Z - debug: Discovered 36 extensions
+2024-11-10T21:30:27.992Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:35:05.591Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T21:35:05.598Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T21:35:05.667Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-10T21:35:18.134Z - info: Found 36 extension(s)
+2024-11-10T21:35:18.384Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T21:35:18.389Z - debug: Discovered 36 extensions
+2024-11-10T21:35:18.546Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:42:38.515Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T21:42:38.521Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T21:42:38.554Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T21:42:39.461Z - info: Found 36 extension(s)
+2024-11-10T21:42:39.614Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T21:42:39.619Z - debug: Discovered 36 extensions
+2024-11-10T21:42:39.797Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:56:31.010Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T21:56:31.017Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T21:56:31.098Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T21:56:31.683Z - info: Found 36 extension(s)
+2024-11-10T21:56:31.856Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T21:56:31.901Z - debug: Discovered 36 extensions
+2024-11-10T21:56:32.082Z - error: Error occurred during reporter init: Error: Error when loading extension handlebars@2.1.0
+Error: Extension "handlebars" is not compatible with "core" extension. Missing ".requires" information in "handlebars" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:36)
+2024-11-10T21:57:49.323Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T21:57:49.330Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T21:57:49.353Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-10T21:57:58.317Z - info: Found 35 extension(s)
+2024-11-10T21:57:58.444Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T21:57:58.448Z - debug: Discovered 35 extensions
+2024-11-10T21:57:58.559Z - info: Using extension authentication@4.2.2
+2024-11-10T21:57:59.121Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-10T21:57:59.123Z - info: Using extension base@4.0.0
+2024-11-10T21:57:59.133Z - info: Using extension child-templates@4.1.0
+2024-11-10T21:57:59.136Z - info: Using extension cli@4.0.5
+2024-11-10T21:57:59.145Z - info: Using extension components@4.0.2
+2024-11-10T21:57:59.153Z - info: Using extension data@4.1.0
+2024-11-10T21:57:59.157Z - info: Using extension express@4.1.3
+2024-11-10T21:58:00.014Z - info: Using extension freeze@4.0.0
+2024-11-10T21:58:00.020Z - info: Using extension fs-store@4.0.5
+2024-11-10T21:58:00.350Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-10T21:58:00.351Z - info: Using extension import-export@4.0.5
+2024-11-10T21:58:00.406Z - info: Using extension jsrender@4.0.0
+2024-11-10T21:58:00.409Z - info: Using extension licensing@4.0.3
+2024-11-10T21:58:00.442Z - info: Using extension localization@4.0.1
+2024-11-10T21:58:00.445Z - info: Using extension npm@4.0.0
+2024-11-10T21:58:00.474Z - info: Using extension pdf-utils@4.2.2
+2024-11-10T21:58:00.496Z - info: Using extension reports@4.1.2
+2024-11-10T21:58:00.504Z - info: Using extension tags@4.0.1
+2024-11-10T21:58:00.512Z - info: Using extension text@4.0.2
+2024-11-10T21:58:00.517Z - info: Using extension version-control@4.0.0
+2024-11-10T21:58:00.588Z - error: Error occurred during reporter init: Error: Error when loading extension html-to-pdfmake@1.0.5
+Error: Extension "html-to-pdfmake" is not compatible with "core" extension. Missing ".requires" information in "html-to-pdfmake" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+2024-11-10T23:25:42.164Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T23:25:42.172Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T23:25:42.183Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-10T23:25:53.462Z - info: Found 35 extension(s)
+2024-11-10T23:25:53.590Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T23:25:53.599Z - debug: Discovered 35 extensions
+2024-11-10T23:25:53.729Z - info: Using extension authentication@4.2.2
+2024-11-10T23:25:54.271Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-10T23:25:54.273Z - info: Using extension base@4.0.0
+2024-11-10T23:25:54.281Z - info: Using extension child-templates@4.1.0
+2024-11-10T23:25:54.285Z - info: Using extension cli@4.0.5
+2024-11-10T23:25:54.293Z - info: Using extension components@4.0.2
+2024-11-10T23:25:54.298Z - info: Using extension data@4.1.0
+2024-11-10T23:25:54.304Z - info: Using extension express@4.1.3
+2024-11-10T23:25:55.149Z - info: Using extension freeze@4.0.0
+2024-11-10T23:25:55.153Z - info: Using extension fs-store@4.0.5
+2024-11-10T23:25:55.502Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-10T23:25:55.504Z - info: Using extension import-export@4.0.5
+2024-11-10T23:25:55.563Z - info: Using extension jsrender@4.0.0
+2024-11-10T23:25:55.572Z - info: Using extension licensing@4.0.3
+2024-11-10T23:25:55.617Z - info: Using extension localization@4.0.1
+2024-11-10T23:25:55.620Z - info: Using extension npm@4.0.0
+2024-11-10T23:25:55.630Z - info: Using extension pdf-utils@4.2.2
+2024-11-10T23:25:55.667Z - info: Using extension reports@4.1.2
+2024-11-10T23:25:55.698Z - info: Using extension tags@4.0.1
+2024-11-10T23:25:55.704Z - info: Using extension text@4.0.2
+2024-11-10T23:25:55.709Z - info: Using extension version-control@4.0.0
+2024-11-10T23:25:55.749Z - error: Error occurred during reporter init: Error: Error when loading extension html-to-pdfmake@1.0.5
+Error: Extension "html-to-pdfmake" is not compatible with "core" extension. Missing ".requires" information in "html-to-pdfmake" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+2024-11-10T23:37:05.879Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T23:37:05.885Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T23:37:05.897Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-10T23:37:16.698Z - info: Found 35 extension(s)
+2024-11-10T23:37:16.786Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T23:37:16.791Z - debug: Discovered 35 extensions
+2024-11-10T23:37:16.914Z - info: Using extension authentication@4.2.2
+2024-11-10T23:37:17.457Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-10T23:37:17.459Z - info: Using extension base@4.0.0
+2024-11-10T23:37:17.469Z - info: Using extension child-templates@4.1.0
+2024-11-10T23:37:17.473Z - info: Using extension cli@4.0.5
+2024-11-10T23:37:17.483Z - info: Using extension components@4.0.2
+2024-11-10T23:37:17.489Z - info: Using extension data@4.1.0
+2024-11-10T23:37:17.498Z - info: Using extension express@4.1.3
+2024-11-10T23:37:18.456Z - info: Using extension freeze@4.0.0
+2024-11-10T23:37:18.464Z - info: Using extension fs-store@4.0.5
+2024-11-10T23:37:18.812Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-10T23:37:18.813Z - info: Using extension import-export@4.0.5
+2024-11-10T23:37:18.878Z - info: Using extension jsrender@4.0.0
+2024-11-10T23:37:18.882Z - info: Using extension licensing@4.0.3
+2024-11-10T23:37:18.920Z - info: Using extension localization@4.0.1
+2024-11-10T23:37:18.925Z - info: Using extension npm@4.0.0
+2024-11-10T23:37:18.934Z - info: Using extension pdf-utils@4.2.2
+2024-11-10T23:37:18.939Z - info: Using extension reports@4.1.2
+2024-11-10T23:37:18.948Z - info: Using extension tags@4.0.1
+2024-11-10T23:37:18.953Z - info: Using extension text@4.0.2
+2024-11-10T23:37:18.957Z - info: Using extension version-control@4.0.0
+2024-11-10T23:37:18.999Z - error: Error occurred during reporter init: Error: Error when loading extension html-to-pdfmake@1.0.5
+Error: Extension "html-to-pdfmake" is not compatible with "core" extension. Missing ".requires" information in "html-to-pdfmake" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+2024-11-10T23:39:10.369Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T23:39:10.394Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T23:39:10.475Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T23:39:13.003Z - info: Found 35 extension(s)
+2024-11-10T23:39:13.666Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T23:39:14.013Z - debug: Discovered 35 extensions
+2024-11-10T23:39:14.960Z - info: Using extension authentication@4.2.2
+2024-11-10T23:39:17.204Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-10T23:39:17.208Z - info: Using extension base@4.0.0
+2024-11-10T23:39:17.250Z - info: Using extension child-templates@4.1.0
+2024-11-10T23:39:17.263Z - info: Using extension cli@4.0.5
+2024-11-10T23:39:17.387Z - info: Using extension components@4.0.2
+2024-11-10T23:39:17.418Z - info: Using extension data@4.1.0
+2024-11-10T23:39:17.515Z - info: Using extension express@4.1.3
+2024-11-10T23:39:21.196Z - info: Using extension freeze@4.0.0
+2024-11-10T23:39:21.238Z - info: Using extension fs-store@4.0.5
+2024-11-10T23:39:22.492Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-10T23:39:22.508Z - info: Using extension import-export@4.0.5
+2024-11-10T23:39:22.649Z - info: Using extension jsrender@4.0.0
+2024-11-10T23:39:22.653Z - info: Using extension licensing@4.0.3
+2024-11-10T23:39:22.717Z - info: Using extension localization@4.0.1
+2024-11-10T23:39:22.722Z - info: Using extension npm@4.0.0
+2024-11-10T23:39:22.732Z - info: Using extension pdf-utils@4.2.2
+2024-11-10T23:39:22.745Z - info: Using extension reports@4.1.2
+2024-11-10T23:39:22.768Z - info: Using extension tags@4.0.1
+2024-11-10T23:39:22.794Z - info: Using extension text@4.0.2
+2024-11-10T23:39:22.798Z - info: Using extension version-control@4.0.0
+2024-11-10T23:39:22.882Z - error: Error occurred during reporter init: Error: Error when loading extension html-to-pdfmake@1.0.5
+Error: Extension "html-to-pdfmake" is not compatible with "core" extension. Missing ".requires" information in "html-to-pdfmake" definition
+    at validateMinimalVersion (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+    at Object._useOne (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at async MainReporter.init (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:206:7)
+    at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\design\js\recetas.js:58:9
+2024-11-10T23:50:56.383Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T23:50:56.391Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T23:50:56.413Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-10T23:51:05.474Z - info: Found 34 extension(s)
+2024-11-10T23:51:05.597Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T23:51:05.602Z - debug: Discovered 34 extensions
+2024-11-10T23:51:05.730Z - info: Using extension authentication@4.2.2
+2024-11-10T23:51:06.200Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-10T23:51:06.202Z - info: Using extension base@4.0.0
+2024-11-10T23:51:06.210Z - info: Using extension child-templates@4.1.0
+2024-11-10T23:51:06.215Z - info: Using extension cli@4.0.5
+2024-11-10T23:51:06.223Z - info: Using extension components@4.0.2
+2024-11-10T23:51:06.231Z - info: Using extension data@4.1.0
+2024-11-10T23:51:06.235Z - info: Using extension express@4.1.3
+2024-11-10T23:51:07.019Z - info: Using extension freeze@4.0.0
+2024-11-10T23:51:07.026Z - info: Using extension fs-store@4.0.5
+2024-11-10T23:51:07.348Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-10T23:51:07.349Z - info: Using extension import-export@4.0.5
+2024-11-10T23:51:07.404Z - info: Using extension jsrender@4.0.0
+2024-11-10T23:51:07.407Z - info: Using extension licensing@4.0.3
+2024-11-10T23:51:07.450Z - info: Using extension localization@4.0.1
+2024-11-10T23:51:07.454Z - info: Using extension npm@4.0.0
+2024-11-10T23:51:07.480Z - info: Using extension pdf-utils@4.2.2
+2024-11-10T23:51:07.502Z - info: Using extension reports@4.1.2
+2024-11-10T23:51:07.510Z - info: Using extension tags@4.0.1
+2024-11-10T23:51:07.514Z - info: Using extension text@4.0.2
+2024-11-10T23:51:07.519Z - info: Using extension version-control@4.0.0
+2024-11-10T23:51:07.561Z - info: Using extension assets@4.2.0
+2024-11-10T23:51:07.603Z - info: Using extension authorization@4.0.1
+2024-11-10T23:51:07.616Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-10T23:51:07.618Z - info: Using extension browser-client@4.1.0
+2024-11-10T23:51:07.627Z - info: Using extension chrome-pdf@4.1.0
+2024-11-10T23:51:07.635Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-10T23:51:07.636Z - info: Using extension docx@4.6.0
+2024-11-10T23:51:07.644Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-10T23:51:08.752Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-10T23:51:08.754Z - info: Using extension pptx@4.3.2
+2024-11-10T23:51:08.760Z - info: Using extension scheduling@4.0.0
+2024-11-10T23:51:08.841Z - info: Using extension scripts@4.1.0
+2024-11-10T23:51:08.845Z - info: Using extension static-pdf@4.1.0
+2024-11-10T23:51:08.848Z - info: Using extension studio@4.2.0
+2024-11-10T23:51:09.138Z - info: Using extension xlsx@4.3.0
+2024-11-10T23:51:09.143Z - info: Using extension public-templates@4.0.0
+2024-11-10T23:51:09.170Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-10T23:51:09.171Z - info: Using extension sample-template@4.0.0
+2024-11-10T23:51:09.176Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-10T23:51:09.183Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-10T23:51:09.184Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-10T23:51:09.215Z - debug: studio default theme is: light
+2024-11-10T23:51:09.223Z - info: Creating default express app.
+2024-11-10T23:51:09.273Z - info: jsreport server successfully started on http port: 5488
+2024-11-10T23:51:09.277Z - info: Verifying license key free
+2024-11-10T23:51:09.280Z - info: Using free license
+2024-11-10T23:51:09.297Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-10T23:51:09.299Z - info: Migration successful
+2024-11-10T23:51:09.301Z - debug: Creating samples is disabled
+2024-11-10T23:51:09.303Z - info: Initializing worker threads
+2024-11-10T23:51:09.304Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-10T23:51:11.594Z - info: 2 worker threads initialized in 2291ms
+2024-11-10T23:51:11.595Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-10T23:51:11.596Z - info: reporter initialized
+2024-11-10T23:51:11.722Z - info: Render request 1 queued for execution and waiting for available worker rootId=9cpamge0qqh6qmr, id=9cpamge0qqh6qmr
+2024-11-10T23:51:11.751Z - info: Starting rendering request 1 rootId=9cpamge0qqh6qmr, id=9cpamge0qqh6qmr
+2024-11-10T23:51:11.754Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=9cpamge0qqh6qmr, id=9cpamge0qqh6qmr
+2024-11-10T23:51:11.754Z - debug: Data item not defined for this template. rootId=9cpamge0qqh6qmr, id=9cpamge0qqh6qmr
+2024-11-10T23:51:11.758Z - debug: Base url not specified, skipping its injection. rootId=9cpamge0qqh6qmr, id=9cpamge0qqh6qmr
+2024-11-10T23:51:11.765Z - warn: Error when processing render request 1
+(because) engine 'handlebars' not found. If this is a custom engine make sure it's properly installed from npm
+Error: Engine 'handlebars' not found. If this is a custom engine make sure it's properly installed from npm
+  at module.exports (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:38:22)
+  at WorkerReporter._render (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:13)
+  at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+  at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:232:24
+  at async processAndResponse (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:41:17) rootId=9cpamge0qqh6qmr, id=9cpamge0qqh6qmr
+2024-11-10T23:51:11.765Z - warn: Rendering request 1 finished with error in 47 ms rootId=9cpamge0qqh6qmr, id=9cpamge0qqh6qmr
+2024-11-10T23:53:53.076Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T23:53:53.083Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T23:53:53.095Z - info: Extensions location cache C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2024-11-10T23:54:01.963Z - info: Found 34 extension(s)
+2024-11-10T23:54:02.064Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T23:54:02.069Z - debug: Discovered 34 extensions
+2024-11-10T23:54:02.178Z - info: Using extension authentication@4.2.2
+2024-11-10T23:54:02.674Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-10T23:54:02.676Z - info: Using extension base@4.0.0
+2024-11-10T23:54:02.686Z - info: Using extension child-templates@4.1.0
+2024-11-10T23:54:02.694Z - info: Using extension cli@4.0.5
+2024-11-10T23:54:02.702Z - info: Using extension components@4.0.2
+2024-11-10T23:54:02.708Z - info: Using extension data@4.1.0
+2024-11-10T23:54:02.713Z - info: Using extension express@4.1.3
+2024-11-10T23:54:03.539Z - info: Using extension freeze@4.0.0
+2024-11-10T23:54:03.547Z - info: Using extension fs-store@4.0.5
+2024-11-10T23:54:03.905Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-10T23:54:03.906Z - info: Using extension import-export@4.0.5
+2024-11-10T23:54:03.962Z - info: Using extension jsrender@4.0.0
+2024-11-10T23:54:03.965Z - info: Using extension licensing@4.0.3
+2024-11-10T23:54:03.998Z - info: Using extension localization@4.0.1
+2024-11-10T23:54:04.001Z - info: Using extension npm@4.0.0
+2024-11-10T23:54:04.010Z - info: Using extension pdf-utils@4.2.2
+2024-11-10T23:54:04.016Z - info: Using extension reports@4.1.2
+2024-11-10T23:54:04.023Z - info: Using extension tags@4.0.1
+2024-11-10T23:54:04.029Z - info: Using extension text@4.0.2
+2024-11-10T23:54:04.033Z - info: Using extension version-control@4.0.0
+2024-11-10T23:54:04.069Z - info: Using extension assets@4.2.0
+2024-11-10T23:54:04.111Z - info: Using extension authorization@4.0.1
+2024-11-10T23:54:04.121Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-10T23:54:04.123Z - info: Using extension browser-client@4.1.0
+2024-11-10T23:54:04.138Z - info: Using extension chrome-pdf@4.1.0
+2024-11-10T23:54:04.145Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-10T23:54:04.147Z - info: Using extension docx@4.6.0
+2024-11-10T23:54:04.153Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-10T23:54:05.348Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-10T23:54:05.349Z - info: Using extension pptx@4.3.2
+2024-11-10T23:54:05.354Z - info: Using extension scheduling@4.0.0
+2024-11-10T23:54:05.436Z - info: Using extension scripts@4.1.0
+2024-11-10T23:54:05.439Z - info: Using extension static-pdf@4.1.0
+2024-11-10T23:54:05.443Z - info: Using extension studio@4.2.0
+2024-11-10T23:54:05.813Z - info: Using extension xlsx@4.3.0
+2024-11-10T23:54:05.820Z - info: Using extension public-templates@4.0.0
+2024-11-10T23:54:05.851Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-10T23:54:05.852Z - info: Using extension sample-template@4.0.0
+2024-11-10T23:54:05.856Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-10T23:54:05.865Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-10T23:54:05.865Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-10T23:54:05.899Z - debug: studio default theme is: light
+2024-11-10T23:54:05.909Z - info: Creating default express app.
+2024-11-10T23:54:05.958Z - info: jsreport server successfully started on http port: 5488
+2024-11-10T23:54:05.963Z - info: Verifying license key free
+2024-11-10T23:54:05.965Z - info: Using free license
+2024-11-10T23:54:05.983Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-10T23:54:05.986Z - info: Migration successful
+2024-11-10T23:54:05.988Z - debug: Creating samples is disabled
+2024-11-10T23:54:05.990Z - info: Initializing worker threads
+2024-11-10T23:54:05.993Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-10T23:54:08.069Z - info: 2 worker threads initialized in 2079ms
+2024-11-10T23:54:08.071Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-10T23:54:08.073Z - info: reporter initialized
+2024-11-10T23:54:08.189Z - info: Render request 1 queued for execution and waiting for available worker rootId=ywqehbqw51yhrer, id=ywqehbqw51yhrer
+2024-11-10T23:54:08.242Z - info: Starting rendering request 1 rootId=ywqehbqw51yhrer, id=ywqehbqw51yhrer
+2024-11-10T23:54:08.247Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=ywqehbqw51yhrer, id=ywqehbqw51yhrer
+2024-11-10T23:54:08.248Z - debug: Data item not defined for this template. rootId=ywqehbqw51yhrer, id=ywqehbqw51yhrer
+2024-11-10T23:54:08.257Z - debug: Base url not specified, skipping its injection. rootId=ywqehbqw51yhrer, id=ywqehbqw51yhrer
+2024-11-10T23:54:08.265Z - warn: Error when processing render request 1
+(because) engine 'handlebars' not found. If this is a custom engine make sure it's properly installed from npm
+Error: Engine 'handlebars' not found. If this is a custom engine make sure it's properly installed from npm
+  at module.exports (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:38:22)
+  at WorkerReporter._render (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:13)
+  at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+  at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:232:24
+  at async processAndResponse (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:41:17) rootId=ywqehbqw51yhrer, id=ywqehbqw51yhrer
+2024-11-10T23:54:08.265Z - warn: Rendering request 1 finished with error in 80 ms rootId=ywqehbqw51yhrer, id=ywqehbqw51yhrer
+2024-11-10T23:55:37.985Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-10T23:55:38.002Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T23:55:38.240Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-10T23:55:40.953Z - info: Found 34 extension(s)
+2024-11-10T23:55:41.165Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-10T23:55:41.187Z - debug: Discovered 34 extensions
+2024-11-10T23:55:41.459Z - info: Using extension authentication@4.2.2
+2024-11-10T23:55:42.640Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-10T23:55:42.651Z - info: Using extension base@4.0.0
+2024-11-10T23:55:42.662Z - info: Using extension child-templates@4.1.0
+2024-11-10T23:55:42.680Z - info: Using extension cli@4.0.5
+2024-11-10T23:55:42.708Z - info: Using extension components@4.0.2
+2024-11-10T23:55:42.733Z - info: Using extension data@4.1.0
+2024-11-10T23:55:42.737Z - info: Using extension express@4.1.3
+2024-11-10T23:55:44.251Z - info: Using extension freeze@4.0.0
+2024-11-10T23:55:44.340Z - info: Using extension fs-store@4.0.5
+2024-11-10T23:55:44.991Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-10T23:55:44.994Z - info: Using extension import-export@4.0.5
+2024-11-10T23:55:45.080Z - info: Using extension jsrender@4.0.0
+2024-11-10T23:55:45.084Z - info: Using extension licensing@4.0.3
+2024-11-10T23:55:45.125Z - info: Using extension localization@4.0.1
+2024-11-10T23:55:45.131Z - info: Using extension npm@4.0.0
+2024-11-10T23:55:45.142Z - info: Using extension pdf-utils@4.2.2
+2024-11-10T23:55:45.151Z - info: Using extension reports@4.1.2
+2024-11-10T23:55:45.159Z - info: Using extension tags@4.0.1
+2024-11-10T23:55:45.178Z - info: Using extension text@4.0.2
+2024-11-10T23:55:45.183Z - info: Using extension version-control@4.0.0
+2024-11-10T23:55:45.277Z - info: Using extension assets@4.2.0
+2024-11-10T23:55:45.383Z - info: Using extension authorization@4.0.1
+2024-11-10T23:55:45.397Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-10T23:55:45.400Z - info: Using extension browser-client@4.1.0
+2024-11-10T23:55:45.407Z - info: Using extension chrome-pdf@4.1.0
+2024-11-10T23:55:45.426Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-10T23:55:45.427Z - info: Using extension docx@4.6.0
+2024-11-10T23:55:45.435Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-10T23:55:48.382Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-10T23:55:48.427Z - info: Using extension pptx@4.3.2
+2024-11-10T23:55:48.479Z - info: Using extension scheduling@4.0.0
+2024-11-10T23:55:48.727Z - info: Using extension scripts@4.1.0
+2024-11-10T23:55:48.733Z - info: Using extension static-pdf@4.1.0
+2024-11-10T23:55:48.760Z - info: Using extension studio@4.2.0
+2024-11-10T23:55:49.323Z - info: Using extension xlsx@4.3.0
+2024-11-10T23:55:49.357Z - info: Using extension public-templates@4.0.0
+2024-11-10T23:55:49.486Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-10T23:55:49.487Z - info: Using extension sample-template@4.0.0
+2024-11-10T23:55:49.494Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-10T23:55:49.500Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-10T23:55:49.501Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-10T23:55:49.577Z - debug: studio default theme is: light
+2024-11-10T23:55:49.750Z - info: Creating default express app.
+2024-11-10T23:55:49.925Z - info: jsreport server successfully started on http port: 5488
+2024-11-10T23:55:49.928Z - info: Verifying license key free
+2024-11-10T23:55:49.962Z - info: Using free license
+2024-11-10T23:55:50.073Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-10T23:55:50.101Z - info: Migration successful
+2024-11-10T23:55:50.103Z - debug: Creating samples is disabled
+2024-11-10T23:55:50.105Z - info: Initializing worker threads
+2024-11-10T23:55:50.106Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-10T23:56:01.479Z - info: 2 worker threads initialized in 11338ms
+2024-11-10T23:56:02.106Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-10T23:56:02.210Z - info: reporter initialized
+2024-11-10T23:56:02.690Z - info: Render request 1 queued for execution and waiting for available worker rootId=b9pyinuo6np5eg5, id=b9pyinuo6np5eg5
+2024-11-10T23:56:02.771Z - info: Starting rendering request 1 rootId=b9pyinuo6np5eg5, id=b9pyinuo6np5eg5
+2024-11-10T23:56:02.774Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=b9pyinuo6np5eg5, id=b9pyinuo6np5eg5
+2024-11-10T23:56:02.776Z - debug: Data item not defined for this template. rootId=b9pyinuo6np5eg5, id=b9pyinuo6np5eg5
+2024-11-10T23:56:02.805Z - debug: Base url not specified, skipping its injection. rootId=b9pyinuo6np5eg5, id=b9pyinuo6np5eg5
+2024-11-10T23:56:02.811Z - warn: Error when processing render request 1
+(because) engine 'handlebars' not found. If this is a custom engine make sure it's properly installed from npm
+Error: Engine 'handlebars' not found. If this is a custom engine make sure it's properly installed from npm
+  at module.exports (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:38:22)
+  at WorkerReporter._render (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:13)
+  at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+  at async C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:232:24
+  at async processAndResponse (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:41:17) rootId=b9pyinuo6np5eg5, id=b9pyinuo6np5eg5
+2024-11-10T23:56:02.812Z - warn: Rendering request 1 finished with error in 147 ms rootId=b9pyinuo6np5eg5, id=b9pyinuo6np5eg5
+2024-11-11T00:02:03.765Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-11T00:02:03.771Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T00:02:03.789Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T00:02:04.779Z - info: Found 34 extension(s)
+2024-11-11T00:02:04.914Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-11T00:02:04.919Z - debug: Discovered 34 extensions
+2024-11-11T00:02:05.039Z - info: Using extension authentication@4.2.2
+2024-11-11T00:02:05.669Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-11T00:02:05.671Z - info: Using extension base@4.0.0
+2024-11-11T00:02:05.680Z - info: Using extension child-templates@4.1.0
+2024-11-11T00:02:05.685Z - info: Using extension cli@4.0.5
+2024-11-11T00:02:05.697Z - info: Using extension components@4.0.2
+2024-11-11T00:02:05.702Z - info: Using extension data@4.1.0
+2024-11-11T00:02:05.707Z - info: Using extension express@4.1.3
+2024-11-11T00:02:06.674Z - info: Using extension freeze@4.0.0
+2024-11-11T00:02:06.680Z - info: Using extension fs-store@4.0.5
+2024-11-11T00:02:07.076Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-11T00:02:07.077Z - info: Using extension import-export@4.0.5
+2024-11-11T00:02:07.138Z - info: Using extension jsrender@4.0.0
+2024-11-11T00:02:07.142Z - info: Using extension licensing@4.0.3
+2024-11-11T00:02:07.184Z - info: Using extension localization@4.0.1
+2024-11-11T00:02:07.188Z - info: Using extension npm@4.0.0
+2024-11-11T00:02:07.218Z - info: Using extension pdf-utils@4.2.2
+2024-11-11T00:02:07.225Z - info: Using extension reports@4.1.2
+2024-11-11T00:02:07.241Z - info: Using extension tags@4.0.1
+2024-11-11T00:02:07.248Z - info: Using extension text@4.0.2
+2024-11-11T00:02:07.252Z - info: Using extension version-control@4.0.0
+2024-11-11T00:02:07.291Z - info: Using extension assets@4.2.0
+2024-11-11T00:02:07.338Z - info: Using extension authorization@4.0.1
+2024-11-11T00:02:07.350Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-11T00:02:07.351Z - info: Using extension browser-client@4.1.0
+2024-11-11T00:02:07.359Z - info: Using extension chrome-pdf@4.1.0
+2024-11-11T00:02:07.367Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-11T00:02:07.368Z - info: Using extension docx@4.6.0
+2024-11-11T00:02:07.375Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-11T00:02:08.739Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-11T00:02:08.741Z - info: Using extension pptx@4.3.2
+2024-11-11T00:02:08.747Z - info: Using extension scheduling@4.0.0
+2024-11-11T00:02:08.838Z - info: Using extension scripts@4.1.0
+2024-11-11T00:02:08.843Z - info: Using extension static-pdf@4.1.0
+2024-11-11T00:02:08.846Z - info: Using extension studio@4.2.0
+2024-11-11T00:02:09.193Z - info: Using extension xlsx@4.3.0
+2024-11-11T00:02:09.199Z - info: Using extension public-templates@4.0.0
+2024-11-11T00:02:09.236Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-11T00:02:09.237Z - info: Using extension sample-template@4.0.0
+2024-11-11T00:02:09.243Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-11T00:02:09.249Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-11T00:02:09.250Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-11T00:02:09.285Z - debug: studio default theme is: light
+2024-11-11T00:02:09.296Z - info: Creating default express app.
+2024-11-11T00:02:09.356Z - info: jsreport server successfully started on http port: 5488
+2024-11-11T00:02:09.390Z - info: Verifying license key free
+2024-11-11T00:02:09.414Z - info: Using free license
+2024-11-11T00:02:09.442Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-11T00:02:09.445Z - info: Migration successful
+2024-11-11T00:02:09.447Z - debug: Creating samples is disabled
+2024-11-11T00:02:09.451Z - info: Initializing worker threads
+2024-11-11T00:02:09.453Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-11T00:02:11.529Z - info: 2 worker threads initialized in 2078ms
+2024-11-11T00:02:11.542Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-11T00:02:11.544Z - info: reporter initialized
+2024-11-11T00:02:11.679Z - info: Render request 1 queued for execution and waiting for available worker rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:11.709Z - info: Starting rendering request 1 rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:11.712Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:11.712Z - debug: Data item not defined for this template. rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:11.717Z - debug: Base url not specified, skipping its injection. rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:11.719Z - debug: Rendering engine none rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:12.930Z - debug: Executing recipe chrome-pdf rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:16.915Z - debug: Converting with chrome Chrome/130.0.6723.116 using chrome-pool strategy rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:17.239Z - debug: Page request: GET (document) file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/d8e0e32e-0fbc-4c1a-9826-8ff826939531-chrome-pdf.html rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:18.006Z - debug: Page request finished: GET (document) 200 file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/d8e0e32e-0fbc-4c1a-9826-8ff826939531-chrome-pdf.html rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:02:18.208Z - debug: Running chrome with params {"timeout":58730,"margin":{},"printBackground":true} rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:03:13.689Z - warn: Report render failed
+(because) report timeout. Last profiler operation: (recipe) chrome-pdf
+Error: Report timeout. Last profiler operation: (recipe) chrome-pdf
+    at Timeout.<anonymous> (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\advanced-workers\lib\threadWorker.js:43:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) rootId=9l2csh90f4g9pvn, id=9l2csh90f4g9pvn
+2024-11-11T00:24:20.216Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-11T00:24:20.222Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T00:24:20.238Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T00:24:21.269Z - info: Found 34 extension(s)
+2024-11-11T00:24:21.404Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-11T00:24:21.409Z - debug: Discovered 34 extensions
+2024-11-11T00:24:21.538Z - info: Using extension authentication@4.2.2
+2024-11-11T00:24:22.283Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-11T00:24:22.285Z - info: Using extension base@4.0.0
+2024-11-11T00:24:22.295Z - info: Using extension child-templates@4.1.0
+2024-11-11T00:24:22.300Z - info: Using extension cli@4.0.5
+2024-11-11T00:24:22.310Z - info: Using extension components@4.0.2
+2024-11-11T00:24:22.316Z - info: Using extension data@4.1.0
+2024-11-11T00:24:22.321Z - info: Using extension express@4.1.3
+2024-11-11T00:24:23.296Z - info: Using extension freeze@4.0.0
+2024-11-11T00:24:23.302Z - info: Using extension fs-store@4.0.5
+2024-11-11T00:24:23.683Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-11T00:24:23.685Z - info: Using extension import-export@4.0.5
+2024-11-11T00:24:23.741Z - info: Using extension jsrender@4.0.0
+2024-11-11T00:24:23.746Z - info: Using extension licensing@4.0.3
+2024-11-11T00:24:23.782Z - info: Using extension localization@4.0.1
+2024-11-11T00:24:23.786Z - info: Using extension npm@4.0.0
+2024-11-11T00:24:23.796Z - info: Using extension pdf-utils@4.2.2
+2024-11-11T00:24:23.801Z - info: Using extension reports@4.1.2
+2024-11-11T00:24:23.810Z - info: Using extension tags@4.0.1
+2024-11-11T00:24:23.816Z - info: Using extension text@4.0.2
+2024-11-11T00:24:23.819Z - info: Using extension version-control@4.0.0
+2024-11-11T00:24:23.857Z - info: Using extension assets@4.2.0
+2024-11-11T00:24:23.907Z - info: Using extension authorization@4.0.1
+2024-11-11T00:24:23.921Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-11T00:24:23.922Z - info: Using extension browser-client@4.1.0
+2024-11-11T00:24:23.933Z - info: Using extension chrome-pdf@4.1.0
+2024-11-11T00:24:23.940Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-11T00:24:23.941Z - info: Using extension docx@4.6.0
+2024-11-11T00:24:23.951Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-11T00:24:25.411Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-11T00:24:25.413Z - info: Using extension pptx@4.3.2
+2024-11-11T00:24:25.419Z - info: Using extension scheduling@4.0.0
+2024-11-11T00:24:25.516Z - info: Using extension scripts@4.1.0
+2024-11-11T00:24:25.519Z - info: Using extension static-pdf@4.1.0
+2024-11-11T00:24:25.521Z - info: Using extension studio@4.2.0
+2024-11-11T00:24:25.818Z - info: Using extension xlsx@4.3.0
+2024-11-11T00:24:25.824Z - info: Using extension public-templates@4.0.0
+2024-11-11T00:24:25.860Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-11T00:24:25.861Z - info: Using extension sample-template@4.0.0
+2024-11-11T00:24:25.866Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-11T00:24:25.873Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-11T00:24:25.874Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-11T00:24:25.907Z - debug: studio default theme is: light
+2024-11-11T00:24:25.929Z - info: Creating default express app.
+2024-11-11T00:24:26.021Z - info: jsreport server successfully started on http port: 5488
+2024-11-11T00:24:26.024Z - info: Verifying license key free
+2024-11-11T00:24:26.027Z - info: Using free license
+2024-11-11T00:24:26.050Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-11T00:24:26.052Z - info: Migration successful
+2024-11-11T00:24:26.055Z - debug: Creating samples is disabled
+2024-11-11T00:24:26.057Z - info: Initializing worker threads
+2024-11-11T00:24:26.058Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-11T00:24:28.286Z - info: 2 worker threads initialized in 2229ms
+2024-11-11T00:24:28.298Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-11T00:24:28.303Z - info: reporter initialized
+2024-11-11T00:24:28.429Z - info: Render request 1 queued for execution and waiting for available worker rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:28.461Z - info: Starting rendering request 1 rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:28.464Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:28.465Z - debug: Data item not defined for this template. rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:28.469Z - debug: Base url not specified, skipping its injection. rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:28.471Z - debug: Rendering engine none rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:29.633Z - debug: Executing recipe chrome-pdf rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:31.860Z - debug: Converting with chrome Chrome/130.0.6723.116 using chrome-pool strategy rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:32.935Z - debug: Page request: GET (document) file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/eedf9d21-68f3-4bd4-9a3e-f950220683ae-chrome-pdf.html rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:33.025Z - debug: Page request finished: GET (document) 200 file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/eedf9d21-68f3-4bd4-9a3e-f950220683ae-chrome-pdf.html rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:24:33.171Z - debug: Running chrome with params {"timeout":58776,"margin":{},"printBackground":true} rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:25:30.437Z - warn: Report render failed
+(because) report timeout. Last profiler operation: (recipe) chrome-pdf
+Error: Report timeout. Last profiler operation: (recipe) chrome-pdf
+    at Timeout.<anonymous> (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\advanced-workers\lib\threadWorker.js:43:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) rootId=nw6s434fu6kwtxa, id=nw6s434fu6kwtxa
+2024-11-11T00:53:24.874Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-11T00:53:24.881Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T00:53:24.895Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T00:53:25.881Z - info: Found 34 extension(s)
+2024-11-11T00:53:26.102Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-11T00:53:26.109Z - debug: Discovered 34 extensions
+2024-11-11T00:53:26.248Z - info: Using extension authentication@4.2.2
+2024-11-11T00:53:26.882Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-11T00:53:26.884Z - info: Using extension base@4.0.0
+2024-11-11T00:53:26.892Z - info: Using extension child-templates@4.1.0
+2024-11-11T00:53:26.896Z - info: Using extension cli@4.0.5
+2024-11-11T00:53:26.906Z - info: Using extension components@4.0.2
+2024-11-11T00:53:26.912Z - info: Using extension data@4.1.0
+2024-11-11T00:53:26.921Z - info: Using extension express@4.1.3
+2024-11-11T00:53:27.833Z - info: Using extension freeze@4.0.0
+2024-11-11T00:53:27.838Z - info: Using extension fs-store@4.0.5
+2024-11-11T00:53:28.244Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-11T00:53:28.245Z - info: Using extension import-export@4.0.5
+2024-11-11T00:53:28.309Z - info: Using extension jsrender@4.0.0
+2024-11-11T00:53:28.312Z - info: Using extension licensing@4.0.3
+2024-11-11T00:53:28.353Z - info: Using extension localization@4.0.1
+2024-11-11T00:53:28.356Z - info: Using extension npm@4.0.0
+2024-11-11T00:53:28.368Z - info: Using extension pdf-utils@4.2.2
+2024-11-11T00:53:28.394Z - info: Using extension reports@4.1.2
+2024-11-11T00:53:28.417Z - info: Using extension tags@4.0.1
+2024-11-11T00:53:28.424Z - info: Using extension text@4.0.2
+2024-11-11T00:53:28.428Z - info: Using extension version-control@4.0.0
+2024-11-11T00:53:28.489Z - info: Using extension assets@4.2.0
+2024-11-11T00:53:28.575Z - info: Using extension authorization@4.0.1
+2024-11-11T00:53:28.592Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-11T00:53:28.594Z - info: Using extension browser-client@4.1.0
+2024-11-11T00:53:28.613Z - info: Using extension chrome-pdf@4.1.0
+2024-11-11T00:53:28.628Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-11T00:53:28.630Z - info: Using extension docx@4.6.0
+2024-11-11T00:53:28.644Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-11T00:53:30.077Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-11T00:53:30.078Z - info: Using extension pptx@4.3.2
+2024-11-11T00:53:30.085Z - info: Using extension scheduling@4.0.0
+2024-11-11T00:53:30.186Z - info: Using extension scripts@4.1.0
+2024-11-11T00:53:30.189Z - info: Using extension static-pdf@4.1.0
+2024-11-11T00:53:30.192Z - info: Using extension studio@4.2.0
+2024-11-11T00:53:30.562Z - info: Using extension xlsx@4.3.0
+2024-11-11T00:53:30.569Z - info: Using extension public-templates@4.0.0
+2024-11-11T00:53:30.610Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-11T00:53:30.611Z - info: Using extension sample-template@4.0.0
+2024-11-11T00:53:30.620Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-11T00:53:30.625Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-11T00:53:30.626Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-11T00:53:30.666Z - debug: studio default theme is: light
+2024-11-11T00:53:30.678Z - info: Creating default express app.
+2024-11-11T00:53:30.751Z - info: jsreport server successfully started on http port: 5488
+2024-11-11T00:53:30.797Z - info: Verifying license key free
+2024-11-11T00:53:30.814Z - info: Using free license
+2024-11-11T00:53:30.885Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-11T00:53:30.888Z - info: Migration successful
+2024-11-11T00:53:30.891Z - debug: Creating samples is disabled
+2024-11-11T00:53:30.908Z - info: Initializing worker threads
+2024-11-11T00:53:30.911Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-11T00:53:33.071Z - info: 2 worker threads initialized in 2163ms
+2024-11-11T00:53:33.073Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-11T00:53:33.085Z - info: reporter initialized
+2024-11-11T00:53:33.192Z - info: Render request 1 queued for execution and waiting for available worker rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:33.224Z - info: Starting rendering request 1 rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:33.227Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:33.227Z - debug: Data item not defined for this template. rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:33.231Z - debug: Base url not specified, skipping its injection. rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:33.234Z - debug: Rendering engine none rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:34.475Z - debug: Executing recipe chrome-pdf rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:36.354Z - debug: Converting with chrome Chrome/130.0.6723.116 using chrome-pool strategy rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:37.058Z - debug: Page request: GET (document) file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/97168802-23a6-42fe-8b8d-f5a8643ee602-chrome-pdf.html rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:37.207Z - debug: Page request finished: GET (document) 200 file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/97168802-23a6-42fe-8b8d-f5a8643ee602-chrome-pdf.html rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:53:37.340Z - debug: Running chrome with params {"timeout":58697,"margin":{},"printBackground":true} rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:54:35.086Z - warn: Error when processing render request 1
+(because) chrome pdf generation timed out
+Error: chrome pdf generation timed out
+  at module.exports (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at Timeout._onTimeout (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:423:30)
+  at listOnTimeout (node:internal/timers:569:17)
+  at process.processTimers (node:internal/timers:512:7) rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T00:54:35.087Z - warn: Rendering request 1 finished with error in 61900 ms rootId=rd6xs3gz4x10qb7, id=rd6xs3gz4x10qb7
+2024-11-11T01:11:39.845Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-11T01:11:39.849Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T01:11:39.878Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T01:11:40.353Z - info: Found 34 extension(s)
+2024-11-11T01:11:40.465Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-11T01:11:40.469Z - debug: Discovered 34 extensions
+2024-11-11T01:11:40.539Z - info: Using extension authentication@4.2.2
+2024-11-11T01:11:40.935Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-11T01:11:40.936Z - info: Using extension base@4.0.0
+2024-11-11T01:11:40.942Z - info: Using extension child-templates@4.1.0
+2024-11-11T01:11:40.945Z - info: Using extension cli@4.0.5
+2024-11-11T01:11:40.952Z - info: Using extension components@4.0.2
+2024-11-11T01:11:40.958Z - info: Using extension data@4.1.0
+2024-11-11T01:11:40.960Z - info: Using extension express@4.1.3
+2024-11-11T01:11:41.492Z - info: Using extension freeze@4.0.0
+2024-11-11T01:11:41.497Z - info: Using extension fs-store@4.0.5
+2024-11-11T01:11:41.864Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-11T01:11:41.865Z - info: Using extension import-export@4.0.5
+2024-11-11T01:11:41.905Z - info: Using extension jsrender@4.0.0
+2024-11-11T01:11:41.907Z - info: Using extension licensing@4.0.3
+2024-11-11T01:11:41.930Z - info: Using extension localization@4.0.1
+2024-11-11T01:11:41.933Z - info: Using extension npm@4.0.0
+2024-11-11T01:11:41.938Z - info: Using extension pdf-utils@4.2.2
+2024-11-11T01:11:41.942Z - info: Using extension reports@4.1.2
+2024-11-11T01:11:41.947Z - info: Using extension tags@4.0.1
+2024-11-11T01:11:41.951Z - info: Using extension text@4.0.2
+2024-11-11T01:11:41.953Z - info: Using extension version-control@4.0.0
+2024-11-11T01:11:41.979Z - info: Using extension assets@4.2.0
+2024-11-11T01:11:42.006Z - info: Using extension authorization@4.0.1
+2024-11-11T01:11:42.015Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-11T01:11:42.016Z - info: Using extension browser-client@4.1.0
+2024-11-11T01:11:42.021Z - info: Using extension chrome-pdf@4.1.0
+2024-11-11T01:11:42.027Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-11T01:11:42.027Z - info: Using extension docx@4.6.0
+2024-11-11T01:11:42.032Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-11T01:11:42.716Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-11T01:11:42.716Z - info: Using extension pptx@4.3.2
+2024-11-11T01:11:42.721Z - info: Using extension scheduling@4.0.0
+2024-11-11T01:11:42.782Z - info: Using extension scripts@4.1.0
+2024-11-11T01:11:42.783Z - info: Using extension static-pdf@4.1.0
+2024-11-11T01:11:42.785Z - info: Using extension studio@4.2.0
+2024-11-11T01:11:42.970Z - info: Using extension xlsx@4.3.0
+2024-11-11T01:11:42.973Z - info: Using extension public-templates@4.0.0
+2024-11-11T01:11:42.991Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-11T01:11:42.992Z - info: Using extension sample-template@4.0.0
+2024-11-11T01:11:42.996Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-11T01:11:43.000Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-11T01:11:43.001Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-11T01:11:43.019Z - debug: studio default theme is: light
+2024-11-11T01:11:43.046Z - info: Creating default express app.
+2024-11-11T01:11:43.100Z - info: jsreport server successfully started on http port: 5488
+2024-11-11T01:11:43.102Z - info: Verifying license key free
+2024-11-11T01:11:43.103Z - info: Using free license
+2024-11-11T01:11:43.116Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-11T01:11:43.118Z - info: Migration successful
+2024-11-11T01:11:43.119Z - debug: Creating samples is disabled
+2024-11-11T01:11:43.122Z - info: Initializing worker threads
+2024-11-11T01:11:43.123Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-11T01:11:44.651Z - info: 2 worker threads initialized in 1529ms
+2024-11-11T01:11:44.652Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-11T01:11:44.653Z - info: reporter initialized
+2024-11-11T01:11:52.516Z - info: Render request 1 queued for execution and waiting for available worker rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:52.540Z - info: Starting rendering request 1 rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:52.541Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:52.541Z - debug: Data item not defined for this template. rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:52.546Z - debug: Base url not specified, skipping its injection. rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:52.548Z - debug: Rendering engine none rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:53.186Z - debug: Executing recipe chrome-pdf rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:54.458Z - debug: Converting with chrome Chrome/130.0.6723.116 using chrome-pool strategy rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:54.952Z - debug: Page request: GET (document) file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/f2295e46-e498-4a79-a0d0-5fbfb5dc1f0f-chrome-pdf.html rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:55.039Z - debug: Page request finished: GET (document) 200 file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/f2295e46-e498-4a79-a0d0-5fbfb5dc1f0f-chrome-pdf.html rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:11:55.088Z - debug: Running chrome with params {"timeout":59321,"margin":{},"printBackground":true} rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:12:53.782Z - warn: Error when processing render request 1
+(because) chrome pdf generation timed out
+Error: chrome pdf generation timed out
+  at module.exports (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at Timeout._onTimeout (C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\node_modules\@jsreport\jsreport-chrome-pdf\lib\conversion.js:423:30)
+  at listOnTimeout (node:internal/timers:569:17)
+  at process.processTimers (node:internal/timers:512:7) rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:12:53.782Z - warn: Rendering request 1 finished with error in 61268 ms rootId=rsekzbiad2hoo80, id=rsekzbiad2hoo80
+2024-11-11T01:17:28.238Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-11T01:17:28.240Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T01:17:28.271Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T01:17:28.843Z - info: Found 34 extension(s)
+2024-11-11T01:17:28.945Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-11T01:17:28.948Z - debug: Discovered 34 extensions
+2024-11-11T01:17:29.011Z - info: Using extension authentication@4.2.2
+2024-11-11T01:17:29.424Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-11T01:17:29.431Z - info: Using extension base@4.0.0
+2024-11-11T01:17:29.444Z - info: Using extension child-templates@4.1.0
+2024-11-11T01:17:29.467Z - info: Using extension cli@4.0.5
+2024-11-11T01:17:29.480Z - info: Using extension components@4.0.2
+2024-11-11T01:17:29.487Z - info: Using extension data@4.1.0
+2024-11-11T01:17:29.494Z - info: Using extension express@4.1.3
+2024-11-11T01:17:30.101Z - info: Using extension freeze@4.0.0
+2024-11-11T01:17:30.105Z - info: Using extension fs-store@4.0.5
+2024-11-11T01:17:30.345Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-11T01:17:30.346Z - info: Using extension import-export@4.0.5
+2024-11-11T01:17:30.381Z - info: Using extension jsrender@4.0.0
+2024-11-11T01:17:30.383Z - info: Using extension licensing@4.0.3
+2024-11-11T01:17:30.403Z - info: Using extension localization@4.0.1
+2024-11-11T01:17:30.405Z - info: Using extension npm@4.0.0
+2024-11-11T01:17:30.412Z - info: Using extension pdf-utils@4.2.2
+2024-11-11T01:17:30.417Z - info: Using extension reports@4.1.2
+2024-11-11T01:17:30.421Z - info: Using extension tags@4.0.1
+2024-11-11T01:17:30.426Z - info: Using extension text@4.0.2
+2024-11-11T01:17:30.429Z - info: Using extension version-control@4.0.0
+2024-11-11T01:17:30.452Z - info: Using extension assets@4.2.0
+2024-11-11T01:17:30.482Z - info: Using extension authorization@4.0.1
+2024-11-11T01:17:30.490Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-11T01:17:30.491Z - info: Using extension browser-client@4.1.0
+2024-11-11T01:17:30.499Z - info: Using extension chrome-pdf@4.1.0
+2024-11-11T01:17:30.505Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-11T01:17:30.505Z - info: Using extension docx@4.6.0
+2024-11-11T01:17:30.517Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-11T01:17:31.337Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-11T01:17:31.338Z - info: Using extension pptx@4.3.2
+2024-11-11T01:17:31.344Z - info: Using extension scheduling@4.0.0
+2024-11-11T01:17:31.403Z - info: Using extension scripts@4.1.0
+2024-11-11T01:17:31.405Z - info: Using extension static-pdf@4.1.0
+2024-11-11T01:17:31.408Z - info: Using extension studio@4.2.0
+2024-11-11T01:17:31.588Z - info: Using extension xlsx@4.3.0
+2024-11-11T01:17:31.592Z - info: Using extension public-templates@4.0.0
+2024-11-11T01:17:31.614Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-11T01:17:31.615Z - info: Using extension sample-template@4.0.0
+2024-11-11T01:17:31.618Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-11T01:17:31.620Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-11T01:17:31.621Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-11T01:17:31.638Z - debug: studio default theme is: light
+2024-11-11T01:17:31.671Z - info: Creating default express app.
+2024-11-11T01:17:31.719Z - info: jsreport server successfully started on http port: 5488
+2024-11-11T01:17:31.721Z - info: Verifying license key free
+2024-11-11T01:17:31.722Z - info: Using free license
+2024-11-11T01:17:31.732Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-11T01:17:31.734Z - info: Migration successful
+2024-11-11T01:17:31.735Z - debug: Creating samples is disabled
+2024-11-11T01:17:31.735Z - info: Initializing worker threads
+2024-11-11T01:17:31.736Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-11T01:17:33.021Z - info: 2 worker threads initialized in 1286ms
+2024-11-11T01:17:33.023Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-11T01:17:33.026Z - info: reporter initialized
+2024-11-11T01:19:28.814Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-11T01:19:28.819Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T01:19:28.924Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T01:19:29.385Z - info: Found 34 extension(s)
+2024-11-11T01:19:29.473Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-11T01:19:29.476Z - debug: Discovered 34 extensions
+2024-11-11T01:19:29.563Z - info: Using extension authentication@4.2.2
+2024-11-11T01:19:29.921Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-11T01:19:29.922Z - info: Using extension base@4.0.0
+2024-11-11T01:19:29.928Z - info: Using extension child-templates@4.1.0
+2024-11-11T01:19:29.930Z - info: Using extension cli@4.0.5
+2024-11-11T01:19:29.940Z - info: Using extension components@4.0.2
+2024-11-11T01:19:29.943Z - info: Using extension data@4.1.0
+2024-11-11T01:19:29.945Z - info: Using extension express@4.1.3
+2024-11-11T01:19:30.772Z - info: Using extension freeze@4.0.0
+2024-11-11T01:19:30.775Z - info: Using extension fs-store@4.0.5
+2024-11-11T01:19:31.056Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-11T01:19:31.057Z - info: Using extension import-export@4.0.5
+2024-11-11T01:19:31.095Z - info: Using extension jsrender@4.0.0
+2024-11-11T01:19:31.097Z - info: Using extension licensing@4.0.3
+2024-11-11T01:19:31.116Z - info: Using extension localization@4.0.1
+2024-11-11T01:19:31.119Z - info: Using extension npm@4.0.0
+2024-11-11T01:19:31.126Z - info: Using extension pdf-utils@4.2.2
+2024-11-11T01:19:31.129Z - info: Using extension reports@4.1.2
+2024-11-11T01:19:31.133Z - info: Using extension tags@4.0.1
+2024-11-11T01:19:31.138Z - info: Using extension text@4.0.2
+2024-11-11T01:19:31.140Z - info: Using extension version-control@4.0.0
+2024-11-11T01:19:31.161Z - info: Using extension assets@4.2.0
+2024-11-11T01:19:31.189Z - info: Using extension authorization@4.0.1
+2024-11-11T01:19:31.195Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-11T01:19:31.196Z - info: Using extension browser-client@4.1.0
+2024-11-11T01:19:31.200Z - info: Using extension chrome-pdf@4.1.0
+2024-11-11T01:19:31.205Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-11T01:19:31.206Z - info: Using extension docx@4.6.0
+2024-11-11T01:19:31.210Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-11T01:19:32.067Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-11T01:19:32.068Z - info: Using extension pptx@4.3.2
+2024-11-11T01:19:32.075Z - info: Using extension scheduling@4.0.0
+2024-11-11T01:19:32.134Z - info: Using extension scripts@4.1.0
+2024-11-11T01:19:32.138Z - info: Using extension static-pdf@4.1.0
+2024-11-11T01:19:32.141Z - info: Using extension studio@4.2.0
+2024-11-11T01:19:32.328Z - info: Using extension xlsx@4.3.0
+2024-11-11T01:19:32.332Z - info: Using extension public-templates@4.0.0
+2024-11-11T01:19:32.359Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-11T01:19:32.360Z - info: Using extension sample-template@4.0.0
+2024-11-11T01:19:32.363Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-11T01:19:32.366Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-11T01:19:32.367Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-11T01:19:32.389Z - debug: studio default theme is: light
+2024-11-11T01:19:32.409Z - info: Creating default express app.
+2024-11-11T01:19:32.466Z - info: jsreport server successfully started on http port: 5488
+2024-11-11T01:19:32.468Z - info: Verifying license key free
+2024-11-11T01:19:32.479Z - info: Using free license
+2024-11-11T01:19:32.494Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-11T01:19:32.496Z - info: Migration successful
+2024-11-11T01:19:32.498Z - debug: Creating samples is disabled
+2024-11-11T01:19:32.499Z - info: Initializing worker threads
+2024-11-11T01:19:32.499Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-11T01:19:34.142Z - info: 2 worker threads initialized in 1642ms
+2024-11-11T01:19:34.150Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-11T01:19:34.152Z - info: reporter initialized
+2024-11-11T01:21:29.041Z - info: Render request 1 queued for execution and waiting for available worker rootId=tio8tijp9pnzuxr, id=tio8tijp9pnzuxr
+2024-11-11T01:21:29.118Z - info: Starting rendering request 1 rootId=tio8tijp9pnzuxr, id=tio8tijp9pnzuxr
+2024-11-11T01:21:29.121Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=tio8tijp9pnzuxr, id=tio8tijp9pnzuxr
+2024-11-11T01:21:29.122Z - debug: Data item not defined for this template. rootId=tio8tijp9pnzuxr, id=tio8tijp9pnzuxr
+2024-11-11T01:21:29.138Z - debug: Base url not specified, skipping its injection. rootId=tio8tijp9pnzuxr, id=tio8tijp9pnzuxr
+2024-11-11T01:21:29.142Z - debug: Rendering engine none rootId=tio8tijp9pnzuxr, id=tio8tijp9pnzuxr
+2024-11-11T01:21:29.494Z - info: Render request 2 queued for execution and waiting for available worker rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:29.528Z - info: Starting rendering request 2 rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:29.533Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:29.534Z - debug: Data item not defined for this template. rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:29.540Z - debug: Base url not specified, skipping its injection. rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:29.543Z - debug: Rendering engine none rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:30.174Z - debug: Executing recipe chrome-pdf rootId=tio8tijp9pnzuxr, id=tio8tijp9pnzuxr
+2024-11-11T01:21:30.795Z - debug: Executing recipe chrome-pdf rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:32.543Z - debug: Converting with chrome Chrome/130.0.6723.116 using chrome-pool strategy rootId=tio8tijp9pnzuxr, id=tio8tijp9pnzuxr
+2024-11-11T01:21:33.035Z - debug: Converting with chrome Chrome/130.0.6723.116 using chrome-pool strategy rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:33.792Z - debug: Page request: GET (document) file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/c2d4dbe5-bf70-4fb2-9216-a90dcfc567fb-chrome-pdf.html rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:33.874Z - debug: Page request finished: GET (document) 200 file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/c2d4dbe5-bf70-4fb2-9216-a90dcfc567fb-chrome-pdf.html rootId=4mjell4nftlr8vp, id=4mjell4nftlr8vp
+2024-11-11T01:21:34.090Z - debug: Page request: GET (document) file:///C:/Users/JATNNA~1/AppData/Local/Temp/jsreport/autocleanup/02b9d256-d289-4861-925a-e5214958d303-chrome-pdf.html rootId=tio8tijp9pnzuxr, id=tio8tijp9pnzuxr
+2024-11-11T01:21:54.664Z - info: Initializing jsreport (version: 4.7.0, configuration file: none, nodejs: 18.20.4)
+2024-11-11T01:21:54.670Z - info: Searching for available extensions in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T01:21:54.694Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Jatnna Reinoso\Desktop\techmedicfinal\
+2024-11-11T01:21:55.110Z - info: Found 34 extension(s)
+2024-11-11T01:21:55.216Z - debug: Writing extension locations cache to C:\Users\JATNNA~1\AppData\Local\Temp\jsreport\core\locations.json
+2024-11-11T01:21:55.220Z - debug: Discovered 34 extensions
+2024-11-11T01:21:55.312Z - info: Using extension authentication@4.2.2
+2024-11-11T01:21:55.688Z - debug: Extension authentication@4.2.2 was disabled
+2024-11-11T01:21:55.689Z - info: Using extension base@4.0.0
+2024-11-11T01:21:55.695Z - info: Using extension child-templates@4.1.0
+2024-11-11T01:21:55.697Z - info: Using extension cli@4.0.5
+2024-11-11T01:21:55.702Z - info: Using extension components@4.0.2
+2024-11-11T01:21:55.705Z - info: Using extension data@4.1.0
+2024-11-11T01:21:55.713Z - info: Using extension express@4.1.3
+2024-11-11T01:21:56.384Z - info: Using extension freeze@4.0.0
+2024-11-11T01:21:56.386Z - info: Using extension fs-store@4.0.5
+2024-11-11T01:21:56.652Z - debug: Extension fs-store@4.0.5 was disabled
+2024-11-11T01:21:56.653Z - info: Using extension import-export@4.0.5
+2024-11-11T01:21:56.689Z - info: Using extension jsrender@4.0.0
+2024-11-11T01:21:56.693Z - info: Using extension licensing@4.0.3
+2024-11-11T01:21:56.717Z - info: Using extension localization@4.0.1
+2024-11-11T01:21:56.719Z - info: Using extension npm@4.0.0
+2024-11-11T01:21:56.728Z - info: Using extension pdf-utils@4.2.2
+2024-11-11T01:21:56.732Z - info: Using extension reports@4.1.2
+2024-11-11T01:21:56.738Z - info: Using extension tags@4.0.1
+2024-11-11T01:21:56.745Z - info: Using extension text@4.0.2
+2024-11-11T01:21:56.748Z - info: Using extension version-control@4.0.0
+2024-11-11T01:21:56.779Z - info: Using extension assets@4.2.0
+2024-11-11T01:21:56.816Z - info: Using extension authorization@4.0.1
+2024-11-11T01:21:56.824Z - debug: Extension authorization@4.0.1 was disabled
+2024-11-11T01:21:56.829Z - info: Using extension browser-client@4.1.0
+2024-11-11T01:21:56.835Z - info: Using extension chrome-pdf@4.1.0
+2024-11-11T01:21:56.846Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2024-11-11T01:21:56.847Z - info: Using extension docx@4.6.0
+2024-11-11T01:21:56.852Z - info: Using extension html-to-xlsx@4.1.4
+2024-11-11T01:21:57.619Z - info: html-to-xlsx detected chrome as available html engine
+2024-11-11T01:21:57.620Z - info: Using extension pptx@4.3.2
+2024-11-11T01:21:57.624Z - info: Using extension scheduling@4.0.0
+2024-11-11T01:21:57.685Z - info: Using extension scripts@4.1.0
+2024-11-11T01:21:57.705Z - info: Using extension static-pdf@4.1.0
+2024-11-11T01:21:57.723Z - info: Using extension studio@4.2.0
+2024-11-11T01:21:57.930Z - info: Using extension xlsx@4.3.0
+2024-11-11T01:21:57.933Z - info: Using extension public-templates@4.0.0
+2024-11-11T01:21:57.955Z - debug: Extension public-templates@4.0.0 was disabled
+2024-11-11T01:21:57.955Z - info: Using extension sample-template@4.0.0
+2024-11-11T01:21:57.962Z - info: Using extension studio-theme-dark@4.0.0
+2024-11-11T01:21:57.966Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-11-11T01:21:57.966Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2024-11-11T01:21:57.988Z - debug: studio default theme is: light
+2024-11-11T01:21:58.031Z - info: Creating default express app.
+2024-11-11T01:21:58.087Z - info: jsreport server successfully started on http port: 5488
+2024-11-11T01:21:58.093Z - info: Verifying license key free
+2024-11-11T01:21:58.099Z - info: Using free license
+2024-11-11T01:21:58.128Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2024-11-11T01:21:58.130Z - info: Migration successful
+2024-11-11T01:21:58.135Z - debug: Creating samples is disabled
+2024-11-11T01:21:58.137Z - info: Initializing worker threads
+2024-11-11T01:21:58.138Z - debug: Extensions in workers: base, child-templates, components, data, express, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2024-11-11T01:21:59.775Z - info: 2 worker threads initialized in 1638ms
+2024-11-11T01:21:59.784Z - info: Starting temp files cleanup with 180000ms threshold
+2024-11-11T01:21:59.786Z - info: reporter initialized
