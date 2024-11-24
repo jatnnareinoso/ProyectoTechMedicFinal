@@ -50,10 +50,8 @@ $(function () {
             info.el.addEventListener('dblclick', function () {
                 Swal.fire({
                     title: '¿Qué deseas hacer?',
-                    showDenyButton: true,
                     showCancelButton: true,
                     confirmButtonText: 'Eliminar',
-                    denyButtonText: 'Consultar',
                     cancelButtonText: 'Cancelar',
                 }).then((result) => {
                     if (result.isConfirmed) {

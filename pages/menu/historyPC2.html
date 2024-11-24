@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TechMedic/Historial Paciente</title>
+    <title>TechMedic - Historial Paciente</title>
     <script src="https://kit.fontawesome.com/c2b1422a44.js" crossorigin="anonymous"></script>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" 
@@ -54,7 +54,7 @@
 
             <hr class="sidebar-divider my-0">
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="../profileDC.html">
                     <i class="fa-solid fa-user-doctor"></i>
                     <span>Sobre Mi</span></a>
@@ -62,7 +62,7 @@
 
             <hr class="sidebar-divider">
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="../menu/listpacient.html">
                     <i class="fa-solid fa-hospital-user"></i>
                     <span>Pacientes</span>
@@ -344,6 +344,10 @@
                                     <table class="table table-bordered mb-0">
                                         <tbody>
                                             <tr>
+                                                <th scope="row">Seguro Médico</th>
+                                                <td id="paciente-seguro"></td>
+                                            </tr>
+                                            <tr>
                                                 <th scope="row">Peso (lb)</th>
                                                 <td id="paciente-peso"></td>
                                             </tr>
@@ -513,6 +517,7 @@
                     document.getElementById('familiar-identificacion').textContent = data.cedula_familiar;
                     document.getElementById('familiar-correo').textContent = data.correo_familiar;
                     document.getElementById('familiar-telefono').textContent = data.telefono_familiar;
+                    document.getElementById('paciente-seguro').textContent = data.seguro_medico;
                     document.getElementById('paciente-peso').textContent = data.peso;
                     document.getElementById('paciente-altura').textContent = data.altura;
                     document.getElementById('paciente-alergias').textContent = data.alergia || "No posee";
@@ -573,8 +578,6 @@
                         removeRequestedAccess(id_acceso)
                         requestTextInput.value = '';
                         errorRequestMessageDiv.textContent = '';
-
-                        alert('Solicitud de acceso enviada correctamente')
 
                     } else {
                         errorRequestMessageDiv.textContent = data.error;

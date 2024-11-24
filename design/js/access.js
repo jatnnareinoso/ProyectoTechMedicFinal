@@ -14,9 +14,6 @@ async function getEspecialesByDoctor(id_usuario) {
     return result.rows.map(row => row.id_especialidad);
 }
 
-
-
-// Obtener el listado de accesos que un usuario aun no ha solicitado
 router.get("/list/faltantes/usuario/:id_usuario/paciente/:id_paciente", async (req, res) => {
     const { id_usuario, id_paciente } = req.params;
 
@@ -39,9 +36,6 @@ router.get("/list/faltantes/usuario/:id_usuario/paciente/:id_paciente", async (r
     }
 });
 
-
-
-// Obtener el listado de accesos que un usuario ya ha solicitado
 router.get("/list/solicitadas/usuario/:id_usuario/paciente/:id_paciente", async (req, res) => {
     const { id_usuario, id_paciente } = req.params;
     const accesos_usuario = []
@@ -88,9 +82,6 @@ router.get("/list/solicitadas/usuario/:id_usuario/paciente/:id_paciente", async 
     }
 });
 
-
-
-// Obtener las solicitudes que aun no se han aceptado o rechazado
 router.get("/solicitudes", async (req, res) => {
     const query = `
         SELECT au.id_acc_usuario, au.id_accesos, au.id_usuario, au.id_paciente, au.motivo, au.estado, acc.modulo, u.nombre AS nombre_doctor, u.apellido AS apellido_doctor, p.nombre AS nombre_paciente, p.apellido AS apellido_paciente
@@ -111,9 +102,6 @@ router.get("/solicitudes", async (req, res) => {
     }
 });
 
-
-
-// Enviar solicitud de acceso
 router.post("/solicitudes", async (req, res) => {
     const { motivo, id_accesos, id_usuario, id_paciente } = req.body;
 
@@ -143,9 +131,6 @@ router.post("/solicitudes", async (req, res) => {
     }
 });
 
-
-
-// aceptar o denegar una solicitud de acceso
 router.put("/solicitudes/:id_acc_usuario", async (req, res) => {
     const { id_acc_usuario } = req.params;
     const { estado } = req.body;

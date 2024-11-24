@@ -209,19 +209,10 @@
                         <a href="message-dc2.html" class="btn btn-danger btn-block">Nuevo Email</a>
                         <ul class="nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="message-dc.html"><i class="fa fa-inbox"></i> Principal</a>
+                                <a href="message-dc.html" class="nav-link" href="message-dc.html"><i class="fa fa-inbox"></i> Principal</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="message-dc3.html"><i class="fa fa-star"></i> Destacados</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-rocket"></i> Enviados</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-trash-o"></i> Papelera</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-bookmark"></i> Importante</a>
+                                <a href="message-dc3.html" class="nav-link" href="#"><i class="fa fa-rocket"></i> Enviados</a>
                             </li>
                         </ul>
                     </nav>
@@ -314,7 +305,6 @@
     </div>
                 
     <script>
-        // Funciones definidas en el ámbito global para ser accesibles
         function loadRecipients() {
             const recipientType = document.getElementById('recipientType').value;
             const recipientSelect = document.getElementById('recipient');
@@ -373,7 +363,6 @@
                 return response.json();
             })
             .then(data => {
-                alert('Notificación enviada: ' + data.message);
                 clearForm();
             })
             .catch(error => {

@@ -125,7 +125,7 @@ router.post('/registrarReceta', async (req, res) => {
                         <h2 class="doctor">${recetaData.doctor.nombre_doctor}</h2>
                         ${recetaData.medicamentos.map(med => `
                             <div>
-                                <h2>${med.nombre}</h2>
+                                <h3>${med.nombre}</h3>
                                 <p>Uso: ${med.uso}, Cantidad: ${med.cantidad}, Frecuencia: ${med.frecuencia}, Tiempo: ${med.tiempo}</p>
                             </div>
                         `).join('')}

@@ -5,7 +5,7 @@ const obtenerPerfilesPacientes = async () => {
     const query = `
       SELECT id_paciente, nombre, apellido, cedula, fecha_nacimiento, correo, sexo, telefono, nacionalidad, ciudad,
       direccion, menor, observacion, nombre_familiar, cedula_familiar, correo_familiar, telefono_familiar, celular_familiar, 
-      estado, celular, peso, altura, alergia, enfermedad, sustancia
+      estado, celular, peso, altura, alergia, enfermedad, sustancia, seguro_medico
       FROM paciente
       ORDER BY id_paciente;
     `;
@@ -22,7 +22,7 @@ const actualizarPaciente = async (id_paciente, datosActualizados) => {
   const {
     nombre, apellido, cedula, correo, fecha_nacimiento, sexo, telefono, celular, nacionalidad, ciudad,
     direccion, menor, observacion, nombre_familiar, cedula_familiar, correo_familiar, telefono_familiar, celular_familiar,
-    estado, peso, altura, alergia, enfermedad, sustancia
+    estado, peso, altura, alergia, enfermedad, sustancia, seguro_medico
   } = datosActualizados;
   
   try {
@@ -31,13 +31,13 @@ const actualizarPaciente = async (id_paciente, datosActualizados) => {
       SET nombre = $1, apellido = $2, cedula = $3, correo = $4, fecha_nacimiento = $5, sexo = $6, telefono = $7, celular = $8, 
           nacionalidad = $9, ciudad = $10, direccion = $11, menor = $12, observacion = $13, nombre_familiar = $14, 
           cedula_familiar = $15, correo_familiar = $16, telefono_familiar = $17, celular_familiar = $18, estado = $19,
-          peso = $20, altura = $21, alergia = $22, enfermedad = $23, sustancia = $24
-      WHERE id_paciente = $25
+          peso = $20, altura = $21, alergia = $22, enfermedad = $23, sustancia = $24, seguro_medico = $25
+      WHERE id_paciente = $26
     `;
     const result = await client.query(query, [
       nombre, apellido, cedula, correo, fecha_nacimiento, sexo, telefono, celular,
       nacionalidad, ciudad, direccion, menor, observacion, nombre_familiar, cedula_familiar, correo_familiar, telefono_familiar,
-      celular_familiar, estado, peso, altura, alergia, enfermedad, sustancia, id_paciente
+      celular_familiar, estado, peso, altura, alergia, enfermedad, sustancia, seguro_medico, id_paciente
     ]);
     
     if (result.rowCount > 0) {
@@ -80,6 +80,7 @@ const buscarPacientes = async (searchQuery) => {
         OR alergia ILIKE $1
         OR enfermedad ILIKE $1
         OR sustancia ILIKE $1
+        OR seguro_medico ILIKE $1
     `;
     const values = [`%${searchQuery}%`];
     const result = await client.query(query, values);

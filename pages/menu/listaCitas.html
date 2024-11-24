@@ -527,6 +527,7 @@
                         function aplicarFiltros() {
                             const startDate = document.getElementById('startDate').value;
                             const endDate = document.getElementById('endDate').value;
+                            const estado = document.getElementById('filterStatus').value;
                         
                             citas = allCitas.filter(cita => {
                                 const citaFecha = new Date(cita.fecha_hora);
@@ -605,22 +606,29 @@
                             try {
                                 const response = await fetch(`/api/cita/asistentesDoctor?id_doctor=${idDoctor}`);
                                 const asistentes = await response.json();
-                                
+                        
                                 const asistenteSelect = document.getElementById('editAsistente');
-                                asistenteSelect.innerHTML = '';  
-                
-                                asistentes.forEach(asistente => {
+                                asistenteSelect.innerHTML = '';
+                        
+                                if (Array.isArray(asistentes) && asistentes.length > 0) {
+                                    asistentes.forEach(asistente => {
+                                        const option = document.createElement('option');
+                                        option.value = asistente.id_usuario;
+                                        option.textContent = `${asistente.nombre} ${asistente.apellido}`;
+                                        option.selected = asistente.id_usuario == selectedId;
+                                        asistenteSelect.appendChild(option);
+                                    });
+                                } else {
                                     const option = document.createElement('option');
-                                    option.value = asistente.id_usuario;
-                                    option.textContent = `${asistente.nombre} ${asistente.apellido}`;
-                                    option.selected = asistente.id_usuario == selectedId;
+                                    option.value = idUsuario; 
+                                    option.textContent = `Doctor ${user.nombre} ${user.apellido}`;
+                                    option.selected = idUsuario == selectedId;
                                     asistenteSelect.appendChild(option);
-                                });
+                                }
                             } catch (error) {
                                 console.error('Error al cargar asistentes:', error);
                             }
                         }
-                
                         async function cargarTiposConsulta(selectedId) {
                             try {
                                 const response = await fetch('/api/cita/tipo_consulta');

@@ -308,6 +308,10 @@
                                                             <label for="editarFechaNacimiento">Fecha de Nacimiento</label>
                                                             <input type="date" class="form-control" id="editarFechaNacimiento" required>
                                                         </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="editarSeguro">Seguro Médico</label>
+                                                            <input type="text" class="form-control" id="editarSeguro" required>
+                                                        </div>
                                                     </div>
                                 
                                                     <div class="form-row">
@@ -604,7 +608,6 @@
                                     </td>
                                 `;
                         
-                                // Evento para doble clic en la fila
                                 row.addEventListener('dblclick', function () {
                                     window.location.href = `historyPC-asis.html?id_paciente=${paciente.id_paciente}`;
                                 });
@@ -647,6 +650,7 @@
                             document.getElementById('editarApellido').value = paciente.apellido;
                             document.getElementById('editarCedula').value = paciente.cedula;
                             document.getElementById('editarCorreo').value = paciente.correo;
+                            document.getElementById('editarSeguro').value = paciente.seguro_medico;
                             document.getElementById('editarFechaNacimiento').value = fechaNacimiento; 
                             document.getElementById('editarSexo').value = paciente.sexo; 
                             document.getElementById('editarTelefono').value = paciente.telefono;
@@ -679,7 +683,7 @@
                             if (paciente.menor) {
                                 document.getElementById('sustanciasContainer').style.display = 'none';
                             } else {
-                                document.getElementById('sustanciasContainer').style.display = 'block'; // Asegurarse de que esté visible
+                                document.getElementById('sustanciasContainer').style.display = 'block';
                             }
                         
                             document.getElementById('editarPacienteModal').classList.add('show');
@@ -707,6 +711,7 @@
                                 apellido: document.getElementById('editarApellido').value,
                                 cedula: document.getElementById('editarCedula').value,
                                 fecha_nacimiento: document.getElementById('editarFechaNacimiento').value,
+                                seguro_medico: document.getElementById('editarSeguro').value,
                                 correo: document.getElementById('editarCorreo').value,
                                 sexo: document.getElementById('editarSexo').value,
                                 telefono: document.getElementById('editarTelefono').value,

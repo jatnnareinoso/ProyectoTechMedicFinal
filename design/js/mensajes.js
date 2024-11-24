@@ -136,6 +136,17 @@ router.post('/registrarNotificacion', async (req, res) => {
             return res.status(404).json({ message: 'Destinatario no encontrado' });
         }
 
+        const remitenteResult = await client.query(
+            'SELECT nombre, apellido FROM usuario WHERE id_usuario = $1',
+            [id_usuario]
+        );
+
+        if (remitenteResult.rows.length === 0) {
+            return res.status(404).json({ message: 'Usuario remitente no encontrado' });
+        }
+
+        const remitenteNombre = `${remitenteResult.rows[0].nombre} ${remitenteResult.rows[0].apellido}`;
+
         const correo = result.rows[0].correo;
         const fechaActual = new Date();
 
@@ -150,8 +161,8 @@ router.post('/registrarNotificacion', async (req, res) => {
                 to: correo,
                 from: 'tecnologiamedicinaltechmedic@gmail.com',
                 subject: 'Notificación importante',
-                text: `${contenido}\nFecha: ${fechaActual.toLocaleString()}`,
-                html: `<p>${contenido}</p><p><strong>Fecha:</strong> ${fechaActual.toLocaleString()}</p>`
+                text: `Mensaje de parte de: ${remitenteNombre}\n\n${contenido}\nFecha: ${fechaActual.toLocaleString()}`,
+                html: `Mensaje de parte de: ${remitenteNombre}\n\n<p>${contenido}</p><p><strong>Fecha:</strong> ${fechaActual.toLocaleString()}</p>`
             };
 
             try {

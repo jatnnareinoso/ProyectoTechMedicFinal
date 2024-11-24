@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TechMedic/Historial Paciente</title>
+    <title>TechMedic - Historial Paciente</title>
     <script src="https://kit.fontawesome.com/c2b1422a44.js" crossorigin="anonymous"></script>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" 
@@ -55,7 +55,7 @@
 
             <hr class="sidebar-divider my-0">
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="../profileUser.html">
                     <i class="fa-solid fa-user-nurse"></i>
                     <span>Sobre Mi</span></a>
@@ -63,7 +63,7 @@
 
             <hr class="sidebar-divider">
 
-            <li class="nav-item">
+            <li class="nav-item  active">
                 <a class="nav-link" href="../menu/listpacient-asis.html">
                     <i class="fa-solid fa-bed"></i>
                     <span>Pacientes</span></a>
@@ -175,73 +175,7 @@
                                 </form>
                             </div>
                         </li>
-
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <span class="badge badge-danger badge-counter"></span>
-                            </a>
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Notificaciones
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Ver todas las notificaciones</a>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <span class="badge badge-danger badge-counter"></span>
-                            </a>
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Centro de Mensajes
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="../../design/img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="../../design/img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Leer otros mensajes</a>
-                            </div>
-                        </li>
-
+                        
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <li class="nav-item dropdown no-arrow">
@@ -394,6 +328,10 @@
                                     <table class="table table-bordered mb-0">
                                         <tbody>
                                             <tr>
+                                                <th scope="row">Seguro Médico</th>
+                                                <td id="paciente-seguro"></td>
+                                            </tr>
+                                            <tr>
                                                 <th scope="row">Peso (lb)</th>
                                                 <td id="paciente-peso"></td>
                                             </tr>
@@ -470,6 +408,7 @@
                     document.getElementById('familiar-identificacion').textContent = data.cedula_familiar;
                     document.getElementById('familiar-correo').textContent = data.correo_familiar;
                     document.getElementById('familiar-telefono').textContent = data.telefono_familiar;
+                    document.getElementById('paciente-seguro').textContent = data.seguro_medico;
                     document.getElementById('paciente-peso').textContent = data.peso;
                     document.getElementById('paciente-altura').textContent = data.altura;
                     document.getElementById('paciente-alergias').textContent = data.alergia || "No posee";

@@ -6,7 +6,7 @@ const registrarPaciente = async (req, res) => {
     const {
         nombre, apellido, cedula, fecha_nacimiento, correo, sexo, telefono, nacionalidad, ciudad, direccion,
         celular, userType, nombre_familiar, cedula_familiar, correo_familiar, telefono_familiar, celular_familiar,
-        peso, altura, alergia, detalleAlergia, enfermedad, detalleEnfermedad, sustancia, detalleSustancia
+        peso, altura, alergia, detalleAlergia, enfermedad, detalleEnfermedad, sustancia, detalleSustancia, seguro_medico
     } = req.body;
 
     const menor = userType === 'menor';
@@ -16,19 +16,20 @@ const registrarPaciente = async (req, res) => {
             INSERT INTO paciente (
                 nombre, apellido, cedula, fecha_nacimiento, correo, sexo, telefono, nacionalidad, ciudad, direccion, celular, menor,
                 nombre_familiar, cedula_familiar, correo_familiar, telefono_familiar, celular_familiar,
-                peso, altura, alergia, enfermedad, sustancia
+                peso, altura, alergia, enfermedad, sustancia, seguro_medico
             ) VALUES (
                 $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12,
                 $13, $14, $15, $16, $17,
-                $18, $19, $20, $21, $22
+                $18, $19, $20, $21, $22. $23
             ) RETURNING id_paciente
         `, [
-            nombre, apellido, cedula || null, fecha_nacimiento, correo, sexo, telefono, nacionalidad, ciudad, direccion, celular,
-            menor, nombre_familiar, cedula_familiar, correo_familiar, telefono_familiar, celular_familiar,
-            peso, altura,
+            nombre, apellido, cedula || null, fecha_nacimiento, correo || null, sexo, telefono, nacionalidad, ciudad, direccion, celular,
+            menor, nombre_familiar, cedula_familiar, correo_familiar || null, telefono_familiar, celular_familiar,
+            peso || null, altura || null,
             alergia === 'si' ? detalleAlergia : null,
             enfermedad === 'si' ? detalleEnfermedad : null,
-            sustancia === 'si' ? detalleSustancia : null
+            sustancia === 'si' ? detalleSustancia : null,
+            seguro_medico || null
         ]);
 
         const { id_paciente } = result.rows[0];

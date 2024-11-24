@@ -12,6 +12,10 @@ const login = async (req, res) => {
 
         const user = result.rows[0];
 
+        if (!user.estado) {
+            return res.status(403).json({ error: 'Tu cuenta está inactiva.' });
+        }
+
         if (password !== user.password) {
             return res.status(401).json({ error: 'Contraseña incorrecta' });
         }
